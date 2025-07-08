@@ -9,7 +9,7 @@ public class Oreveil implements ModInitializer {
 	public static final String MOD_ID = "oreveil";
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-//dsadas
+	Logger.info("prodbyeagle war hier, in der schule")
 	@Override
 	public void onInitialize() {
 	}
