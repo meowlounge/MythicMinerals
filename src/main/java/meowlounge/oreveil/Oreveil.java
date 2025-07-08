@@ -1,7 +1,6 @@
 package meowlounge.oreveil;
 
 import meowlounge.oreveil.block.ModBlocks;
-import meowlounge.oreveil.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,5 +13,6 @@ public class Oreveil implements ModInitializer {
 	public void onInitialize() {
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
+		ItemGroup.registerItemGroups();
 	}
 }
