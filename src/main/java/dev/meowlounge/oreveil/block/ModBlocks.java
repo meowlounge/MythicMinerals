@@ -1,13 +1,11 @@
-package meowlounge.oreveil.block;
+package dev.meowlounge.oreveil.block;
 
-import meowlounge.oreveil.Oreveil;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import dev.meowlounge.oreveil.Oreveil;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -32,12 +30,7 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-        Oreveil.LOGGER.info("Registering Mod Blocks for " + Oreveil.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-            entries.add(ModBlocks.FROSTIUM_ORE);
-            entries.add(ModBlocks.DEEPSLATE_FROSTIUM_ORE);
-        });
+        Oreveil.LOGGER.info("⛏️ [OREVEIL]: Registering Blocks");
     }
     public static final Block FROSTIUM_ORE = registerBlock("frostium_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
@@ -49,7 +42,7 @@ public class ModBlocks {
 
     public static final Block RAW_FROSTIUM_BLOCK = registerBlock("raw_frostium_block",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
-                    properties.strength(4f).requiresTool().sounds(BlockSoundGroup.COPPER)));
+                    properties.strength(4f).requiresTool()));
 
     public static final Block FROSTIUM_BLOCK = registerBlock("frostium_block",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),

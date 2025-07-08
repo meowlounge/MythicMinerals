@@ -1,7 +1,7 @@
-package meowlounge.oreveil.datagen;
+package dev.meowlounge.oreveil.datagen;
 
-import meowlounge.oreveil.ModItems;
-import meowlounge.oreveil.block.ModBlocks;
+import dev.meowlounge.oreveil.ModItems;
+import dev.meowlounge.oreveil.block.ModBlocks;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;

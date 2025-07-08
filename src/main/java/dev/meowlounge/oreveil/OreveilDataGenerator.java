@@ -1,8 +1,8 @@
-package meowlounge.oreveil;
+package dev.meowlounge.oreveil;
 
-import meowlounge.oreveil.datagen.ItemModel;
-import meowlounge.oreveil.datagen.lang.English;
-import meowlounge.oreveil.datagen.lang.German;
+import dev.meowlounge.oreveil.datagen.ItemModel;
+import dev.meowlounge.oreveil.datagen.lang.LangEN;
+import dev.meowlounge.oreveil.datagen.lang.LangDE;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
@@ -12,7 +12,7 @@ public class OreveilDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(ItemModel::new);
-		pack.addProvider(German::new);
-		pack.addProvider(English::new);
+		pack.addProvider(LangDE::new);
+		pack.addProvider(LangEN::new);
 	}
 }

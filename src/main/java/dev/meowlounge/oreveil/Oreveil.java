@@ -1,6 +1,6 @@
-package meowlounge.oreveil;
+package dev.meowlounge.oreveil;
 
-import meowlounge.oreveil.block.ModBlocks;
+import dev.meowlounge.oreveil.block.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

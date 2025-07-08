@@ -1,6 +1,6 @@
-package meowlounge.oreveil;
+package dev.meowlounge.oreveil;
 
-import meowlounge.oreveil.block.ModBlocks;
+import dev.meowlounge.oreveil.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -24,6 +24,7 @@ public class ItemGroup {
 					.entries((displayContext, entries) -> {
 						entries.add(ModItems.FROSTIUM);
 						entries.add(ModItems.RAW_FROSTIUM);
+
 						entries.add(ModBlocks.FROSTIUM_BLOCK);
 						entries.add(ModBlocks.DEEPSLATE_FROSTIUM_ORE);
 						entries.add(ModBlocks.FROSTIUM_ORE);

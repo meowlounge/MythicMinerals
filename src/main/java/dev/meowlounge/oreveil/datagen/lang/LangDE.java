@@ -1,4 +1,4 @@
-package meowlounge.oreveil.datagen.lang;
+package dev.meowlounge.oreveil.datagen.lang;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -6,8 +6,8 @@ import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
 
-public class German extends FabricLanguageProvider {
-	public German(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+public class LangDE extends FabricLanguageProvider {
+	public LangDE(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
 		super(dataOutput, "de_de", registryLookup);
 	}
 
