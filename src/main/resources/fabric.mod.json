@@ -1,24 +1,24 @@
 {
 	"schemaVersion": 1,
-	"id": "oreveil",
+	"id": "mythicminerals",
 	"version": "${version}",
-	"name": "Oreveil",
+	"name": "MythicMinerals",
 	"description": "Adds Custom Ores that will give custom buffs... or debuffs.",
 	"authors": [
 		"@dwhincandi, @prodbyeagle"
 	],
 	"license": "MIT",
-	"icon": "assets/oreveil/icon.png",
+	"icon": "assets/mythicminerals/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"meowlounge.oreveil.Oreveil"
+			"dev.meowlounge.mythicminerals.MythicMinerals"
 		],
 		"fabric-datagen": [
-			"meowlounge.oreveil.OreveilDataGenerator"
+			"dev.meowlounge.mythicminerals.MythicMineralsDataGenerator"
 		],
 		"client": [
-			"meowlounge.oreveil.OreveilClient"
+			"dev.meowlounge.mythicminerals.MythicMineralsClient"
 		]
 	},
 	"depends": {

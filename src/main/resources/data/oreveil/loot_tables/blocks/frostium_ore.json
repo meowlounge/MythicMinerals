@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "oreveil:frostium_ore"
+          "name": "mythicminerals:frostium_ore"
         }
       ],
       "functions": [

@@ -1,5 +1,5 @@
 {
-  "feature": "oreveil:frostium_ore",
+  "feature": "mythicminerals:frostium_ore",
   "placement": [
     {
       "type": "minecraft:rarity_filter",

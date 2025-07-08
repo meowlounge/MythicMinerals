@@ -1,0 +1,9 @@
+{
+  "block.mythicminerals.deepslate_frostium_ore": "Deepslate Frostium Ore",
+  "block.mythicminerals.frostium_block": "Frostium Block",
+  "block.mythicminerals.frostium_ore": "Frostium Ore",
+  "block.mythicminerals.raw_frostium_block": "Raw Frostium Block",
+  "item.mythicminerals.frostium": "Frostium",
+  "item.mythicminerals.raw_frostium": "Raw Frostium",
+  "mythicminerals.item_group_ore": "MythicMinerals Ores"
+}

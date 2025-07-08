@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "oreveil:frostium_ore"
+          "Name": "mythicminerals:frostium_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
@@ -15,7 +15,7 @@
       },
       {
         "state": {
-          "Name": "oreveil:deepslate_frostium_ore"
+          "Name": "mythicminerals:deepslate_frostium_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
