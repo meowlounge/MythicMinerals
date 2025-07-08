@@ -1,15 +1,25 @@
 {
   "type": "minecraft:ore",
   "config": {
-    "size": 7,
+    "discard_chance_on_air_exposure": 1,
+    "size": 12,
     "targets": [
       {
+        "state": {
+          "Name": "oreveil:frostium_ore"
+        },
         "target": {
           "predicate_type": "minecraft:tag_match",
           "tag": "minecraft:stone_ore_replaceables"
-        },
+        }
+      },
+      {
         "state": {
-          "Name": "oreveil:frostium_ore"
+          "Name": "oreveil:deepslate_frostium_ore"
+        },
+        "target": {
+          "predicate_type": "minecraft:tag_match",
+          "tag": "minecraft:deepslate_ore_replaceables"
         }
       }
     ]
