@@ -45,6 +45,14 @@ public class ModBlocks {
                     properties.strength(3f).requiresTool()));
 
     public static final Block DEEPSLATE_FROSTIUM_ORE = registerBlock("deepslate_frostium_ore",
-            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(3, 8),
                     properties.strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
+
+    public static final Block RAW_FROSTIUM_BLOCK = registerBlock("raw_frostium_block",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
+                    properties.strength(4f).requiresTool().sounds(BlockSoundGroup.COPPER)));
+
+    public static final Block FROSTIUM_BLOCK = registerBlock("frostium_block",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
+                    properties.strength(4f).requiresTool().sounds(BlockSoundGroup.IRON)));
 }
