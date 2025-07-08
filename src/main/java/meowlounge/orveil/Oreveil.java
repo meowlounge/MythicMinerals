@@ -10,6 +10,8 @@ public class Oreveil implements ModInitializer {
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	Logger.info("prodbyeagle war hier, in der schule")
+
 	@Override
 	public void onInitialize() {
 	}
