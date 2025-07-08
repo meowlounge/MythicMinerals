@@ -19,7 +19,7 @@ public class English extends FabricLanguageProvider {
 		translationBuilder.add("block.oreveil.frostium_block", "Frostium Block");
 
 		translationBuilder.add("item.oreveil.frostium", "Frostium");
-		translationBuilder.add("item.oreveil.raw_frostium", "Rhoes Frostium");
+		translationBuilder.add("item.oreveil.raw_frostium", "Raw Frostium");
 
 		translationBuilder.add("oreveil.item_group_ore", "Oreveil Ores");
 	}
