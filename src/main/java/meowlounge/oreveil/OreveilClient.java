@@ -1,4 +1,4 @@
-package meowlounge.orveil;
+package meowlounge.oreveil;
 
 import net.fabricmc.api.ClientModInitializer;
 

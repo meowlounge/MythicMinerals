@@ -1,0 +1,20 @@
+{
+  "feature": "oreveil:frostium_ore",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 8
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": -48,
+        "max_inclusive": 40
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

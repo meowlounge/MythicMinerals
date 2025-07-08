@@ -16,13 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"meowlounge.orveil.Oreveil"
+			"meowlounge.oreveil.Oreveil"
 		],
 		"fabric-datagen": [
-			"meowlounge.orveil.OreveilDataGenerator"
+			"meowlounge.oreveil.OreveilDataGenerator"
 		],
 		"client": [
-			"meowlounge.orveil.OreveilClient"
+			"meowlounge.oreveil.OreveilClient"
 		]
 	},
 	"mixins": [
