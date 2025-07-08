@@ -3,15 +3,11 @@
 	"id": "oreveil",
 	"version": "${version}",
 	"name": "Oreveil",
-	"description": "Adds 5 new Ores",
+	"description": "Adds Custom Ores that will give custom buffs... or debuffs.",
 	"authors": [
 		"@dwhincandi, @prodbyeagle"
 	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/oreveil/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -25,16 +21,10 @@
 			"meowlounge.oreveil.OreveilClient"
 		]
 	},
-	"mixins": [
-		"oreveil.mixins.json"
-	],
 	"depends": {
 		"fabricloader": ">=0.16.14",
 		"minecraft": "~1.21.7",
 		"java": ">=21",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
