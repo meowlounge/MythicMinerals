@@ -1,6 +1,7 @@
 package dev.meowlounge.mythicminerals;
 
-import dev.meowlounge.mythicminerals.block.ModBlocks;
+import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
+import dev.meowlounge.mythicminerals.item.Frostium;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -19,16 +20,25 @@ public class ItemGroup {
 			Registries.ITEM_GROUP,
 			OREVEIL_ORE_GROUP_KEY.getValue(),
 			FabricItemGroup.builder()
-					.icon(() -> new ItemStack(ModItems.FROSTIUM))
+					.icon(() -> new ItemStack(Frostium.FROSTIUM))
 					.displayName(Text.translatable("mythicminerals.item_group_ore"))
 					.entries((displayContext, entries) -> {
-						entries.add(ModItems.FROSTIUM);
-						entries.add(ModItems.RAW_FROSTIUM);
+						entries.add(Frostium.FROSTIUM);
+						entries.add(Frostium.RAW_FROSTIUM);
+						entries.add(Frostium.FROSTIUM_LEGGINGS);
+						entries.add(Frostium.FROSTIUM_SHOVEL);
+						entries.add(Frostium.FROSTIUM_AXE);
+						entries.add(Frostium.FROSTIUM_BOOTS);
+						entries.add(Frostium.FROSTIUM_CHESTPLATE);
+						entries.add(Frostium.FROSTIUM_HELMET);
+						entries.add(Frostium.FROSTIUM_HOE);
+						entries.add(Frostium.FROSTIUM_PICKAXE);
+						entries.add(Frostium.FROSTIUM_SWORD);
 
-						entries.add(ModBlocks.FROSTIUM_BLOCK);
-						entries.add(ModBlocks.DEEPSLATE_FROSTIUM_ORE);
-						entries.add(ModBlocks.FROSTIUM_ORE);
-						entries.add(ModBlocks.RAW_FROSTIUM_BLOCK);
+						entries.add(FrostiumBlocks.FROSTIUM_BLOCK);
+						entries.add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE);
+						entries.add(FrostiumBlocks.FROSTIUM_ORE);
+						entries.add(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
 					})
 					.build()
 	);
