@@ -16,7 +16,7 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 import java.util.function.Function;
 
-public class ModBlocks {
+public class FrostiumBlocks {
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name))));
         registerBlockItem(name, toRegister);
