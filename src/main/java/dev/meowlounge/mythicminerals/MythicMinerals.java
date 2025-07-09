@@ -1,6 +1,8 @@
 package dev.meowlounge.mythicminerals;
 
-import dev.meowlounge.mythicminerals.block.ModBlocks;
+import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
+import dev.meowlounge.mythicminerals.item.FrostiumItems;
+import dev.meowlounge.mythicminerals.world.gen.WorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,8 +13,11 @@ public class MythicMinerals implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModBlocks.registerModBlocks();
-		ModItems.registerModItems();
-		ItemGroup.registerItemGroups();
+		ItemGroup.registerItemGroup();
+		WorldGeneration.generateWorldGen();
+
+		// init items
+		FrostiumItems.registerItems();
+		FrostiumBlocks.registerModBlocks();
 	}
 }

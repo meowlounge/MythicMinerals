@@ -1,7 +1,7 @@
 package dev.meowlounge.mythicminerals.datagen;
 
-import dev.meowlounge.mythicminerals.ModItems;
-import dev.meowlounge.mythicminerals.block.ModBlocks;
+import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
+import dev.meowlounge.mythicminerals.item.FrostiumItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
@@ -15,14 +15,15 @@ public class ItemModel extends FabricModelProvider {
 
 	@Override
 	public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-		BlockStateModelGenerator.BlockTexturePool FrostiumBlockPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.FROSTIUM_BLOCK);
-		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_FROSTIUM_ORE);
-		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FROSTIUM_ORE);
-		blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_FROSTIUM_BLOCK); }
+		BlockStateModelGenerator.BlockTexturePool FrostiumBlockPool = blockStateModelGenerator.registerCubeAllModelTexturePool(FrostiumBlocks.FROSTIUM_BLOCK);
+		blockStateModelGenerator.registerSimpleCubeAll(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE);
+		blockStateModelGenerator.registerSimpleCubeAll(FrostiumBlocks.FROSTIUM_ORE);
+		blockStateModelGenerator.registerSimpleCubeAll(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
+	}
 
 
 	public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-		itemModelGenerator.register(ModItems.RAW_FROSTIUM, Models.GENERATED);
-		itemModelGenerator.register(ModItems.FROSTIUM, Models.GENERATED);
+		itemModelGenerator.register(FrostiumItems.RAW_FROSTIUM, Models.GENERATED);
+		itemModelGenerator.register(FrostiumItems.FROSTIUM, Models.GENERATED);
 	}
 }
