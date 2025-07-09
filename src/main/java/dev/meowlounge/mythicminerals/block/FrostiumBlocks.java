@@ -30,8 +30,10 @@ public class FrostiumBlocks {
 	}
 
 	public static void registerModBlocks() {
-		MythicMinerals.LOGGER.info("⛏️ [OREVEIL]: Registering Blocks");
+		MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Blocks");
 	}
+
+	//TODO: fix blocks being not breakable via pickaxe. ( its really slow )
 
 	public static final Block FROSTIUM_ORE = registerBlock("frostium_ore",
 			properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
@@ -42,8 +44,7 @@ public class FrostiumBlocks {
 					properties.strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
 	public static final Block RAW_FROSTIUM_BLOCK = registerBlock("raw_frostium_block",
-			properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
-					properties.strength(4f).requiresTool()));
+			properties -> new Block(properties.strength(4f).requiresTool()));
 
 	public static final Block FROSTIUM_BLOCK = registerBlock("frostium_block",
 			properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
