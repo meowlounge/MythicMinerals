@@ -12,7 +12,7 @@ public class FrostiumGeneration {
 //				PlacedFeatures.FROSTIUM_PLACED_KEY);
 
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(
-				BiomeKeys.ICE_SPIKES, BiomeKeys.DEEP_FROZEN_OCEAN, BiomeKeys.JAGGED_PEAKS, BiomeKeys.SNOWY_SLOPES),
+						BiomeKeys.ICE_SPIKES, BiomeKeys.DEEP_FROZEN_OCEAN, BiomeKeys.JAGGED_PEAKS, BiomeKeys.SNOWY_SLOPES),
 				GenerationStep.Feature.UNDERGROUND_ORES,
 				PlacedFeatures.FROSTIUM_PLACED_KEY);
 	}

@@ -33,5 +33,6 @@ public class ItemGroup {
 					.build()
 	);
 
-	public static void registerItemGroup() {}
+	public static void registerItemGroup() {
+	}
 }
