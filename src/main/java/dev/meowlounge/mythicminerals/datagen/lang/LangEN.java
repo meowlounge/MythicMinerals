@@ -30,7 +30,7 @@ public class LangEN extends FabricLanguageProvider {
 		translationBuilder.add("item.mythicminerals.frostium_leggings", "Frostium Leggings");
 		translationBuilder.add("item.mythicminerals.frostium_boots", "Frostium Boots");
 
-		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals Ores");
+		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
 	}
 
 	@Override

@@ -25,9 +25,7 @@ public class Block extends FabricTagProvider.BlockTagProvider {
                 .add(FrostiumBlocks.RAW_FROSTIUM_BLOCK)
                 .add(FrostiumBlocks.FROSTIUM_BLOCK)
                 .add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE);
-
     }
-
 
     @Override
     public String getName() {

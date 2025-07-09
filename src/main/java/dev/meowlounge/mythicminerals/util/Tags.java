@@ -10,8 +10,8 @@ import net.minecraft.util.Identifier;
 
 public class Tags {
     public static class Blocks {
-        public static final TagKey<Block> NEEDS_FROSTIUM_TOOL = createTag("needs_frostium_tool");
-        public static final TagKey<Block> INCORRECT_FOR_FROSTIUM_TOOL = createTag("incorrect_for_frostium_tool");
+//        public static final TagKey<Block> NEEDS_FROSTIUM_TOOL = createTag("needs_frostium_tool");
+//        public static final TagKey<Block> INCORRECT_FOR_FROSTIUM_TOOL = createTag("incorrect_for_frostium_tool");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name));
@@ -20,11 +20,10 @@ public class Tags {
 
 
     public static class Items {
-        public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
-        public static final TagKey<Item> FROSTIUM_REPAIR = createTag("frostium_repair");
+        public static final TagKey<Item> FROSTIUM_REPAIR = createTag();
 
-        private static TagKey<Item> createTag(String name) {
-            return TagKey.of(RegistryKeys.ITEM, Identifier.of(MythicMinerals.MOD_ID, name));
+        private static TagKey<Item> createTag() {
+            return TagKey.of(RegistryKeys.ITEM, Identifier.of(MythicMinerals.MOD_ID, "frostium_repair"));
         }
     }
 

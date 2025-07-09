@@ -1,6 +1,6 @@
 package dev.meowlounge.mythicminerals.datagen.tags;
 
-import dev.meowlounge.mythicminerals.item.Frostium;
+import dev.meowlounge.mythicminerals.item.FrostiumItems;
 import dev.meowlounge.mythicminerals.util.Tags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -16,21 +16,21 @@ public class Item extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         valueLookupBuilder(Tags.Items.FROSTIUM_REPAIR)
-                .add(Frostium.FROSTIUM);
+                .add(FrostiumItems.FROSTIUM);
         valueLookupBuilder(net.minecraft.registry.tag.ItemTags.SHARP_WEAPON_ENCHANTABLE)
-                .add(Frostium.FROSTIUM_SWORD)
-                .add(Frostium.FROSTIUM_AXE);
+                .add(FrostiumItems.FROSTIUM_SWORD)
+                .add(FrostiumItems.FROSTIUM_AXE);
         valueLookupBuilder(net.minecraft.registry.tag.ItemTags.MINING_LOOT_ENCHANTABLE)
-                .add(Frostium.FROSTIUM_SHOVEL)
-                .add(Frostium.FROSTIUM_AXE)
-                .add(Frostium.FROSTIUM_HOE);
+                .add(FrostiumItems.FROSTIUM_SHOVEL)
+                .add(FrostiumItems.FROSTIUM_AXE)
+                .add(FrostiumItems.FROSTIUM_HOE);
         valueLookupBuilder(net.minecraft.registry.tag.ItemTags.MINING_ENCHANTABLE)
-                .add(Frostium.FROSTIUM_PICKAXE);
+                .add(FrostiumItems.FROSTIUM_PICKAXE);
         valueLookupBuilder(net.minecraft.registry.tag.ItemTags.ARMOR_ENCHANTABLE)
-                .add(Frostium.FROSTIUM_BOOTS)
-                .add(Frostium.FROSTIUM_CHESTPLATE)
-                .add(Frostium.FROSTIUM_HELMET)
-                .add(Frostium.FROSTIUM_LEGGINGS);
+                .add(FrostiumItems.FROSTIUM_BOOTS)
+                .add(FrostiumItems.FROSTIUM_CHESTPLATE)
+                .add(FrostiumItems.FROSTIUM_HELMET)
+                .add(FrostiumItems.FROSTIUM_LEGGINGS);
     }
 
 

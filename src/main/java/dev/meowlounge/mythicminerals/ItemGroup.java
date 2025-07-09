@@ -20,20 +20,20 @@ public class ItemGroup {
 			Registries.ITEM_GROUP,
 			MM_GROUP_KEY.getValue(),
 			FabricItemGroup.builder()
-					.icon(() -> new ItemStack(Frostium.FROSTIUM))
+					.icon(() -> new ItemStack(FrostiumItems.FROSTIUM))
 					.displayName(Text.translatable("mythicminerals.item_group_ore"))
 					.entries((displayContext, entries) -> {
-						entries.add(Frostium.FROSTIUM);
-						entries.add(Frostium.RAW_FROSTIUM);
-						entries.add(Frostium.FROSTIUM_LEGGINGS);
-						entries.add(Frostium.FROSTIUM_SHOVEL);
-						entries.add(Frostium.FROSTIUM_AXE);
-						entries.add(Frostium.FROSTIUM_BOOTS);
-						entries.add(Frostium.FROSTIUM_CHESTPLATE);
-						entries.add(Frostium.FROSTIUM_HELMET);
-						entries.add(Frostium.FROSTIUM_HOE);
-						entries.add(Frostium.FROSTIUM_PICKAXE);
-						entries.add(Frostium.FROSTIUM_SWORD);
+						entries.add(FrostiumItems.FROSTIUM);
+						entries.add(FrostiumItems.RAW_FROSTIUM);
+						entries.add(FrostiumItems.FROSTIUM_LEGGINGS);
+						entries.add(FrostiumItems.FROSTIUM_SHOVEL);
+						entries.add(FrostiumItems.FROSTIUM_AXE);
+						entries.add(FrostiumItems.FROSTIUM_BOOTS);
+						entries.add(FrostiumItems.FROSTIUM_CHESTPLATE);
+						entries.add(FrostiumItems.FROSTIUM_HELMET);
+						entries.add(FrostiumItems.FROSTIUM_HOE);
+						entries.add(FrostiumItems.FROSTIUM_PICKAXE);
+						entries.add(FrostiumItems.FROSTIUM_SWORD);
 
 						entries.add(FrostiumBlocks.FROSTIUM_BLOCK);
 						entries.add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE);

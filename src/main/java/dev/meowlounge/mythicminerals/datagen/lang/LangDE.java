@@ -31,7 +31,7 @@ public class LangDE extends FabricLanguageProvider {
 		translationBuilder.add("item.mythicminerals.frostium_boots", "Frostiumstiefel");
 
 
-		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals Erz");
+		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
 	}
 
 	@Override
