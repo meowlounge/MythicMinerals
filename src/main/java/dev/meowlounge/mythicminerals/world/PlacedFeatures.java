@@ -23,8 +23,8 @@ public class PlacedFeatures {
 		var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
 		register(context, FROSTIUM_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.FROSTIUM_ORE_KEY),
-				OrePlacement.modifiersWithCount(14,
-						HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
+				OrePlacement.modifiersWithRarity(1,
+						HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(12))));
 	}
 
 	public static RegistryKey<PlacedFeature> registerKey(String name) {

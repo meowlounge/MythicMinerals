@@ -8,12 +8,13 @@ import net.minecraft.world.gen.GenerationStep;
 
 public class FrostiumGeneration {
 	public static void generateOres() {
-//		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES,
-//				PlacedFeatures.FROSTIUM_PLACED_KEY);
-
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(
-						BiomeKeys.ICE_SPIKES, BiomeKeys.DEEP_FROZEN_OCEAN, BiomeKeys.JAGGED_PEAKS, BiomeKeys.SNOWY_SLOPES),
+		BiomeModifications.addFeature(
+				BiomeSelectors.foundInOverworld().and(context -> {
+					var biome = context.getBiome();
+					return biome.getTemperature() <= 0.2F; // ez way to get the biomes...
+				}),
 				GenerationStep.Feature.UNDERGROUND_ORES,
-				PlacedFeatures.FROSTIUM_PLACED_KEY);
+				PlacedFeatures.FROSTIUM_PLACED_KEY
+		);
 	}
 }

@@ -2,8 +2,8 @@
   "feature": "mythicminerals:frostium_ore_key",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": 14
+      "type": "minecraft:rarity_filter",
+      "chance": 1
     },
     {
       "type": "minecraft:in_square"
@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:trapezoid",
         "max_inclusive": {
-          "absolute": 80
+          "absolute": 12
         },
         "min_inclusive": {
-          "absolute": -80
+          "absolute": -20
         }
       }
     },
