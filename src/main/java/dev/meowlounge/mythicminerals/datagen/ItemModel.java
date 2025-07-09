@@ -1,8 +1,7 @@
 package dev.meowlounge.mythicminerals.datagen;
 
-import dev.meowlounge.mythicminerals.item.Armor;
-import dev.meowlounge.mythicminerals.item.Frostium;
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
+import dev.meowlounge.mythicminerals.item.FrostiumItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
