@@ -30,7 +30,7 @@ public class FrostiumBlocks {
     }
 
     public static void registerModBlocks() {
-        MythicMinerals.LOGGER.info("⛏️ [OREVEIL]: Registering Blocks");
+        MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Blocks");
     }
     public static final Block FROSTIUM_ORE = registerBlock("frostium_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
