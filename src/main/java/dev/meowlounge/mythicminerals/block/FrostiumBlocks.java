@@ -17,33 +17,34 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import java.util.function.Function;
 
 public class FrostiumBlocks {
-	public static final Block FROSTIUM_ORE = registerBlock("frostium_ore",
-			properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
-					properties.strength(3f).requiresTool()));
-	public static final Block DEEPSLATE_FROSTIUM_ORE = registerBlock("deepslate_frostium_ore",
-			properties -> new ExperienceDroppingBlock(UniformIntProvider.create(3, 8),
-					properties.strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
-	public static final Block RAW_FROSTIUM_BLOCK = registerBlock("raw_frostium_block",
-			properties -> new Block(properties.strength(4f).requiresTool()));
+    private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
+        Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name))));
+        registerBlockItem(name, toRegister);
+        return Registry.register(Registries.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name), toRegister);
+    }
 
-	//TODO: fix blocks being not breakable via pickaxe. ( its really slow )
-	public static final Block FROSTIUM_BLOCK = registerBlock("frostium_block",
-			properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
-					properties.strength(4f).requiresTool().sounds(BlockSoundGroup.IRON)));
+    private static void registerBlockItem(String name, Block block) {
+        Registry.register(Registries.ITEM, Identifier.of(MythicMinerals.MOD_ID, name),
+                new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()
+                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MythicMinerals.MOD_ID, name)))));
+    }
 
-	private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
-		Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name))));
-		registerFrostiumBlock(name, toRegister);
-		return Registry.register(Registries.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name), toRegister);
-	}
+    public static void registerModBlocks() {
+        MythicMinerals.LOGGER.info("⛏️ [OREVEIL]: Registering Blocks");
+    }
+    public static final Block FROSTIUM_ORE = registerBlock("frostium_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    properties.strength(3f).requiresTool()));
 
-	private static void registerFrostiumBlock(String name, Block block) {
-		Registry.register(Registries.ITEM, Identifier.of(MythicMinerals.MOD_ID, name),
-				new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()
-						.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MythicMinerals.MOD_ID, name)))));
-	}
+    public static final Block DEEPSLATE_FROSTIUM_ORE = registerBlock("deepslate_frostium_ore",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(3, 8),
+                    properties.strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
-	public static void registerModBlocks() {
-		MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Blocks");
-	}
+    public static final Block RAW_FROSTIUM_BLOCK = registerBlock("raw_frostium_block",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
+                    properties.strength(4f).requiresTool()));
+
+    public static final Block FROSTIUM_BLOCK = registerBlock("frostium_block",
+            properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
+                    properties.strength(4f).requiresTool().sounds(BlockSoundGroup.IRON)));
 }

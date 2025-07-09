@@ -25,6 +25,16 @@ public class ItemGroup {
 					.entries((displayContext, entries) -> {
 						entries.add(FrostiumItems.FROSTIUM);
 						entries.add(FrostiumItems.RAW_FROSTIUM);
+						entries.add(FrostiumItems.FROSTIUM_LEGGINGS);
+						entries.add(FrostiumItems.FROSTIUM_SHOVEL);
+						entries.add(FrostiumItems.FROSTIUM_AXE);
+						entries.add(FrostiumItems.FROSTIUM_BOOTS);
+						entries.add(FrostiumItems.FROSTIUM_CHESTPLATE);
+						entries.add(FrostiumItems.FROSTIUM_HELMET);
+						entries.add(FrostiumItems.FROSTIUM_HOE);
+						entries.add(FrostiumItems.FROSTIUM_PICKAXE);
+						entries.add(FrostiumItems.FROSTIUM_SWORD);
+
 						entries.add(FrostiumBlocks.FROSTIUM_BLOCK);
 						entries.add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE);
 						entries.add(FrostiumBlocks.FROSTIUM_ORE);

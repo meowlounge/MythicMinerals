@@ -1,9 +1,18 @@
 {
-  "block.mythicminerals.deepslate_frostium_ore": "Tiefenschiefer Frostium Erz",
-  "block.mythicminerals.frostium_block": "Frostium Block",
-  "block.mythicminerals.frostium_ore": "Frostium Erz",
+  "block.mythicminerals.deepslate_frostium_ore": "Tiefenschiefer-Frostiumerz",
+  "block.mythicminerals.frostium_block": "Frostiumblock",
+  "block.mythicminerals.frostium_ore": "Frostiumerz",
   "block.mythicminerals.raw_frostium_block": "Rohfrostiumblock",
   "item.mythicminerals.frostium": "Frostium",
-  "item.mythicminerals.raw_frostium": "Rhoes Frostium",
+  "item.mythicminerals.frostium_axe": "Frostiumaxt",
+  "item.mythicminerals.frostium_boots": "Frostiumstiefel",
+  "item.mythicminerals.frostium_chestplate": "Frostiumharnisch",
+  "item.mythicminerals.frostium_helmet": "Frostiumhelm",
+  "item.mythicminerals.frostium_hoe": "Frostiumhacke",
+  "item.mythicminerals.frostium_leggings": "Frostiumbeinschutz",
+  "item.mythicminerals.frostium_pickaxe": "Frostiumspitzhacke",
+  "item.mythicminerals.frostium_shovel": "Frostiumschaufel",
+  "item.mythicminerals.frostium_sword": "Frostiumschwert",
+  "item.mythicminerals.raw_frostium": "Rhoesfrostium",
   "mythicminerals.item_group_ore": "MythicMinerals Erz"
 }

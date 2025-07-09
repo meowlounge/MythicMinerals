@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "frostium",
+  "ingredient": "mythicminerals:deepslate_frostium_ore",
+  "result": {
+    "id": "mythicminerals:frostium"
+  }
+}

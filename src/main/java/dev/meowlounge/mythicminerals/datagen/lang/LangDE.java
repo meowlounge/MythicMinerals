@@ -13,15 +13,25 @@ public class LangDE extends FabricLanguageProvider {
 
 	@Override
 	public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
-		translationBuilder.add("block.mythicminerals.frostium_ore", "Frostium Erz");
-		translationBuilder.add("block.mythicminerals.deepslate_frostium_ore", "Tiefenschiefer Frostium Erz");
+		translationBuilder.add("block.mythicminerals.frostium_ore", "Frostiumerz");
+		translationBuilder.add("block.mythicminerals.deepslate_frostium_ore", "Tiefenschiefer-Frostiumerz");
 		translationBuilder.add("block.mythicminerals.raw_frostium_block", "Rohfrostiumblock");
-		translationBuilder.add("block.mythicminerals.frostium_block", "Frostium Block");
+		translationBuilder.add("block.mythicminerals.frostium_block", "Frostiumblock");
 
 		translationBuilder.add("item.mythicminerals.frostium", "Frostium");
-		translationBuilder.add("item.mythicminerals.raw_frostium", "Rhoes Frostium");
+		translationBuilder.add("item.mythicminerals.raw_frostium", "Rhoesfrostium");
+		translationBuilder.add("item.mythicminerals.frostium_sword", "Frostiumschwert");
+		translationBuilder.add("item.mythicminerals.frostium_shovel", "Frostiumschaufel");
+		translationBuilder.add("item.mythicminerals.frostium_pickaxe", "Frostiumspitzhacke");
+		translationBuilder.add("item.mythicminerals.frostium_axe", "Frostiumaxt");
+		translationBuilder.add("item.mythicminerals.frostium_hoe", "Frostiumhacke");
+		translationBuilder.add("item.mythicminerals.frostium_helmet", "Frostiumhelm");
+		translationBuilder.add("item.mythicminerals.frostium_chestplate", "Frostiumharnisch");
+		translationBuilder.add("item.mythicminerals.frostium_leggings", "Frostiumbeinschutz");
+		translationBuilder.add("item.mythicminerals.frostium_boots", "Frostiumstiefel");
 
-		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals Erz");
+
+		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
 	}
 
 	@Override
