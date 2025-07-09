@@ -17,7 +17,7 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 import java.util.List;
 
 public class ConfiguredFeatures {
-	public static final RegistryKey<ConfiguredFeature<?, ?>> FROSTIUM_ORE_KEY = registerKey("frostium_ore");
+	public static final RegistryKey<ConfiguredFeature<?, ?>> FROSTIUM_ORE_KEY = registerKey("frostium_ore_key");
 
 	public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
 		RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);

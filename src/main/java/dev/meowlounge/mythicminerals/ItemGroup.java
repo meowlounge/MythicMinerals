@@ -33,7 +33,5 @@ public class ItemGroup {
 					.build()
 	);
 
-	public static void registerItemGroup() {
-		MythicMinerals.LOGGER.info("⛏️ [OREVEIL]: Register ItemGroup");
-	}
+	public static void registerItemGroup() {}
 }
