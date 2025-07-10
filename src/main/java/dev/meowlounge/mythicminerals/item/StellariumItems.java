@@ -10,7 +10,7 @@ import static dev.meowlounge.mythicminerals.item.RegisterItem.registerItem;
 
 public class StellariumItems {
 	public static final ToolMaterial STELLARIUM_TOOL_MATERIAL = new ToolMaterial(
-			BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1700, 10.0F, 3.0F, 15, ItemTags.DIAMOND_TOOL_MATERIALS
+			BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1700, 25.0F, 3.0F, 15, ItemTags.DIAMOND_TOOL_MATERIALS
 	);
 
 	public static final Item RAW_STELLARIUM = registerItem("raw_stellarium", Item::new);
@@ -23,7 +23,7 @@ public class StellariumItems {
 			settings -> new ShovelItem(StellariumItems.STELLARIUM_TOOL_MATERIAL, -0.5F, -3, settings));
 
 	public static final Item STELLARIUM_PICKAXE = registerItem("stellarium_pickaxe",
-			settings -> new Item(settings.sword(StellariumItems.STELLARIUM_TOOL_MATERIAL, -0.5F, -3)));
+			settings -> new Item(settings.pickaxe(StellariumItems.STELLARIUM_TOOL_MATERIAL, -0.5F, -3)));
 
 	public static final Item STELLARIUM_AXE = registerItem("stellarium_axe",
 			settings -> new AxeItem(StellariumItems.STELLARIUM_TOOL_MATERIAL, 7, -2.8F, settings));

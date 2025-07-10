@@ -22,7 +22,6 @@ public class Block extends FabricTagProvider.BlockTagProvider {
 				.add(FrostiumBlocks.FROSTIUM_BLOCK)
 				.add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE)
 				.add(StellariumBlocks.STELLARIUM_ORE)
-				.add(StellariumBlocks.RAW_STELLARIUM_BLOCK)
 				.add(StellariumBlocks.STELLARIUM_BLOCK);
 
 		valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
