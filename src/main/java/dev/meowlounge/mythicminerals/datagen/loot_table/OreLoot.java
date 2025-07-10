@@ -30,20 +30,30 @@ public class OreLoot extends FabricBlockLootTableProvider {
 	public void generate() {
 		addDrop(FrostiumBlocks.FROSTIUM_BLOCK);
 		addDrop(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
-		addDrop(FrostiumBlocks.FROSTIUM_ORE, oreDrops(FrostiumBlocks.FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM));
-		addDrop(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, multipleOreDrops(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM, 1, 1));
+
+		addDrop(FrostiumBlocks.FROSTIUM_ORE, multipleOreDrops(
+				FrostiumBlocks.FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM, 1, 2
+		));
+
+		addDrop(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, multipleOreDrops(
+				FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM, 1, 2
+		));
 
 		// ---------------------- //
 
 		addDrop(PhantomiumBlocks.PHANTOMIUM_BLOCK);
 		addDrop(PhantomiumBlocks.RAW_PHANTOMIUM_BLOCK);
-		addDrop(PhantomiumBlocks.PHANTOMIUM_ORE, oreDrops(PhantomiumBlocks.PHANTOMIUM_ORE, PhantomiumItems.RAW_PHANTOMIUM));
+
+		addDrop(PhantomiumBlocks.PHANTOMIUM_ORE, multipleOreDrops(
+				PhantomiumBlocks.PHANTOMIUM_ORE, PhantomiumItems.RAW_PHANTOMIUM, 1, 2
+		));
 	}
 
 	public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
 		RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
 		return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
-				ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
-				.apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
+				ItemEntry.builder(item)
+						.apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops)))
+		).apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
 	}
 }
