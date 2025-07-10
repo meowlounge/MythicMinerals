@@ -6,7 +6,7 @@ import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 
-import static dev.meowlounge.mythicminerals.item.Utils.registerItem;
+import static dev.meowlounge.mythicminerals.item.RegisterItem.registerItem;
 
 public class StellariumItems {
 	public static final ToolMaterial STELLARIUM_TOOL_MATERIAL = new ToolMaterial(

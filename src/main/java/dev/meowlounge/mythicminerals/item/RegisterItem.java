@@ -13,7 +13,7 @@ import java.util.function.Function;
 /**
  * Utility class for item registration in the Mythic Minerals mod.
  */
-public class Utils {
+public class RegisterItem {
 
 	/**
 	 * Registers a new {@link Item} with the given name and configuration function.
