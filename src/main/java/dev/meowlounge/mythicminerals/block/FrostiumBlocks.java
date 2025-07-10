@@ -1,22 +1,12 @@
 package dev.meowlounge.mythicminerals.block;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
-import java.util.function.Function;
-
-import static dev.meowlounge.mythicminerals.block.Utils.registerBlock;
+import static dev.meowlounge.mythicminerals.block.RegisterHandler.registerBlock;
 
 public class FrostiumBlocks {
 
@@ -37,5 +27,5 @@ public class FrostiumBlocks {
 
     public static final Block FROSTIUM_BLOCK = registerBlock("frostium_block",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
-                    properties.strength(4f).requiresTool().sounds(BlockSoundGroup.IRON)));
+                    properties.strength(4f).requiresTool()));
 }

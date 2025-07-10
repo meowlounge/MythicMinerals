@@ -23,13 +23,13 @@ public class FrostiumItems {
 			settings -> new Item(settings.pickaxe(FrostiumItems.FROSTIUM_TOOL_MATERIAL,-1,-3)));
 
 	public static final Item FROSTIUM_AXE = registerItem("frostium_axe",
-			settings -> new AxeItem(FrostiumItems.FROSTIUM_TOOL_MATERIAL,5,-3.1F, settings));
+			settings -> new Item(settings.axe(FrostiumItems.FROSTIUM_TOOL_MATERIAL,5,-3.1F)));
 
 	public static final Item FROSTIUM_SHOVEL = registerItem("frostium_shovel",
-			settings -> new ShovelItem(FrostiumItems.FROSTIUM_TOOL_MATERIAL,-1,-3, settings));
+			settings -> new Item(settings.shovel(FrostiumItems.FROSTIUM_TOOL_MATERIAL,-1,-3)));
 
 	public static final Item FROSTIUM_HOE = registerItem("frostium_hoe",
-			settings -> new HoeItem(FrostiumItems.FROSTIUM_TOOL_MATERIAL,-1,-3, settings));
+			settings -> new Item(settings.hoe(FrostiumItems.FROSTIUM_TOOL_MATERIAL,-1,-3)));
 
 	// ---------------------- //
 

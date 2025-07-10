@@ -19,17 +19,17 @@ public class PhantomiumItems {
     public static final Item PHANTOMIUM_SWORD = registerItem("phantomium_sword",
             settings -> new Item(settings.sword(PhantomiumItems.PHANTOMIUM_TOOL_MATERIAL,5,-2.2F)));
 
-    public static final Item PHANTOMIUM_SHOVEL = registerItem("phantomium_shovel",
-            settings -> new ShovelItem(PhantomiumItems.PHANTOMIUM_TOOL_MATERIAL,-0.5F,-3, settings));
-
     public static final Item PHANTOMIUM_PICKAXE = registerItem("phantomium_pickaxe",
-            settings -> new Item(settings.sword(PhantomiumItems.PHANTOMIUM_TOOL_MATERIAL,-0.5F,-3)));
+            settings -> new Item(settings.pickaxe(PhantomiumItems.PHANTOMIUM_TOOL_MATERIAL,-0.5F,-3)));
 
     public static final Item PHANTOMIUM_AXE = registerItem("phantomium_axe",
-            settings -> new AxeItem(PhantomiumItems.PHANTOMIUM_TOOL_MATERIAL,7,-2.8F, settings));
+            settings -> new Item(settings.axe(PhantomiumItems.PHANTOMIUM_TOOL_MATERIAL,7,-2.8F)));
+
+    public static final Item PHANTOMIUM_SHOVEL = registerItem("phantomium_shovel",
+            settings -> new Item(settings.shovel(PhantomiumItems.PHANTOMIUM_TOOL_MATERIAL,-0.5F,-3)));
 
     public static final Item PHANTOMIUM_HOE = registerItem("phantomium_hoe",
-            settings -> new HoeItem(PhantomiumItems.PHANTOMIUM_TOOL_MATERIAL,-0.5F,-3, settings));
+            settings -> new Item(settings.hoe(PhantomiumItems.PHANTOMIUM_TOOL_MATERIAL,-0.5F,-3)));
 
     // ---------------------- //
  

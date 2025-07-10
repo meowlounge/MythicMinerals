@@ -3,10 +3,9 @@ package dev.meowlounge.mythicminerals.block;
 import dev.meowlounge.mythicminerals.MythicMinerals;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
-import static dev.meowlounge.mythicminerals.block.Utils.registerBlock;
+import static dev.meowlounge.mythicminerals.block.RegisterHandler.registerBlock;
 
 public class PhantomiumBlocks {
     public static void registerPhantomiumBlocks() {
@@ -22,5 +21,5 @@ public class PhantomiumBlocks {
 
     public static final Block PHANTOMIUM_BLOCK = registerBlock("phantomium_block",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
-                    properties.strength(4f).requiresTool().sounds(BlockSoundGroup.IRON)));
+                    properties.strength(4f).requiresTool()));
 }
