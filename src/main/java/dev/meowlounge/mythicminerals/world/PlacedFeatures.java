@@ -24,12 +24,12 @@ public class PlacedFeatures {
 		var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
 		register(context, FROSTIUM_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.FROSTIUM_ORE_KEY),
-				OrePlacement.modifiersWithRarity(1,
+				OrePlacement.modifiersWithCount(4,
 						HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(12))));
 
 		register(context, PHANTOMIUM_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.PHANTOMIUM_ORE_KEY),
-				OrePlacement.modifiersWithRarity(800,
-						HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(100))));
+				OrePlacement.modifiersWithCount(8,
+						HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(20))));
 	}
 
 

@@ -18,10 +18,11 @@ public class MythicMinerals implements ModInitializer {
 		ItemGroup.registerItemGroup();
 		WorldGeneration.generateWorldGen();
 
-		// init items
+		//? init ores
 		FrostiumItems.registerFrostiumItems();
 		FrostiumBlocks.registerFrostiumBlocks();
+
+		PhantomiumItems.registerPhantomiumItems();
 		PhantomiumBlocks.registerPhantomiumBlocks();
-		PhantomiumItems.registerPahntomiumItems();
 	}
 }

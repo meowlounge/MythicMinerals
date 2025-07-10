@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "mythicminerals:phantomium_block"
+          "Name": "mythicminerals:phantomium_ore"
         },
         "target": {
           "block": "minecraft:end_stone",

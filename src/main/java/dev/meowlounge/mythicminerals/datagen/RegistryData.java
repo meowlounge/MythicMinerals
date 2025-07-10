@@ -20,6 +20,6 @@ public class RegistryData extends FabricDynamicRegistryProvider {
 
 	@Override
 	public String getName() {
-		return "";
+		return "⛏️ [MythicMinerals]: Registering Data";
 	}
 }

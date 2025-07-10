@@ -2,12 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "R": "mythicminerals:raw_frostium"
+    "#": "mythicminerals:raw_frostium"
   },
   "pattern": [
-    "RRR",
-    "RRR",
-    "RRR"
+    "###",
+    "###",
+    "###"
   ],
   "result": {
     "count": 1,
