@@ -1,9 +1,9 @@
 package dev.meowlounge.mythicminerals.datagen.loot_table;
 
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
-import dev.meowlounge.mythicminerals.block.PhantomiumBlocks;
+import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
-import dev.meowlounge.mythicminerals.item.PhantomiumItems;
+import dev.meowlounge.mythicminerals.item.StellariumItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
@@ -41,11 +41,11 @@ public class OreLoot extends FabricBlockLootTableProvider {
 
 		// ---------------------- //
 
-		addDrop(PhantomiumBlocks.PHANTOMIUM_BLOCK);
-		addDrop(PhantomiumBlocks.RAW_PHANTOMIUM_BLOCK);
+		addDrop(StellariumBlocks.STELLARIUM_BLOCK);
+		addDrop(StellariumBlocks.RAW_STELLARIUM_BLOCK);
 
-		addDrop(PhantomiumBlocks.PHANTOMIUM_ORE, multipleOreDrops(
-				PhantomiumBlocks.PHANTOMIUM_ORE, PhantomiumItems.RAW_PHANTOMIUM, 1, 2
+		addDrop(StellariumBlocks.STELLARIUM_ORE, multipleOreDrops(
+				StellariumBlocks.STELLARIUM_ORE, StellariumItems.RAW_STELLARIUM, 1, 2
 		));
 	}
 

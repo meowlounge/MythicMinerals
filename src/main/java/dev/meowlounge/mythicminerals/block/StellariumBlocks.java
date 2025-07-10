@@ -7,19 +7,19 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 import static dev.meowlounge.mythicminerals.block.RegisterHandler.registerBlock;
 
-public class PhantomiumBlocks {
-    public static void registerPhantomiumBlocks() {
-        MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Phantomium Blocks");
+public class StellariumBlocks {
+    public static void registerStellariumBlocks() {
+        MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Stellarium Blocks");
     }
-    public static final Block PHANTOMIUM_ORE = registerBlock("phantomium_ore",
+    public static final Block STELLARIUM_ORE = registerBlock("stellarium_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
                     properties.strength(3f).requiresTool()));
 
-    public static final Block RAW_PHANTOMIUM_BLOCK = registerBlock("raw_phantomium_block",
+    public static final Block RAW_STELLARIUM_BLOCK = registerBlock("raw_stellarium_block",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
                     properties.strength(4f).requiresTool()));
 
-    public static final Block PHANTOMIUM_BLOCK = registerBlock("phantomium_block",
+    public static final Block STELLARIUM_BLOCK = registerBlock("stellarium_block",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
                     properties.strength(4f).requiresTool()));
 }

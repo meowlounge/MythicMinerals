@@ -1,9 +1,9 @@
 package dev.meowlounge.mythicminerals;
 
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
-import dev.meowlounge.mythicminerals.block.PhantomiumBlocks;
+import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
-import dev.meowlounge.mythicminerals.item.PhantomiumItems;
+import dev.meowlounge.mythicminerals.item.StellariumItems;
 import dev.meowlounge.mythicminerals.world.gen.WorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -22,7 +22,7 @@ public class MythicMinerals implements ModInitializer {
 		FrostiumItems.registerFrostiumItems();
 		FrostiumBlocks.registerFrostiumBlocks();
 
-		PhantomiumItems.registerPhantomiumItems();
-		PhantomiumBlocks.registerPhantomiumBlocks();
+		StellariumItems.registerStellariumItems();
+		StellariumBlocks.registerStellariumBlocks();
 	}
 }

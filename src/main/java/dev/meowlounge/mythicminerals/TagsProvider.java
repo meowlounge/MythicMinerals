@@ -20,7 +20,7 @@ public class TagsProvider {
 
     public static class Items {
         public static final TagKey<Item> FROSTIUM_REPAIR = createTag();
-        public static final TagKey<Item> PHANTOMIUM_REPAIR = createTag();
+        public static final TagKey<Item> STELLARIUM_REPAIR = createTag();
 
         private static TagKey<Item> createTag() {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(MythicMinerals.MOD_ID, "frostium_repair"));

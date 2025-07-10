@@ -1,7 +1,7 @@
 package dev.meowlounge.mythicminerals;
 
 import dev.meowlounge.mythicminerals.datagen.recipe.FrostiumRecipes;
-import dev.meowlounge.mythicminerals.datagen.recipe.PhantomiumRecipes;
+import dev.meowlounge.mythicminerals.datagen.recipe.StellariumRecipes;
 import dev.meowlounge.mythicminerals.datagen.tags.Block;
 import dev.meowlounge.mythicminerals.datagen.ItemModel;
 import dev.meowlounge.mythicminerals.datagen.tags.Item;
@@ -31,7 +31,7 @@ public class MythicMineralsDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(OreLoot::new);
 		pack.addProvider(RegistryData::new);
 
-		pack.addProvider(PhantomiumRecipes::new);
+		pack.addProvider(StellariumRecipes::new);
 		pack.addProvider(FrostiumRecipes::new);
 	}
 

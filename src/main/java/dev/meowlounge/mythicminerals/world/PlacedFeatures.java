@@ -18,7 +18,7 @@ import java.util.List;
 
 public class PlacedFeatures {
 	public static final RegistryKey<PlacedFeature> FROSTIUM_PLACED_KEY = registerKey("frostium_ore_placed");
-	public static final RegistryKey<PlacedFeature> PHANTOMIUM_PLACED_KEY = registerKey("phantomium_ore_placed");
+	public static final RegistryKey<PlacedFeature> STELLARIUM_PLACED_KEY = registerKey("stellarium_ore_placed");
 
 	public static void bootstrap(Registerable<PlacedFeature> context) {
 		var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -27,7 +27,7 @@ public class PlacedFeatures {
 				OrePlacement.modifiersWithCount(4,
 						HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(12))));
 
-		register(context, PHANTOMIUM_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.PHANTOMIUM_ORE_KEY),
+		register(context, STELLARIUM_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.STELLARIUM_ORE_KEY),
 				OrePlacement.modifiersWithCount(8,
 						HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(20))));
 	}

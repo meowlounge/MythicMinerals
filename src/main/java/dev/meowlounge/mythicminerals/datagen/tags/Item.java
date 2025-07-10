@@ -2,7 +2,7 @@ package dev.meowlounge.mythicminerals.datagen.tags;
 
 import dev.meowlounge.mythicminerals.TagsProvider;
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
-import dev.meowlounge.mythicminerals.item.PhantomiumItems;
+import dev.meowlounge.mythicminerals.item.StellariumItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -19,28 +19,28 @@ public class Item extends FabricTagProvider.ItemTagProvider {
         valueLookupBuilder(TagsProvider.Items.FROSTIUM_REPAIR)
                 .add(FrostiumItems.FROSTIUM);
 
-        valueLookupBuilder(TagsProvider.Items.PHANTOMIUM_REPAIR)
-                .add(PhantomiumItems.PHANTOMIUM);
+        valueLookupBuilder(TagsProvider.Items.STELLARIUM_REPAIR)
+                .add(StellariumItems.STELLARIUM);
 
         valueLookupBuilder(net.minecraft.registry.tag.ItemTags.SHARP_WEAPON_ENCHANTABLE)
                 .add(FrostiumItems.FROSTIUM_SWORD)
                 .add(FrostiumItems.FROSTIUM_AXE)
 
-                .add(PhantomiumItems.PHANTOMIUM_SWORD)
-                .add(PhantomiumItems.PHANTOMIUM_AXE);
+                .add(StellariumItems.STELLARIUM_SWORD)
+                .add(StellariumItems.STELLARIUM_AXE);
 
         valueLookupBuilder(net.minecraft.registry.tag.ItemTags.MINING_LOOT_ENCHANTABLE)
                 .add(FrostiumItems.FROSTIUM_SHOVEL)
                 .add(FrostiumItems.FROSTIUM_AXE)
                 .add(FrostiumItems.FROSTIUM_HOE)
 
-                .add(PhantomiumItems.PHANTOMIUM_SHOVEL)
-                .add(PhantomiumItems.PHANTOMIUM_AXE)
-                .add(PhantomiumItems.PHANTOMIUM_HOE);
+                .add(StellariumItems.STELLARIUM_SHOVEL)
+                .add(StellariumItems.STELLARIUM_AXE)
+                .add(StellariumItems.STELLARIUM_HOE);
 
         valueLookupBuilder(net.minecraft.registry.tag.ItemTags.MINING_ENCHANTABLE)
                 .add(FrostiumItems.FROSTIUM_PICKAXE)
-                .add(PhantomiumItems.PHANTOMIUM_PICKAXE);
+                .add(StellariumItems.STELLARIUM_PICKAXE);
 
         valueLookupBuilder(net.minecraft.registry.tag.ItemTags.ARMOR_ENCHANTABLE)
                 .add(FrostiumItems.FROSTIUM_BOOTS)
@@ -48,10 +48,10 @@ public class Item extends FabricTagProvider.ItemTagProvider {
                 .add(FrostiumItems.FROSTIUM_HELMET)
                 .add(FrostiumItems.FROSTIUM_LEGGINGS)
 
-                .add(PhantomiumItems.PHANTOMIUM_BOOTS)
-                .add(PhantomiumItems.PHANTOMIUM_CHESTPLATE)
-                .add(PhantomiumItems.PHANTOMIUM_HELMET)
-                .add(PhantomiumItems.PHANTOMIUM_LEGGINGS);
+                .add(StellariumItems.STELLARIUM_BOOTS)
+                .add(StellariumItems.STELLARIUM_CHESTPLATE)
+                .add(StellariumItems.STELLARIUM_HELMET)
+                .add(StellariumItems.STELLARIUM_LEGGINGS);
     }
 
 
