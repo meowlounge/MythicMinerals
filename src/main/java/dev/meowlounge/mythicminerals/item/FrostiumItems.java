@@ -13,6 +13,8 @@ import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
 
+import static dev.meowlounge.mythicminerals.item.Utils.registerItem;
+
 public class FrostiumItems {
 	public static final ToolMaterial FROSTIUM_TOOL_MATERIAL = new ToolMaterial(
 			BlockTags.INCORRECT_FOR_IRON_TOOL, 250, 6.0F, 2.0F, 14, ItemTags.IRON_TOOL_MATERIALS
@@ -40,12 +42,7 @@ public class FrostiumItems {
 	public static final Item FROSTIUM_BOOTS = registerItem("frostium_boots",
 			settings -> new Item(settings.armor(Armor.FROSTIUM_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-	private static Item registerItem(String name, Function<Item.Settings, Item> function) {
-		return Registry.register(Registries.ITEM, Identifier.of(MythicMinerals.MOD_ID, name),
-				function.apply(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MythicMinerals.MOD_ID, name)))));
-	}
-
-	public static void registerItems() {
-		MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Frostium Items");
+	public static void registerFrostiumItems() {
+		MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Frostium Items❄️");
 	}
 }

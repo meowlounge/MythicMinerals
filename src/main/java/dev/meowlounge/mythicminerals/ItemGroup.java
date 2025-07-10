@@ -1,7 +1,9 @@
 package dev.meowlounge.mythicminerals;
 
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
+import dev.meowlounge.mythicminerals.block.PhantomiumBlocks;
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
+import dev.meowlounge.mythicminerals.item.PhantomiumItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -39,6 +41,22 @@ public class ItemGroup {
 						entries.add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE);
 						entries.add(FrostiumBlocks.FROSTIUM_ORE);
 						entries.add(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
+
+						entries.add(PhantomiumItems.PHANTOMIUM);
+						entries.add(PhantomiumItems.RAW_PHANTOMIUM);
+						entries.add(PhantomiumItems.PHANTOMIUM_LEGGINGS);
+						entries.add(PhantomiumItems.PHANTOMIUM_SHOVEL);
+						entries.add(PhantomiumItems.PHANTOMIUM_AXE);
+						entries.add(PhantomiumItems.PHANTOMIUM_BOOTS);
+						entries.add(PhantomiumItems.PHANTOMIUM_CHESTPLATE);
+						entries.add(PhantomiumItems.PHANTOMIUM_HELMET);
+						entries.add(PhantomiumItems.PHANTOMIUM_HOE);
+						entries.add(PhantomiumItems.PHANTOMIUM_PICKAXE);
+						entries.add(PhantomiumItems.PHANTOMIUM_SWORD);
+
+						entries.add(PhantomiumBlocks.PHANTOMIUM_BLOCK);
+						entries.add(PhantomiumBlocks.PHANTOMIUM_ORE);
+						entries.add(PhantomiumBlocks.RAW_PHANTOMIUM_BLOCK);
 					})
 					.build()
 	);

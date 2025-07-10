@@ -1,6 +1,6 @@
 // 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/Item
-f020f3702a142b19409710dddc93daa91ea021c3 data/minecraft/tags/item/enchantable/armor.json
-e29c439c35029008945d6c913a2a7da7478c7d12 data/minecraft/tags/item/enchantable/mining.json
-90ca0c58ee29930a52121fd649ebed3c6ae2c4ca data/minecraft/tags/item/enchantable/mining_loot.json
-dbad8b94268a0b75726208d3660c4b63c410102b data/minecraft/tags/item/enchantable/sharp_weapon.json
-5057c406de9d43b3690a0382718ad68faca038ef data/mythicminerals/tags/item/frostium_repair.json
+a33b5a7b3ab0bcbf8987d2c68542cd03fe30fb70 data/minecraft/tags/item/enchantable/armor.json
+90d6cb96ef5c0097dffd44658155812f278d68af data/minecraft/tags/item/enchantable/mining.json
+334ebdf2e43c60cc475484c51521b47d09213129 data/minecraft/tags/item/enchantable/mining_loot.json
+ef9ff6bfa3fe1cdece7285c8ecc8f71c4a228b64 data/minecraft/tags/item/enchantable/sharp_weapon.json
+28aa7aa35c5286a964ef1cb22aa5ab2ceb24061e data/mythicminerals/tags/item/frostium_repair.json
