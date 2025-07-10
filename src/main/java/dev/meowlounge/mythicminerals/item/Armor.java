@@ -1,7 +1,7 @@
 package dev.meowlounge.mythicminerals.item;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
-import dev.meowlounge.mythicminerals.util.TagsProvider;
+import dev.meowlounge.mythicminerals.TagsProvider;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.item.equipment.EquipmentAsset;
 import net.minecraft.item.equipment.EquipmentType;

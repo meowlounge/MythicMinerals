@@ -1,8 +1,8 @@
 package dev.meowlounge.mythicminerals.datagen.tags;
 
+import dev.meowlounge.mythicminerals.TagsProvider;
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
 import dev.meowlounge.mythicminerals.item.PhantomiumItems;
-import dev.meowlounge.mythicminerals.util.TagsProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;

@@ -1,6 +1,5 @@
-package dev.meowlounge.mythicminerals.util;
+package dev.meowlounge.mythicminerals;
 
-import dev.meowlounge.mythicminerals.MythicMinerals;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
