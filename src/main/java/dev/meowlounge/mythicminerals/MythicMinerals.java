@@ -22,6 +22,6 @@ public class MythicMinerals implements ModInitializer {
 		FrostiumItems.registerFrostiumItems();
 		FrostiumBlocks.registerFrostiumBlocks();
 		PhantomiumBlocks.registerPhantomiumBlocks();
-		PhantomiumItems.registerPahntomiumItems();
+		PhantomiumItems.registerPhantomiumItems();
 	}
 }
