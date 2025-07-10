@@ -21,7 +21,7 @@ import static dev.meowlounge.mythicminerals.block.Utils.registerBlock;
 public class FrostiumBlocks {
 
     public static void registerFrostiumBlocks() {
-        MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Frostium Blocks️❄️");
+        MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Frostium Blocks️");
     }
     public static final Block FROSTIUM_ORE = registerBlock("frostium_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
