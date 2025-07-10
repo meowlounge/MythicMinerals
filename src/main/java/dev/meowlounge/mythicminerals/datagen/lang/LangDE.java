@@ -19,7 +19,7 @@ public class LangDE extends FabricLanguageProvider {
 		translationBuilder.add("block.mythicminerals.frostium_block", "Frostiumblock");
 
 		translationBuilder.add("item.mythicminerals.frostium", "Frostium");
-		translationBuilder.add("item.mythicminerals.raw_frostium", "Rhoesfrostium");
+		translationBuilder.add("item.mythicminerals.raw_frostium", "Rohesfrostium");
 		translationBuilder.add("item.mythicminerals.frostium_sword", "Frostiumschwert");
 		translationBuilder.add("item.mythicminerals.frostium_shovel", "Frostiumschaufel");
 		translationBuilder.add("item.mythicminerals.frostium_pickaxe", "Frostiumspitzhacke");
@@ -29,6 +29,23 @@ public class LangDE extends FabricLanguageProvider {
 		translationBuilder.add("item.mythicminerals.frostium_chestplate", "Frostiumharnisch");
 		translationBuilder.add("item.mythicminerals.frostium_leggings", "Frostiumbeinschutz");
 		translationBuilder.add("item.mythicminerals.frostium_boots", "Frostiumstiefel");
+
+		translationBuilder.add("block.mythicminerals.phantomium_ore", "Phantomiumerz");
+		translationBuilder.add("block.mythicminerals.deepslate_phantomium_ore", "Tiefenschiefer-Phantomiumerz");
+		translationBuilder.add("block.mythicminerals.raw_phantomium_block", "Rohphantomiumblock");
+		translationBuilder.add("block.mythicminerals.phantomium_block", "Phantomiumblock");
+
+		translationBuilder.add("item.mythicminerals.phantomium", "Phantomium");
+		translationBuilder.add("item.mythicminerals.raw_phantomium", "Rohesphantomium");
+		translationBuilder.add("item.mythicminerals.phantomium_sword", "Phantomiumschwert");
+		translationBuilder.add("item.mythicminerals.phantomium_shovel", "Phantomiumschaufel");
+		translationBuilder.add("item.mythicminerals.phantomium_pickaxe", "Phantomiumspitzhacke");
+		translationBuilder.add("item.mythicminerals.phantomium_axe", "Phantomiumaxt");
+		translationBuilder.add("item.mythicminerals.phantomium_hoe", "Phantomiumhacke");
+		translationBuilder.add("item.mythicminerals.phantomium_helmet", "Phantomiumhelm");
+		translationBuilder.add("item.mythicminerals.phantomium_chestplate", "Phantomiumharnisch");
+		translationBuilder.add("item.mythicminerals.phantomium_leggings", "Phantomiumbeinschutz");
+		translationBuilder.add("item.mythicminerals.phantomium_boots", "Phantomiumstiefel");
 
 
 		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
