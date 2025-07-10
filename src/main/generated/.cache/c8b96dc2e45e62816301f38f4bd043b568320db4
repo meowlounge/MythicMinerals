@@ -1,3 +1,5 @@
 // 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/
-a91bc136ff4e9728e2b642adc1da964ad93c2b94 data/mythicminerals/worldgen/configured_feature/frostium_ore_key.json
-7c98931f6b6e135e86036844f665266f7cbdb2d3 data/mythicminerals/worldgen/placed_feature/frostium_ore_placed.json
+7cc18b526730159c5d006e1871d218a7109dc2b2 data/mythicminerals/worldgen/configured_feature/frostium_ore_key.json
+46f287a0af502307574965bc9361a99ae0685d9a data/mythicminerals/worldgen/configured_feature/phantomium_ore_key.json
+d109f356ba2c9b8ffd006a376903651f9b352726 data/mythicminerals/worldgen/placed_feature/frostium_ore_placed.json
+6dfa5ce20da0665a7e01e8589f80ffe3ee736e52 data/mythicminerals/worldgen/placed_feature/phantomium_ore_placed.json

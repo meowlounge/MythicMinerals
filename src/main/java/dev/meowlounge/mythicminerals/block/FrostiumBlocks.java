@@ -16,21 +16,12 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 import java.util.function.Function;
 
+import static dev.meowlounge.mythicminerals.block.Utils.registerBlock;
+
 public class FrostiumBlocks {
-    private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
-        Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name))));
-        registerBlockItem(name, toRegister);
-        return Registry.register(Registries.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name), toRegister);
-    }
 
-    private static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, Identifier.of(MythicMinerals.MOD_ID, name),
-                new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()
-                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MythicMinerals.MOD_ID, name)))));
-    }
-
-    public static void registerModBlocks() {
-        MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Blocks");
+    public static void registerFrostiumBlocks() {
+        MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Frostium Blocks️");
     }
     public static final Block FROSTIUM_ORE = registerBlock("frostium_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),

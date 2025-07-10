@@ -7,7 +7,7 @@ import dev.meowlounge.mythicminerals.datagen.tags.Item;
 import dev.meowlounge.mythicminerals.datagen.lang.LangEN;
 import dev.meowlounge.mythicminerals.datagen.lang.LangDE;
 import dev.meowlounge.mythicminerals.datagen.RegistryData;
-import dev.meowlounge.mythicminerals.datagen.loot_table.FrostiumLoot;
+import dev.meowlounge.mythicminerals.datagen.loot_table.OreLoot;
 import dev.meowlounge.mythicminerals.world.ConfiguredFeatures;
 import dev.meowlounge.mythicminerals.world.PlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -26,7 +26,7 @@ public class MythicMineralsDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(Recipe::new);
 		pack.addProvider(Item::new);
 		pack.addProvider(Block::new);
-		pack.addProvider(FrostiumLoot::new);
+		pack.addProvider(OreLoot::new);
 		pack.addProvider(RegistryData::new);
 	}
 

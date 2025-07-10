@@ -1,7 +1,9 @@
 package dev.meowlounge.mythicminerals.datagen.loot_table;
 
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
+import dev.meowlounge.mythicminerals.block.PhantomiumBlocks;
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
+import dev.meowlounge.mythicminerals.item.PhantomiumItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
@@ -19,8 +21,8 @@ import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
 
-public class FrostiumLoot extends FabricBlockLootTableProvider {
-	public FrostiumLoot(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+public class OreLoot extends FabricBlockLootTableProvider {
+	public OreLoot(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
 		super(dataOutput, registryLookup);
 	}
 
@@ -31,6 +33,10 @@ public class FrostiumLoot extends FabricBlockLootTableProvider {
 
 		addDrop(FrostiumBlocks.FROSTIUM_ORE, oreDrops(FrostiumBlocks.FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM));
 		addDrop(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, multipleOreDrops(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM, 1, 1));
+		addDrop(PhantomiumBlocks.PHANTOMIUM_BLOCK);
+		addDrop(PhantomiumBlocks.RAW_PHANTOMIUM_BLOCK);
+
+		addDrop(PhantomiumBlocks.PHANTOMIUM_ORE, oreDrops(PhantomiumBlocks.PHANTOMIUM_ORE, PhantomiumItems.RAW_PHANTOMIUM));
 	}
 
 	public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

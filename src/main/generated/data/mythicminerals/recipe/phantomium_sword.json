@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "mythicminerals:phantomium",
+    "x": "minecraft:stick"
+  },
+  "pattern": [
+    "#",
+    "#",
+    "x"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mythicminerals:phantomium_sword"
+  }
+}
