@@ -1,8 +1,9 @@
 package dev.meowlounge.mythicminerals;
 
+import dev.meowlounge.mythicminerals.datagen.recipe.FrostiumRecipes;
+import dev.meowlounge.mythicminerals.datagen.recipe.PhantomiumRecipes;
 import dev.meowlounge.mythicminerals.datagen.tags.Block;
 import dev.meowlounge.mythicminerals.datagen.ItemModel;
-import dev.meowlounge.mythicminerals.datagen.Recipe;
 import dev.meowlounge.mythicminerals.datagen.tags.Item;
 import dev.meowlounge.mythicminerals.datagen.lang.LangEN;
 import dev.meowlounge.mythicminerals.datagen.lang.LangDE;
@@ -20,14 +21,18 @@ public class MythicMineralsDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
-		pack.addProvider(ItemModel::new);
 		pack.addProvider(LangDE::new);
 		pack.addProvider(LangEN::new);
-		pack.addProvider(Recipe::new);
+
+		pack.addProvider(ItemModel::new);
 		pack.addProvider(Item::new);
 		pack.addProvider(Block::new);
+
 		pack.addProvider(OreLoot::new);
 		pack.addProvider(RegistryData::new);
+
+		pack.addProvider(PhantomiumRecipes::new);
+		pack.addProvider(FrostiumRecipes::new);
 	}
 
 	@Override

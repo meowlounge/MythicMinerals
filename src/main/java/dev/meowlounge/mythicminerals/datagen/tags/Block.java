@@ -21,7 +21,6 @@ public class Block extends FabricTagProvider.BlockTagProvider {
                 .add(FrostiumBlocks.RAW_FROSTIUM_BLOCK)
                 .add(FrostiumBlocks.FROSTIUM_BLOCK)
                 .add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE)
-
                 .add(PhantomiumBlocks.PHANTOMIUM_ORE)
                 .add(PhantomiumBlocks.RAW_PHANTOMIUM_BLOCK)
                 .add(PhantomiumBlocks.PHANTOMIUM_BLOCK);
@@ -40,7 +39,7 @@ public class Block extends FabricTagProvider.BlockTagProvider {
 
     @Override
     public String getName() {
-        return "Block";
+        return "⛏️ [MythicMinerals]: Registering Block Tags";
     }
 }
 

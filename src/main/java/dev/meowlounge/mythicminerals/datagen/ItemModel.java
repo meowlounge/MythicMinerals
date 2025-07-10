@@ -29,7 +29,6 @@ public class ItemModel extends FabricModelProvider {
 		blockStateModelGenerator.registerSimpleCubeAll(PhantomiumBlocks.RAW_PHANTOMIUM_BLOCK);
 	}
 
-
 	public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 		itemModelGenerator.register(FrostiumItems.RAW_FROSTIUM, Models.GENERATED);
 		itemModelGenerator.register(FrostiumItems.FROSTIUM, Models.GENERATED);
@@ -43,6 +42,8 @@ public class ItemModel extends FabricModelProvider {
 		itemModelGenerator.registerArmor(FrostiumItems.FROSTIUM_BOOTS, Armor.FROSTIUM_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 		itemModelGenerator.registerArmor(FrostiumItems.FROSTIUM_HELMET, Armor.FROSTIUM_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
 
+		// ---------------------- //
+		
 		itemModelGenerator.register(PhantomiumItems.RAW_PHANTOMIUM, Models.GENERATED);
 		itemModelGenerator.register(PhantomiumItems.PHANTOMIUM, Models.GENERATED);
 		itemModelGenerator.register(PhantomiumItems.PHANTOMIUM_SWORD, Models.HANDHELD);

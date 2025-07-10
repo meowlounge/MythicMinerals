@@ -2,7 +2,7 @@ package dev.meowlounge.mythicminerals.datagen.tags;
 
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
 import dev.meowlounge.mythicminerals.item.PhantomiumItems;
-import dev.meowlounge.mythicminerals.util.Tags;
+import dev.meowlounge.mythicminerals.util.TagsProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -16,10 +16,10 @@ public class Item extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        valueLookupBuilder(Tags.Items.FROSTIUM_REPAIR)
+        valueLookupBuilder(TagsProvider.Items.FROSTIUM_REPAIR)
                 .add(FrostiumItems.FROSTIUM);
 
-        valueLookupBuilder(Tags.Items.PHANTOMIUM_REPAIR)
+        valueLookupBuilder(TagsProvider.Items.PHANTOMIUM_REPAIR)
                 .add(PhantomiumItems.PHANTOMIUM);
 
         valueLookupBuilder(net.minecraft.registry.tag.ItemTags.SHARP_WEAPON_ENCHANTABLE)
@@ -40,7 +40,6 @@ public class Item extends FabricTagProvider.ItemTagProvider {
 
         valueLookupBuilder(net.minecraft.registry.tag.ItemTags.MINING_ENCHANTABLE)
                 .add(FrostiumItems.FROSTIUM_PICKAXE)
-
                 .add(PhantomiumItems.PHANTOMIUM_PICKAXE);
 
         valueLookupBuilder(net.minecraft.registry.tag.ItemTags.ARMOR_ENCHANTABLE)
@@ -58,6 +57,6 @@ public class Item extends FabricTagProvider.ItemTagProvider {
 
     @Override
     public String getName() {
-        return "Item";
+        return "⛏️ [MythicMinerals]: Registering Item Tags";
     }
 }

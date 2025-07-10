@@ -30,12 +30,13 @@ public class OreLoot extends FabricBlockLootTableProvider {
 	public void generate() {
 		addDrop(FrostiumBlocks.FROSTIUM_BLOCK);
 		addDrop(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
-
 		addDrop(FrostiumBlocks.FROSTIUM_ORE, oreDrops(FrostiumBlocks.FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM));
 		addDrop(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, multipleOreDrops(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM, 1, 1));
+
+		// ---------------------- //
+
 		addDrop(PhantomiumBlocks.PHANTOMIUM_BLOCK);
 		addDrop(PhantomiumBlocks.RAW_PHANTOMIUM_BLOCK);
-
 		addDrop(PhantomiumBlocks.PHANTOMIUM_ORE, oreDrops(PhantomiumBlocks.PHANTOMIUM_ORE, PhantomiumItems.RAW_PHANTOMIUM));
 	}
 

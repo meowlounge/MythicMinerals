@@ -30,6 +30,8 @@ public class LangEN extends FabricLanguageProvider {
 		translationBuilder.add("item.mythicminerals.frostium_leggings", "Frostium Leggings");
 		translationBuilder.add("item.mythicminerals.frostium_boots", "Frostium Boots");
 
+		// ---------------------- //
+
 		translationBuilder.add("block.mythicminerals.phantomium_ore", "Phantomium Ore");
 		translationBuilder.add("block.mythicminerals.deepslate_phantomium_ore", "Deepslate Phantomium Ore");
 		translationBuilder.add("block.mythicminerals.raw_phantomium_block", "Raw Phantomium Block");
@@ -47,11 +49,13 @@ public class LangEN extends FabricLanguageProvider {
 		translationBuilder.add("item.mythicminerals.phantomium_leggings", "Phantomium Leggings");
 		translationBuilder.add("item.mythicminerals.phantomium_boots", "Phantomium Boots");
 
+		// ---------------------- //
+
 		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
 	}
 
 	@Override
 	public String getName() {
-		return "English Translation Generator";
+		return "⛏️ [MythicMinerals]: English Lang Generator";
 	}
 }
