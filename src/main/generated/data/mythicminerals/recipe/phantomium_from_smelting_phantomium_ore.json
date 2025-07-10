@@ -3,7 +3,7 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 0.25,
-  "group": "frostium",
+  "group": "phantomium",
   "ingredient": "mythicminerals:phantomium_ore",
   "result": {
     "id": "mythicminerals:phantomium"

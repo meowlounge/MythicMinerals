@@ -2,12 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "R": "mythicminerals:raw_phantomium"
+    "#": "mythicminerals:raw_phantomium"
   },
   "pattern": [
-    "RRR",
-    "RRR",
-    "RRR"
+    "###",
+    "###",
+    "###"
   ],
   "result": {
     "count": 1,

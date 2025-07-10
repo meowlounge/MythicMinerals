@@ -3,12 +3,12 @@
   "category": "equipment",
   "key": {
     "#": "mythicminerals:frostium",
-    "x": "minecraft:stick"
+    "X": "minecraft:stick"
   },
   "pattern": [
     "###",
-    " x ",
-    " x "
+    " X ",
+    " X "
   ],
   "result": {
     "count": 1,
