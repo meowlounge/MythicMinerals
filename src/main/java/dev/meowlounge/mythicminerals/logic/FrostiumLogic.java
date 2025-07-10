@@ -1,6 +1,5 @@
 package dev.meowlounge.mythicminerals.logic;
 
-import dev.meowlounge.mythicminerals.item.Armor;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.EquippableComponent;
 import net.minecraft.entity.Entity;
@@ -11,13 +10,13 @@ import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.Box;
 import org.jetbrains.annotations.Nullable;
 
+//TODO: doesnt work yet, fix logic that the slowness is applied. currently the game doesnt know its here...
 public class FrostiumLogic extends Item {
-	private static final int RADIUS = 3;
+	private static final int RADIUS = 5;
 	private static final StatusEffectInstance SLOWNESS = new StatusEffectInstance(StatusEffects.SLOWNESS, 40, 1, true, false);
 
 	public FrostiumLogic(Settings settings) {
@@ -63,11 +62,9 @@ public class FrostiumLogic extends Item {
 			return false;
 		}
 
-		ArmorMaterial frostium = Armor.FROSTIUM_ARMOR_MATERIAL;
-
-		return bootsComp.assetId().get().equals(frostium.assetId())
-				&& legsComp.assetId().get().equals(frostium.assetId())
-				&& chestComp.assetId().get().equals(frostium.assetId())
-				&& helmetComp.assetId().get().equals(frostium.assetId());
+		return bootsComp.assetId().isPresent()
+				&& legsComp.assetId().isPresent()
+				&& chestComp.assetId().isPresent()
+				&& helmetComp.assetId().isPresent();
 	}
 }
