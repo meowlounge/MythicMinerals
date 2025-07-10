@@ -10,7 +10,7 @@ import static dev.meowlounge.mythicminerals.block.Utils.registerBlock;
 
 public class PhantomiumBlocks {
     public static void registerPhantomiumBlocks() {
-        MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Phantomium Blocks👻");
+        MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Phantomium Blocks");
     }
     public static final Block PHANTOMIUM_ORE = registerBlock("phantomium_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
