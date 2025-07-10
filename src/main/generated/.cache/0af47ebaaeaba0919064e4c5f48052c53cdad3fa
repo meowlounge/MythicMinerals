@@ -1,5 +1,5 @@
 // 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/⛏️ [MythicMinerals]: Registering Data
 7cc18b526730159c5d006e1871d218a7109dc2b2 data/mythicminerals/worldgen/configured_feature/frostium_ore_key.json
-9b440695f5bd760e609100dc069f085dd7d2062c data/mythicminerals/worldgen/configured_feature/voidstone_ore_key.json
+4babfa479fe0f92cb905dbaacfefff1eacd9e237 data/mythicminerals/worldgen/configured_feature/stellarium_ore_key.json
 e10b6999695f77d41a062410d652fdde505cd400 data/mythicminerals/worldgen/placed_feature/frostium_ore_placed.json
-8b2dc6550b3a67bf22a1758873d13ad5a725f4fd data/mythicminerals/worldgen/placed_feature/voidstone_ore_placed.json
+416c9439bc47ea985c5902052f9d7b2bcb604d81 data/mythicminerals/worldgen/placed_feature/stellarium_ore_placed.json

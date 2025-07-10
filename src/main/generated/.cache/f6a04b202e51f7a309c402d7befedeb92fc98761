@@ -1,6 +1,6 @@
 // 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/⛏️ [MythicMinerals]: Registering Item Tags
-9cea186b0d380e7541ba7a395ed7ae2fb53184d9 data/minecraft/tags/item/enchantable/armor.json
-e8266de4296f7933e90d00552d26da8dd079889d data/minecraft/tags/item/enchantable/mining.json
-05334dd20b9a59e92f0ffbad5a0de47b1a6718d2 data/minecraft/tags/item/enchantable/mining_loot.json
-be641aa001de64e5fb046a27b481a0dbd3193efc data/minecraft/tags/item/enchantable/sharp_weapon.json
-1b0231a7e4153e8c79254339098a22fb46927b9a data/mythicminerals/tags/item/frostium_repair.json
+db9a7b6ac1413cf1b7debed3727f37a2b8424a7e data/minecraft/tags/item/enchantable/armor.json
+e284cb0cb5b3a22c147c1abe67b5fce40ee574d0 data/minecraft/tags/item/enchantable/mining.json
+3a1da38d48be690890514d5f7a5a0cc2672dcc54 data/minecraft/tags/item/enchantable/mining_loot.json
+350ff6a2f1bbd95a7357f323b14acddafc820d4f data/minecraft/tags/item/enchantable/sharp_weapon.json
+a1d7220cfb254c6eecc5c5c16533bdeaccda1d14 data/mythicminerals/tags/item/frostium_repair.json
