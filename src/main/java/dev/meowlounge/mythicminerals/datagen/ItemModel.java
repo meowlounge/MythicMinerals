@@ -19,12 +19,14 @@ public class ItemModel extends FabricModelProvider {
 
 	@Override
 	public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-		BlockStateModelGenerator.BlockTexturePool FrostiumBlockPool = blockStateModelGenerator.registerCubeAllModelTexturePool(FrostiumBlocks.FROSTIUM_BLOCK);
+		blockStateModelGenerator.registerSimpleCubeAll(FrostiumBlocks.FROSTIUM_BLOCK);
 		blockStateModelGenerator.registerSimpleCubeAll(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE);
 		blockStateModelGenerator.registerSimpleCubeAll(FrostiumBlocks.FROSTIUM_ORE);
 		blockStateModelGenerator.registerSimpleCubeAll(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
 
-		BlockStateModelGenerator.BlockTexturePool PhantomiumBlockPool = blockStateModelGenerator.registerCubeAllModelTexturePool(PhantomiumBlocks.PHANTOMIUM_BLOCK);
+		// ---------------------- //
+
+		blockStateModelGenerator.registerSimpleCubeAll(PhantomiumBlocks.PHANTOMIUM_BLOCK);
 		blockStateModelGenerator.registerSimpleCubeAll(PhantomiumBlocks.PHANTOMIUM_ORE);
 		blockStateModelGenerator.registerSimpleCubeAll(PhantomiumBlocks.RAW_PHANTOMIUM_BLOCK);
 	}
@@ -43,7 +45,7 @@ public class ItemModel extends FabricModelProvider {
 		itemModelGenerator.registerArmor(FrostiumItems.FROSTIUM_HELMET, Armor.FROSTIUM_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
 
 		// ---------------------- //
-		
+
 		itemModelGenerator.register(PhantomiumItems.RAW_PHANTOMIUM, Models.GENERATED);
 		itemModelGenerator.register(PhantomiumItems.PHANTOMIUM, Models.GENERATED);
 		itemModelGenerator.register(PhantomiumItems.PHANTOMIUM_SWORD, Models.HANDHELD);
