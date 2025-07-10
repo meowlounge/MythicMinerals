@@ -16,9 +16,6 @@
     ],
     "fabric-datagen": [
       "dev.meowlounge.mythicminerals.MythicMineralsDataGenerator"
-    ],
-    "client": [
-      "dev.meowlounge.mythicminerals.MythicMineralsClient"
     ]
   },
   "depends": {
