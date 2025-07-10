@@ -35,7 +35,7 @@ public class PhantomiumItems {
     public static final Item PHANTOMIUM_BOOTS = registerItem("phantomium_boots",
             settings -> new Item(settings.armor(Armor.PHANTOMIUM_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-    public static void registerPahntomiumItems() {
+    public static void registerPhantomiumItems() {
         MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Phantomium Items");
     }
 }
