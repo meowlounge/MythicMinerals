@@ -1,14 +1,14 @@
 package dev.meowlounge.mythicminerals;
 
+import dev.meowlounge.mythicminerals.datagen.ItemModel;
+import dev.meowlounge.mythicminerals.datagen.RegistryData;
+import dev.meowlounge.mythicminerals.datagen.lang.LangDE;
+import dev.meowlounge.mythicminerals.datagen.lang.LangEN;
+import dev.meowlounge.mythicminerals.datagen.loot_table.OreLoot;
 import dev.meowlounge.mythicminerals.datagen.recipe.FrostiumRecipes;
 import dev.meowlounge.mythicminerals.datagen.recipe.StellariumRecipes;
 import dev.meowlounge.mythicminerals.datagen.tags.Block;
-import dev.meowlounge.mythicminerals.datagen.ItemModel;
 import dev.meowlounge.mythicminerals.datagen.tags.Item;
-import dev.meowlounge.mythicminerals.datagen.lang.LangEN;
-import dev.meowlounge.mythicminerals.datagen.lang.LangDE;
-import dev.meowlounge.mythicminerals.datagen.RegistryData;
-import dev.meowlounge.mythicminerals.datagen.loot_table.OreLoot;
 import dev.meowlounge.mythicminerals.world.ConfiguredFeatures;
 import dev.meowlounge.mythicminerals.world.PlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;

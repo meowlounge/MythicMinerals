@@ -45,7 +45,8 @@ public class ConfiguredFeatures {
 	}
 
 	private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,
-																				   RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+																				   RegistryKey<ConfiguredFeature<?, ?>> key,
+																				   F feature, FC configuration) {
 		context.register(key, new ConfiguredFeature<>(feature, configuration));
 	}
 }

@@ -14,15 +14,15 @@ import net.minecraft.util.Identifier;
 import java.util.function.Function;
 
 public class RegisterHandler {
-    public static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
-        Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name))));
-        registerBlockItem(name, toRegister);
-        return Registry.register(Registries.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name), toRegister);
-    }
+	public static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
+		Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name))));
+		registerBlockItem(name, toRegister);
+		return Registry.register(Registries.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name), toRegister);
+	}
 
-    public static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, Identifier.of(MythicMinerals.MOD_ID, name),
-                new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()
-                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MythicMinerals.MOD_ID, name)))));
-    }
+	public static void registerBlockItem(String name, Block block) {
+		Registry.register(Registries.ITEM, Identifier.of(MythicMinerals.MOD_ID, name),
+				new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()
+						.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MythicMinerals.MOD_ID, name)))));
+	}
 }

@@ -19,19 +19,19 @@ public class FrostiumItems {
 	public static final Item FROSTIUM = registerItem("frostium", Item::new);
 
 	public static final Item FROSTIUM_SWORD = registerItem("frostium_sword",
-			settings -> new Item(settings.sword(FrostiumItems.FROSTIUM_TOOL_MATERIAL,4,-2.4F)));
+			settings -> new Item(settings.sword(FrostiumItems.FROSTIUM_TOOL_MATERIAL, 4, -2.4F)));
 
 	public static final Item FROSTIUM_SHOVEL = registerItem("frostium_shovel",
-			settings -> new ShovelItem(FrostiumItems.FROSTIUM_TOOL_MATERIAL,-1,-3, settings));
+			settings -> new ShovelItem(FrostiumItems.FROSTIUM_TOOL_MATERIAL, -1, -3, settings));
 
 	public static final Item FROSTIUM_PICKAXE = registerItem("frostium_pickaxe",
-			settings -> new Item(settings.pickaxe(FrostiumItems.FROSTIUM_TOOL_MATERIAL,-1,-3)));
+			settings -> new Item(settings.pickaxe(FrostiumItems.FROSTIUM_TOOL_MATERIAL, -1, -3)));
 
 	public static final Item FROSTIUM_AXE = registerItem("frostium_axe",
-			settings -> new AxeItem(FrostiumItems.FROSTIUM_TOOL_MATERIAL,5,-3.1F, settings));
+			settings -> new AxeItem(FrostiumItems.FROSTIUM_TOOL_MATERIAL, 5, -3.1F, settings));
 
 	public static final Item FROSTIUM_HOE = registerItem("frostium_hoe",
-			settings -> new HoeItem(FrostiumItems.FROSTIUM_TOOL_MATERIAL,-1,-3, settings));
+			settings -> new HoeItem(FrostiumItems.FROSTIUM_TOOL_MATERIAL, -1, -3, settings));
 
 	// ---------------------- //
 
