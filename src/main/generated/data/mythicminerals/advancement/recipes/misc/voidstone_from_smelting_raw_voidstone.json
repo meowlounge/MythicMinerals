@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_voidstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mythicminerals:raw_voidstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mythicminerals:voidstone_from_smelting_raw_voidstone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_voidstone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mythicminerals:voidstone_from_smelting_raw_voidstone"
+    ]
+  }
+}
