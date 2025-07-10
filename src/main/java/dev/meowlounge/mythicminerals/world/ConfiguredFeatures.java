@@ -35,7 +35,7 @@ public class ConfiguredFeatures {
 		register(context, FROSTIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(FrostiumOres, 2));
 
 		List<OreFeatureConfig.Target> PhantomiumOres =
-				List.of(OreFeatureConfig.createTarget(endstoneReplaceables, PhantomiumBlocks.PHANTOMIUM_BLOCK.getDefaultState()));
+				List.of(OreFeatureConfig.createTarget(endstoneReplaceables, PhantomiumBlocks.PHANTOMIUM_ORE.getDefaultState()));
 
 		register(context, PHANTOMIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(PhantomiumOres, 4));
 	}
