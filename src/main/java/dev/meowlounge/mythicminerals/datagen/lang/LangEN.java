@@ -34,11 +34,11 @@ public class LangEN extends FabricLanguageProvider {
 
 		translationBuilder.add("block.mythicminerals.phantomium_ore", "Phantomium Ore");
 		translationBuilder.add("block.mythicminerals.deepslate_phantomium_ore", "Deepslate Phantomium Ore");
-		translationBuilder.add("block.mythicminerals.raw_phantomium_block", "Raw Phantomium Block");
+		translationBuilder.add("block.mythicminerals.raw_phantomium_block", "Block of Raw Phantomium");
 		translationBuilder.add("block.mythicminerals.phantomium_block", "Phantomium Block");
 
 		translationBuilder.add("item.mythicminerals.phantomium", "Phantomium");
-		translationBuilder.add("item.mythicminerals.raw_phantomium", "Raw Phantomium");
+		translationBuilder.add("item.mythicminerals.raw_phantomium", "Block of Raw Phantomium");
 		translationBuilder.add("item.mythicminerals.phantomium_sword", "Phantomium Sword");
 		translationBuilder.add("item.mythicminerals.phantomium_shovel", "Phantomium Shovel");
 		translationBuilder.add("item.mythicminerals.phantomium_pickaxe", "Phantomium Pickaxe");
