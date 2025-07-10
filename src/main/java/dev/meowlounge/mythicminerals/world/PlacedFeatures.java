@@ -18,6 +18,7 @@ import java.util.List;
 
 public class PlacedFeatures {
 	public static final RegistryKey<PlacedFeature> FROSTIUM_PLACED_KEY = registerKey("frostium_ore_placed");
+	public static final RegistryKey<PlacedFeature> PHANTOMIUM_PLACED_KEY = registerKey("phantomium_ore_placed");
 
 	public static void bootstrap(Registerable<PlacedFeature> context) {
 		var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -25,7 +26,12 @@ public class PlacedFeatures {
 		register(context, FROSTIUM_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.FROSTIUM_ORE_KEY),
 				OrePlacement.modifiersWithRarity(1,
 						HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(12))));
+
+		register(context, PHANTOMIUM_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.PHANTOMIUM_ORE_KEY),
+				OrePlacement.modifiersWithRarity(800,
+						HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(100))));
 	}
+
 
 	public static RegistryKey<PlacedFeature> registerKey(String name) {
 		return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MythicMinerals.MOD_ID, name));
