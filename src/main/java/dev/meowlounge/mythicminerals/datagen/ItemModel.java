@@ -69,7 +69,7 @@ public class ItemModel extends FabricModelProvider {
 
         itemModelGenerator.register(StellariumItems.STELLARIUM_SCRAP, Models.GENERATED);
         itemModelGenerator.register(StellariumItems.STELLARIUM, Models.GENERATED);
-        itemModelGenerator.register(StellariumItems.STELLARIUM_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(StellariumItems.STELLARIUM_SWORD, Models.HANDHELD);
         itemModelGenerator.register(StellariumItems.STELLARIUM_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(StellariumItems.STELLARIUM_AXE, Models.HANDHELD);

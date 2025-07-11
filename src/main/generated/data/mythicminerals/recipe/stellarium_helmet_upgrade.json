@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "mythicminerals:stellarium",
+  "base": "minecraft:netherite_helmet",
+  "result": {
+    "id": "mythicminerals:stellarium_helmet"
+  },
+  "template": "mythicminerals:stellarium_upgrade_smithing_template"
+}
