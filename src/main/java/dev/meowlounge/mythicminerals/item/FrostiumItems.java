@@ -2,6 +2,7 @@ package dev.meowlounge.mythicminerals.item;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
 import dev.meowlounge.mythicminerals.TagsProvider;
+import dev.meowlounge.mythicminerals.logic.FrostiumLogic;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.tag.BlockTags;
@@ -34,7 +35,7 @@ public class FrostiumItems {
     // ---------------------- //
 
     public static final Item FROSTIUM_HELMET = registerItem("frostium_helmet",
-            settings -> new Item(settings.armor(Armor.FROSTIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
+            settings -> new FrostiumLogic(settings.armor(Armor.FROSTIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
 
     public static final Item FROSTIUM_CHESTPLATE = registerItem("frostium_chestplate",
             settings -> new Item(settings.armor(Armor.FROSTIUM_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));

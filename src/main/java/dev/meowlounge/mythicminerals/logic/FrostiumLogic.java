@@ -1,46 +1,52 @@
 package dev.meowlounge.mythicminerals.logic;
 
-import net.minecraft.entity.Entity;
+import dev.meowlounge.mythicminerals.item.FrostiumItems;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.math.Box;
+import net.minecraft.world.World;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import org.jetbrains.annotations.Nullable;
 
-import static dev.meowlounge.mythicminerals.item.FrostiumItems.*;
-
 public class FrostiumLogic extends Item {
-	private static final int RADIUS = 5;
-	private static final StatusEffectInstance SLOWNESS = new StatusEffectInstance(StatusEffects.SLOWNESS, 40, 1, true, false);
+//	private static final StatusEffectInstance FIRE_RESISTANCE = new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 1, 1, false, false, false);
 
 	public FrostiumLogic(Settings settings) {
 		super(settings);
 	}
 
 	@Override
-	public void inventoryTick(ItemStack stack, ServerWorld world, Entity entity, @Nullable EquipmentSlot slot) {
-		if (!world.isClient() && entity instanceof PlayerEntity player) {
-			if (hasFullFrostiumArmorOn(player)) {
-				System.out.println("[FROSTIUM] " + player.getName().getString() + " is wearing full Frostium armor.");
-				applySlownessToNearbyMobs(world, player);
-			}
+	public void inventoryTick(ItemStack stack, ServerWorld world, net.minecraft.entity.Entity entity, @Nullable EquipmentSlot slot) {
+		if (!(entity instanceof PlayerEntity player)) return;
+		if (world.isClient) return;
+
+		if (hasFullFrostiumArmorOn(player)) {
+			grantColdArmorEffects(player, world);
+
+//			if (isInNether(world)) {
+//				applyNetherPenalties(player);
+//			}
 		}
 
 		super.inventoryTick(stack, world, entity, slot);
 	}
 
-	private void applySlownessToNearbyMobs(ServerWorld world, PlayerEntity player) {
-		Box box = new Box(player.getBlockPos()).expand(RADIUS);
-		for (MobEntity mob : world.getEntitiesByClass(MobEntity.class, box, mob -> mob.isAlive() && !mob.hasStatusEffect(StatusEffects.SLOWNESS))) {
-			mob.addStatusEffect(SLOWNESS);
-			System.out.println("[FROSTIUM] Applied slowness to mob: " + mob.getName().getString() + " at " + mob.getBlockPos());
-		}
+	private void grantColdArmorEffects(PlayerEntity player, World world) {
+		//* player cant burn since the armor cools him down.
+		player.setOnFireFor(0);
 	}
+
+//	TODO: add logic to debuff player in nether when frostium armor is on.
+//	private void applyNetherPenalties(PlayerEntity player) {
+//		player.setOnFireFor(0);
+//	}
+
+//	private boolean isInNether(ServerWorld world) {
+//		return world.getRegistryKey().getRegistry().getPath().equals("the_nether");
+//	}
 
 	private boolean hasFullFrostiumArmorOn(PlayerEntity player) {
 		ItemStack boots = player.getEquippedStack(EquipmentSlot.FEET);
@@ -48,13 +54,9 @@ public class FrostiumLogic extends Item {
 		ItemStack chestplate = player.getEquippedStack(EquipmentSlot.CHEST);
 		ItemStack helmet = player.getEquippedStack(EquipmentSlot.HEAD);
 
-		if (boots.isEmpty() || leggings.isEmpty() || chestplate.isEmpty() || helmet.isEmpty()) {
-			return false;
-		}
-
-		return boots.getItem() == FROSTIUM_BOOTS &&
-				leggings.getItem() == FROSTIUM_LEGGINGS &&
-				chestplate.getItem() == FROSTIUM_CHESTPLATE &&
-				helmet.getItem() == FROSTIUM_HELMET;
+		return boots.getItem() == FrostiumItems.FROSTIUM_BOOTS &&
+				leggings.getItem() == FrostiumItems.FROSTIUM_LEGGINGS &&
+				chestplate.getItem() == FrostiumItems.FROSTIUM_CHESTPLATE &&
+				helmet.getItem() == FrostiumItems.FROSTIUM_HELMET;
 	}
 }
