@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "mythicminerals:block/stellarium_ore"
+    "end": "mythicminerals:block/stellarium_ore_top",
+    "side": "mythicminerals:block/stellarium_ore_side"
   }
 }

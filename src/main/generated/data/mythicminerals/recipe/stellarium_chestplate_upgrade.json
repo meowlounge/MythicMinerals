@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "mythicminerals:stellarium",
+  "base": "minecraft:netherite_chestplate",
+  "result": {
+    "id": "mythicminerals:stellarium_chestplate"
+  },
+  "template": "mythicminerals:stellarium_upgrade_smithing_template"
+}

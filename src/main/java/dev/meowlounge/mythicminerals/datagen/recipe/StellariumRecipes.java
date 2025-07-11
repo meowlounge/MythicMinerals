@@ -2,132 +2,153 @@ package dev.meowlounge.mythicminerals.datagen.recipe;
 
 import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import dev.meowlounge.mythicminerals.item.StellariumItems;
+import dev.meowlounge.mythicminerals.item.VoidstoneItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.data.recipe.SmithingTransformRecipeJsonBuilder;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.book.RecipeCategory;
+
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class StellariumRecipes extends FabricRecipeProvider {
-	public StellariumRecipes(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
-		super(output, registriesFuture);
-	}
+    public StellariumRecipes(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
+    }
 
-	@Override
-	protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup wrapperLookup, RecipeExporter exporter) {
-		return new RecipeGenerator(wrapperLookup, exporter) {
-			@Override
-			public void generate() {
-				List<ItemConvertible> STELLARIUM_SMELTABLES = List.of(
-						StellariumItems.RAW_STELLARIUM,
-						StellariumBlocks.STELLARIUM_ORE,
-						StellariumBlocks.RAW_STELLARIUM_BLOCK
-				);
+    @Override
+    protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup wrapperLookup, RecipeExporter exporter) {
+        return new RecipeGenerator(wrapperLookup, exporter) {
+            @Override
+            public void generate() {
+                List<ItemConvertible> STELLARIUM_SMELTABLES = List.of(
+                        StellariumBlocks.STELLARIUM_ORE
+                );
 
-				offerSmelting(STELLARIUM_SMELTABLES, RecipeCategory.MISC, StellariumItems.STELLARIUM, 0.25f, 200, "stellarium");
-				offerBlasting(STELLARIUM_SMELTABLES, RecipeCategory.MISC, StellariumItems.STELLARIUM, 0.25f, 100, "stellarium");
+                offerSmelting(STELLARIUM_SMELTABLES, RecipeCategory.MISC, StellariumItems.STELLARIUM_SCRAP, 0.25f, 300, "stellarium");
+                offerBlasting(STELLARIUM_SMELTABLES, RecipeCategory.MISC, StellariumItems.STELLARIUM_SCRAP, 0.25f, 150, "stellarium");
 
-				offerReversibleCompactingRecipes(RecipeCategory.MISC, StellariumItems.STELLARIUM, RecipeCategory.BUILDING_BLOCKS, StellariumBlocks.STELLARIUM_BLOCK);
+                createShapeless(RecipeCategory.MISC, StellariumItems.STELLARIUM, 1)
+                        .input(StellariumItems.STELLARIUM_SCRAP, 4)
+                        .input(VoidstoneItems.VOIDSTONE, 4)
+                        .criterion(hasItem(StellariumItems.STELLARIUM_SCRAP), conditionsFromItem(StellariumItems.STELLARIUM_SCRAP))
+                        .offerTo(exporter);
 
-				createShaped(RecipeCategory.BUILDING_BLOCKS, StellariumBlocks.RAW_STELLARIUM_BLOCK)
-						.pattern("###")
-						.pattern("###")
-						.pattern("###")
-						.input('#', StellariumItems.RAW_STELLARIUM)
-						.criterion(hasItem(StellariumItems.RAW_STELLARIUM), conditionsFromItem(StellariumItems.RAW_STELLARIUM))
-						.offerTo(exporter);
 
-				createShapeless(RecipeCategory.MISC, StellariumItems.RAW_STELLARIUM, 9)
-						.input(StellariumBlocks.RAW_STELLARIUM_BLOCK)
-						.criterion(hasItem(StellariumBlocks.RAW_STELLARIUM_BLOCK), conditionsFromItem(StellariumBlocks.RAW_STELLARIUM_BLOCK))
-						.offerTo(exporter);
+                createShaped(RecipeCategory.BUILDING_BLOCKS, StellariumBlocks.STELLARIUM_BLOCK, 1)
+                        .pattern("###")
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', StellariumItems.STELLARIUM)
+                        .criterion(hasItem(StellariumBlocks.STELLARIUM_BLOCK), conditionsFromItem(StellariumBlocks.STELLARIUM_BLOCK))
+                        .offerTo(exporter);
 
-				createShaped(RecipeCategory.COMBAT, StellariumItems.STELLARIUM_SWORD)
-						.pattern("#")
-						.pattern("#")
-						.pattern("X")
-						.input('#', StellariumItems.STELLARIUM)
-						.input('X', Items.STICK)
-						.criterion(hasItem(Items.DIAMOND_SWORD), conditionsFromItem(Items.DIAMOND_SWORD))
-						.offerTo(exporter);
+                createShaped(RecipeCategory.MISC, StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE, 2)
+                        .pattern("#X#")
+                        .pattern("#*#")
+                        .pattern("###")
+                        .input('#', Items.END_STONE)
+                        .input('X', VoidstoneItems.VOIDSTONE)
+                        .input('*', StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE)
+                        .criterion(hasItem(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE), conditionsFromItem(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE))
+                        .offerTo(exporter);
 
-				createShaped(RecipeCategory.TOOLS, StellariumItems.STELLARIUM_HOE)
-						.pattern("## ")
-						.pattern(" X ")
-						.pattern(" X ")
-						.input('#', StellariumItems.STELLARIUM)
-						.input('X', Items.STICK)
-						.criterion(hasItem(Items.DIAMOND_HOE), conditionsFromItem(Items.DIAMOND_HOE))
-						.offerTo(exporter);
+                SmithingTransformRecipeJsonBuilder.create(
+                                Ingredient.ofItems(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE),
+                                Ingredient.ofItems(Items.NETHERITE_SWORD),
+                                Ingredient.ofItems(StellariumItems.STELLARIUM),
+                                RecipeCategory.COMBAT,
+                                StellariumItems.STELLARIUM_SWORD
+                        ).criterion("has_netherite_sword", conditionsFromItem(Items.NETHERITE_SWORD))
+                        .offerTo(exporter, "stellarium_sword_upgrade");
 
-				createShaped(RecipeCategory.TOOLS, StellariumItems.STELLARIUM_AXE)
-						.pattern("## ")
-						.pattern("#X ")
-						.pattern(" X ")
-						.input('#', StellariumItems.STELLARIUM)
-						.input('X', Items.STICK)
-						.criterion(hasItem(Items.DIAMOND_AXE), conditionsFromItem(Items.DIAMOND_AXE))
-						.offerTo(exporter);
+                SmithingTransformRecipeJsonBuilder.create(
+                                Ingredient.ofItems(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE),
+                                Ingredient.ofItems(Items.NETHERITE_PICKAXE),
+                                Ingredient.ofItems(StellariumItems.STELLARIUM),
+                                RecipeCategory.TOOLS,
+                                StellariumItems.STELLARIUM_PICKAXE
+                        ).criterion("has_netherite_pickaxe", conditionsFromItem(Items.NETHERITE_PICKAXE))
+                        .offerTo(exporter, "stellarium_pickaxe_upgrade");
 
-				createShaped(RecipeCategory.TOOLS, StellariumItems.STELLARIUM_PICKAXE)
-						.pattern("###")
-						.pattern(" X ")
-						.pattern(" X ")
-						.input('#', StellariumItems.STELLARIUM)
-						.input('X', Items.STICK)
-						.criterion(hasItem(Items.DIAMOND_PICKAXE), conditionsFromItem(Items.DIAMOND_PICKAXE))
-						.offerTo(exporter);
+                SmithingTransformRecipeJsonBuilder.create(
+                                Ingredient.ofItems(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE),
+                                Ingredient.ofItems(Items.NETHERITE_AXE),
+                                Ingredient.ofItems(StellariumItems.STELLARIUM),
+                                RecipeCategory.TOOLS,
+                                StellariumItems.STELLARIUM_AXE
+                        ).criterion("has_netherite_axe", conditionsFromItem(Items.NETHERITE_AXE))
+                        .offerTo(exporter, "stellarium_axe_upgrade");
 
-				createShaped(RecipeCategory.TOOLS, StellariumItems.STELLARIUM_SHOVEL)
-						.pattern("#")
-						.pattern("X")
-						.pattern("X")
-						.input('#', StellariumItems.STELLARIUM)
-						.input('X', Items.STICK)
-						.criterion(hasItem(Items.DIAMOND_SHOVEL), conditionsFromItem(Items.DIAMOND_SHOVEL))
-						.offerTo(exporter);
+                SmithingTransformRecipeJsonBuilder.create(
+                                Ingredient.ofItems(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE),
+                                Ingredient.ofItems(Items.NETHERITE_HOE),
+                                Ingredient.ofItems(StellariumItems.STELLARIUM),
+                                RecipeCategory.TOOLS,
+                                StellariumItems.STELLARIUM_HOE
+                        ).criterion("has_netherite_hoe", conditionsFromItem(Items.NETHERITE_HOE))
+                        .offerTo(exporter, "stellarium_hoe_upgrade");
 
-				createShaped(RecipeCategory.COMBAT, StellariumItems.STELLARIUM_HELMET)
-						.pattern("###")
-						.pattern("# #")
-						.input('#', StellariumItems.STELLARIUM)
-						.criterion(hasItem(Items.DIAMOND_HELMET), conditionsFromItem(Items.DIAMOND_HELMET))
-						.offerTo(exporter);
+                SmithingTransformRecipeJsonBuilder.create(
+                                Ingredient.ofItems(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE),
+                                Ingredient.ofItems(Items.NETHERITE_SHOVEL),
+                                Ingredient.ofItems(StellariumItems.STELLARIUM),
+                                RecipeCategory.TOOLS,
+                                StellariumItems.STELLARIUM_SHOVEL
+                        ).criterion("has_netherite_shovel", conditionsFromItem(Items.NETHERITE_SHOVEL))
+                        .offerTo(exporter, "stellarium_shovel_upgrade");
 
-				createShaped(RecipeCategory.COMBAT, StellariumItems.STELLARIUM_CHESTPLATE)
-						.pattern("# #")
-						.pattern("###")
-						.pattern("###")
-						.input('#', StellariumItems.STELLARIUM)
-						.criterion(hasItem(Items.DIAMOND_CHESTPLATE), conditionsFromItem(Items.DIAMOND_CHESTPLATE))
-						.offerTo(exporter);
+                SmithingTransformRecipeJsonBuilder.create(
+                                Ingredient.ofItems(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE),
+                                Ingredient.ofItems(Items.NETHERITE_CHESTPLATE),
+                                Ingredient.ofItems(StellariumItems.STELLARIUM),
+                                RecipeCategory.COMBAT,
+                                StellariumItems.STELLARIUM_CHESTPLATE
+                        ).criterion("has_netherite_chestplate", conditionsFromItem(Items.NETHERITE_CHESTPLATE))
+                        .offerTo(exporter, "stellarium_chestplate_upgrade");
 
-				createShaped(RecipeCategory.COMBAT, StellariumItems.STELLARIUM_LEGGINGS)
-						.pattern("###")
-						.pattern("# #")
-						.pattern("# #")
-						.input('#', StellariumItems.STELLARIUM)
-						.criterion(hasItem(Items.DIAMOND_LEGGINGS), conditionsFromItem(Items.DIAMOND_LEGGINGS))
-						.offerTo(exporter);
+                SmithingTransformRecipeJsonBuilder.create(
+                                Ingredient.ofItems(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE),
+                                Ingredient.ofItems(Items.NETHERITE_HELMET),
+                                Ingredient.ofItems(StellariumItems.STELLARIUM),
+                                RecipeCategory.COMBAT,
+                                StellariumItems.STELLARIUM_HELMET
+                        ).criterion("has_netherite_helmet", conditionsFromItem(Items.NETHERITE_HELMET))
+                        .offerTo(exporter, "stellarium_helmet_upgrade");
 
-				createShaped(RecipeCategory.COMBAT, StellariumItems.STELLARIUM_BOOTS)
-						.pattern("# #")
-						.pattern("# #")
-						.input('#', StellariumItems.STELLARIUM)
-						.criterion(hasItem(Items.DIAMOND_BOOTS), conditionsFromItem(Items.DIAMOND_BOOTS))
-						.offerTo(exporter);
-			}
-		};
-	}
+                SmithingTransformRecipeJsonBuilder.create(
+                                Ingredient.ofItems(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE),
+                                Ingredient.ofItems(Items.NETHERITE_LEGGINGS),
+                                Ingredient.ofItems(StellariumItems.STELLARIUM),
+                                RecipeCategory.COMBAT,
+                                StellariumItems.STELLARIUM_LEGGINGS
+                        ).criterion("has_netherite_leggings", conditionsFromItem(Items.NETHERITE_LEGGINGS))
+                        .offerTo(exporter, "stellarium_leggings_upgrade");
 
-	@Override
-	public String getName() {
-		return "⛏️ [MythicMinerals]: Registering Phantomium Recipes";
-	}
+                SmithingTransformRecipeJsonBuilder.create(
+                                Ingredient.ofItems(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE),
+                                Ingredient.ofItems(Items.NETHERITE_BOOTS),
+                                Ingredient.ofItems(StellariumItems.STELLARIUM),
+                                RecipeCategory.COMBAT,
+                                StellariumItems.STELLARIUM_BOOTS
+                        ).criterion("has_netherite_boots", conditionsFromItem(Items.NETHERITE_BOOTS))
+                        .offerTo(exporter, "stellarium_boots_upgrade");
+
+            }
+        };
+
+    }
+
+
+    @Override
+    public String getName() {
+        return "⛏️ [MythicMinerals]: Registering Stellarium Recipes";
+    }
 }

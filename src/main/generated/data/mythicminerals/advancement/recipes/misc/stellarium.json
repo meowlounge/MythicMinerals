@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stellarium_block": {
+    "has_stellarium_scrap": {
       "conditions": {
         "items": [
           {
-            "items": "mythicminerals:stellarium_block"
+            "items": "mythicminerals:stellarium_scrap"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_stellarium_block"
+      "has_stellarium_scrap"
     ]
   ],
   "rewards": {
