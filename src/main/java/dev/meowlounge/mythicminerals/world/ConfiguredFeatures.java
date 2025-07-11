@@ -44,7 +44,7 @@ public class ConfiguredFeatures {
         List<OreFeatureConfig.Target> StellariumOres =
                 List.of(OreFeatureConfig.createTarget(endstoneReplaceables, StellariumBlocks.STELLARIUM_ORE.getDefaultState()));
 
-        register(context, STELLARIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(StellariumOres, 10));
+        register(context, STELLARIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(StellariumOres, 2));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
