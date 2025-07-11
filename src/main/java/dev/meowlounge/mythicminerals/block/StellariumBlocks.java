@@ -6,7 +6,7 @@ import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
-import static dev.meowlounge.mythicminerals.block.Utils.registerBlock;
+import static dev.meowlounge.mythicminerals.block.BlockUtils.*;
 
 public class StellariumBlocks {
     public static final Block STELLARIUM_ORE = registerBlock("stellarium_ore",
