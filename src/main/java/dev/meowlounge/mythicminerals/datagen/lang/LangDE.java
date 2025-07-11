@@ -32,22 +32,22 @@ public class LangDE extends FabricLanguageProvider {
 
 		// ---------------------- //
 
-		translationBuilder.add("block.mythicminerals.phantomium_ore", "Phantomiumerz");
-		translationBuilder.add("block.mythicminerals.deepslate_phantomium_ore", "Tiefenschiefer-Phantomiumerz");
-		translationBuilder.add("block.mythicminerals.raw_phantomium_block", "Rohphantomiumblock");
-		translationBuilder.add("block.mythicminerals.phantomium_block", "Phantomiumblock");
+		translationBuilder.add("block.mythicminerals.stellarium_ore", "Stellariumerz");
+		translationBuilder.add("block.mythicminerals.deepslate_stellarium_ore", "Tiefenschiefer-Stellariumerz");
+		translationBuilder.add("block.mythicminerals.raw_stellarium_block", "Rohstellariumblock");
+		translationBuilder.add("block.mythicminerals.stellarium_block", "Stellariumblock");
 
-		translationBuilder.add("item.mythicminerals.phantomium", "Phantomium");
-		translationBuilder.add("item.mythicminerals.raw_phantomium", "Rohesphantomium");
-		translationBuilder.add("item.mythicminerals.phantomium_sword", "Phantomiumschwert");
-		translationBuilder.add("item.mythicminerals.phantomium_shovel", "Phantomiumschaufel");
-		translationBuilder.add("item.mythicminerals.phantomium_pickaxe", "Phantomiumspitzhacke");
-		translationBuilder.add("item.mythicminerals.phantomium_axe", "Phantomiumaxt");
-		translationBuilder.add("item.mythicminerals.phantomium_hoe", "Phantomiumhacke");
-		translationBuilder.add("item.mythicminerals.phantomium_helmet", "Phantomiumhelm");
-		translationBuilder.add("item.mythicminerals.phantomium_chestplate", "Phantomiumharnisch");
-		translationBuilder.add("item.mythicminerals.phantomium_leggings", "Phantomiumbeinschutz");
-		translationBuilder.add("item.mythicminerals.phantomium_boots", "Phantomiumstiefel");
+		translationBuilder.add("item.mythicminerals.stellarium", "Stellarium");
+		translationBuilder.add("item.mythicminerals.raw_stellarium", "Rohstellarium");
+		translationBuilder.add("item.mythicminerals.stellarium_sword", "Stellariumschwert");
+		translationBuilder.add("item.mythicminerals.stellarium_shovel", "Stellariumschaufel");
+		translationBuilder.add("item.mythicminerals.stellarium_pickaxe", "Stellariumspitzhacke");
+		translationBuilder.add("item.mythicminerals.stellarium_axe", "Stellariumaxt");
+		translationBuilder.add("item.mythicminerals.stellarium_hoe", "Stellariumhacke");
+		translationBuilder.add("item.mythicminerals.stellarium_helmet", "Stellariumhelm");
+		translationBuilder.add("item.mythicminerals.stellarium_chestplate", "Stellariumharnisch");
+		translationBuilder.add("item.mythicminerals.stellarium_leggings", "Stellariumbeinschutz");
+		translationBuilder.add("item.mythicminerals.stellarium_boots", "Stellariumstiefel");
 
 		// ---------------------- //
 

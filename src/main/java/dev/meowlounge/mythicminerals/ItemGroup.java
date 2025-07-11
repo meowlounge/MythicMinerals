@@ -1,9 +1,9 @@
 package dev.meowlounge.mythicminerals;
 
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
-import dev.meowlounge.mythicminerals.block.PhantomiumBlocks;
+import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
-import dev.meowlounge.mythicminerals.item.PhantomiumItems;
+import dev.meowlounge.mythicminerals.item.StellariumItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -42,21 +42,21 @@ public class ItemGroup {
 						entries.add(FrostiumBlocks.FROSTIUM_ORE);
 						entries.add(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
 
-						entries.add(PhantomiumItems.PHANTOMIUM);
-						entries.add(PhantomiumItems.RAW_PHANTOMIUM);
-						entries.add(PhantomiumItems.PHANTOMIUM_LEGGINGS);
-						entries.add(PhantomiumItems.PHANTOMIUM_SHOVEL);
-						entries.add(PhantomiumItems.PHANTOMIUM_AXE);
-						entries.add(PhantomiumItems.PHANTOMIUM_BOOTS);
-						entries.add(PhantomiumItems.PHANTOMIUM_CHESTPLATE);
-						entries.add(PhantomiumItems.PHANTOMIUM_HELMET);
-						entries.add(PhantomiumItems.PHANTOMIUM_HOE);
-						entries.add(PhantomiumItems.PHANTOMIUM_PICKAXE);
-						entries.add(PhantomiumItems.PHANTOMIUM_SWORD);
+						entries.add(StellariumItems.STELLARIUM);
+						entries.add(StellariumItems.RAW_STELLARIUM);
+						entries.add(StellariumItems.STELLARIUM_LEGGINGS);
+						entries.add(StellariumItems.STELLARIUM_SHOVEL);
+						entries.add(StellariumItems.STELLARIUM_AXE);
+						entries.add(StellariumItems.STELLARIUM_BOOTS);
+						entries.add(StellariumItems.STELLARIUM_CHESTPLATE);
+						entries.add(StellariumItems.STELLARIUM_HELMET);
+						entries.add(StellariumItems.STELLARIUM_HOE);
+						entries.add(StellariumItems.STELLARIUM_PICKAXE);
+						entries.add(StellariumItems.STELLARIUM_SWORD);
 
-						entries.add(PhantomiumBlocks.PHANTOMIUM_BLOCK);
-						entries.add(PhantomiumBlocks.PHANTOMIUM_ORE);
-						entries.add(PhantomiumBlocks.RAW_PHANTOMIUM_BLOCK);
+						entries.add(StellariumBlocks.STELLARIUM_BLOCK);
+						entries.add(StellariumBlocks.STELLARIUM_ORE);
+						entries.add(StellariumBlocks.RAW_STELLARIUM_BLOCK);
 					})
 					.build()
 	);

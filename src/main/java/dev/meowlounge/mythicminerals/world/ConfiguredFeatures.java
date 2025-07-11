@@ -2,7 +2,7 @@ package dev.meowlounge.mythicminerals.world;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
-import dev.meowlounge.mythicminerals.block.PhantomiumBlocks;
+import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -21,7 +21,7 @@ import java.util.List;
 
 public class ConfiguredFeatures {
 	public static final RegistryKey<ConfiguredFeature<?, ?>> FROSTIUM_ORE_KEY = registerKey("frostium_ore_key");
-	public static final RegistryKey<ConfiguredFeature<?, ?>> PHANTOMIUM_ORE_KEY = registerKey("phantomium_ore_key");
+	public static final RegistryKey<ConfiguredFeature<?, ?>> STELLARIUM_ORE_KEY = registerKey("stellarium_ore_key");
 
 	public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
 		RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -35,9 +35,9 @@ public class ConfiguredFeatures {
 		register(context, FROSTIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(FrostiumOres, 2));
 
 		List<OreFeatureConfig.Target> PhantomiumOres =
-				List.of(OreFeatureConfig.createTarget(endstoneReplaceables, PhantomiumBlocks.PHANTOMIUM_ORE.getDefaultState()));
+				List.of(OreFeatureConfig.createTarget(endstoneReplaceables, StellariumBlocks.STELLARIUM_ORE.getDefaultState()));
 
-		register(context, PHANTOMIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(PhantomiumOres, 4));
+		register(context, STELLARIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(PhantomiumOres, 4));
 	}
 
 	public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
@@ -45,7 +45,8 @@ public class ConfiguredFeatures {
 	}
 
 	private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,
-																				   RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+																				   RegistryKey<ConfiguredFeature<?, ?>> key,
+																				   F feature, FC configuration) {
 		context.register(key, new ConfiguredFeature<>(feature, configuration));
 	}
 }

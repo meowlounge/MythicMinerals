@@ -1,9 +1,9 @@
 package dev.meowlounge.mythicminerals.datagen.loot_table;
 
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
-import dev.meowlounge.mythicminerals.block.PhantomiumBlocks;
+import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
-import dev.meowlounge.mythicminerals.item.PhantomiumItems;
+import dev.meowlounge.mythicminerals.item.StellariumItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
@@ -30,20 +30,30 @@ public class OreLoot extends FabricBlockLootTableProvider {
 	public void generate() {
 		addDrop(FrostiumBlocks.FROSTIUM_BLOCK);
 		addDrop(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
-		addDrop(FrostiumBlocks.FROSTIUM_ORE, oreDrops(FrostiumBlocks.FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM));
-		addDrop(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, multipleOreDrops(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM, 1, 1));
+
+		addDrop(FrostiumBlocks.FROSTIUM_ORE, multipleOreDrops(
+				FrostiumBlocks.FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM, 1, 2
+		));
+
+		addDrop(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, multipleOreDrops(
+				FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM, 1, 2
+		));
 
 		// ---------------------- //
 
-		addDrop(PhantomiumBlocks.PHANTOMIUM_BLOCK);
-		addDrop(PhantomiumBlocks.RAW_PHANTOMIUM_BLOCK);
-		addDrop(PhantomiumBlocks.PHANTOMIUM_ORE, oreDrops(PhantomiumBlocks.PHANTOMIUM_ORE, PhantomiumItems.RAW_PHANTOMIUM));
+		addDrop(StellariumBlocks.STELLARIUM_BLOCK);
+		addDrop(StellariumBlocks.RAW_STELLARIUM_BLOCK);
+
+		addDrop(StellariumBlocks.STELLARIUM_ORE, multipleOreDrops(
+				StellariumBlocks.STELLARIUM_ORE, StellariumItems.RAW_STELLARIUM, 1, 2
+		));
 	}
 
 	public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
 		RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
 		return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
-				ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
-				.apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
+				ItemEntry.builder(item)
+						.apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops)))
+		).apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
 	}
 }

@@ -1,4 +1,4 @@
 // 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/⛏️ [MythicMinerals]: Registering Block Tags
-de7c2ca4bf167a9fbd50fc788fc34bb9001bece7 data/minecraft/tags/block/mineable/pickaxe.json
-d680e82a4b2ecfd250a4a8e41ec550a47c805681 data/minecraft/tags/block/needs_diamond_tool.json
+7c8b0c0b149e752e42f3255e3f45af142deb2605 data/minecraft/tags/block/mineable/pickaxe.json
+4a0b1a972c9576bbf47523a9e01ab34683100e8d data/minecraft/tags/block/needs_diamond_tool.json
 680709686315cb26e9638f5da4502674b9ca5283 data/minecraft/tags/block/needs_iron_tool.json
