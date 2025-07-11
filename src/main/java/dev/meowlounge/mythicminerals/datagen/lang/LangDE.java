@@ -54,7 +54,7 @@ public class LangDE extends FabricLanguageProvider {
         translationBuilder.add("block.mythicminerals.stellarium_block", "Stellariumblock");
 
         translationBuilder.add("item.mythicminerals.stellarium", "Stellarium");
-        translationBuilder.add("item.mythicminerals.stellarium_smithing_template", "Stellariumschmiedevorlage");
+        translationBuilder.add("item.mythicminerals.stellarium_upgrade_smithing_template", "Stellariumschmiedevorlage");
         translationBuilder.add("item.mythicminerals.stellarium_scrap", "Stellariumplaten");
         translationBuilder.add("item.mythicminerals.stellarium_sword", "Stellariumschwert");
         translationBuilder.add("item.mythicminerals.stellarium_shovel", "Stellariumschaufel");
@@ -74,7 +74,7 @@ public class LangDE extends FabricLanguageProvider {
 
         translationBuilder.add("item.minecraft.smithing_template.applies_to.netherite", "Netheritausrüstung");
         translationBuilder.add("item.minecraft.smithing_template.base_slot_description", "Rüstungsteil, Werkzeug oder Schwert aus Netherit hinzufügen");
-        translationBuilder.add("item.mythicminerals.stellarium_smithing_template.additions_slot_description", "Stellarium hinzufügen");
+        translationBuilder.add("item.mythicminerals.stellarium_upgrade_smithing_template.additions_slot_description", "Stellarium hinzufügen");
     }
 
     @Override
