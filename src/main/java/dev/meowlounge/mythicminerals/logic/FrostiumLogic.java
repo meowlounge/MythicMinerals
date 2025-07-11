@@ -1,7 +1,5 @@
 package dev.meowlounge.mythicminerals.logic;
 
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.EquippableComponent;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -14,7 +12,8 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.Box;
 import org.jetbrains.annotations.Nullable;
 
-//TODO: doesnt work yet, fix logic that the slowness is applied. currently the game doesnt know its here...
+import static dev.meowlounge.mythicminerals.item.FrostiumItems.*;
+
 public class FrostiumLogic extends Item {
 	private static final int RADIUS = 5;
 	private static final StatusEffectInstance SLOWNESS = new StatusEffectInstance(StatusEffects.SLOWNESS, 40, 1, true, false);
@@ -38,33 +37,24 @@ public class FrostiumLogic extends Item {
 	private void applySlownessToNearbyMobs(ServerWorld world, PlayerEntity player) {
 		Box box = new Box(player.getBlockPos()).expand(RADIUS);
 		for (MobEntity mob : world.getEntitiesByClass(MobEntity.class, box, mob -> mob.isAlive() && !mob.hasStatusEffect(StatusEffects.SLOWNESS))) {
-			mob.addStatusEffect(new StatusEffectInstance(SLOWNESS));
+			mob.addStatusEffect(SLOWNESS);
 			System.out.println("[FROSTIUM] Applied slowness to mob: " + mob.getName().getString() + " at " + mob.getBlockPos());
 		}
 	}
 
 	private boolean hasFullFrostiumArmorOn(PlayerEntity player) {
-		ItemStack boots = player.getInventory().getStack(EquipmentSlot.FEET.getIndex());
-		ItemStack leggings = player.getInventory().getStack(EquipmentSlot.LEGS.getIndex());
-		ItemStack chestplate = player.getInventory().getStack(EquipmentSlot.CHEST.getIndex());
-		ItemStack helmet = player.getInventory().getStack(EquipmentSlot.HEAD.getIndex());
+		ItemStack boots = player.getEquippedStack(EquipmentSlot.FEET);
+		ItemStack leggings = player.getEquippedStack(EquipmentSlot.LEGS);
+		ItemStack chestplate = player.getEquippedStack(EquipmentSlot.CHEST);
+		ItemStack helmet = player.getEquippedStack(EquipmentSlot.HEAD);
 
 		if (boots.isEmpty() || leggings.isEmpty() || chestplate.isEmpty() || helmet.isEmpty()) {
 			return false;
 		}
 
-		EquippableComponent bootsComp = boots.getComponents().get(DataComponentTypes.EQUIPPABLE);
-		EquippableComponent legsComp = leggings.getComponents().get(DataComponentTypes.EQUIPPABLE);
-		EquippableComponent chestComp = chestplate.getComponents().get(DataComponentTypes.EQUIPPABLE);
-		EquippableComponent helmetComp = helmet.getComponents().get(DataComponentTypes.EQUIPPABLE);
-
-		if (bootsComp == null || legsComp == null || chestComp == null || helmetComp == null) {
-			return false;
-		}
-
-		return bootsComp.assetId().isPresent()
-				&& legsComp.assetId().isPresent()
-				&& chestComp.assetId().isPresent()
-				&& helmetComp.assetId().isPresent();
+		return boots.getItem() == FROSTIUM_BOOTS &&
+				leggings.getItem() == FROSTIUM_LEGGINGS &&
+				chestplate.getItem() == FROSTIUM_CHESTPLATE &&
+				helmet.getItem() == FROSTIUM_HELMET;
 	}
 }
