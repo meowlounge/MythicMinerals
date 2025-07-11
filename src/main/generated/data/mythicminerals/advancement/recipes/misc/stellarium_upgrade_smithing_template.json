@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stellarium_smithing_template": {
+    "has_stellarium_upgrade_smithing_template": {
       "conditions": {
         "items": [
           {
-            "items": "mythicminerals:stellarium_smithing_template"
+            "items": "mythicminerals:stellarium_upgrade_smithing_template"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mythicminerals:stellarium_smithing_template"
+        "recipe": "mythicminerals:stellarium_upgrade_smithing_template"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_stellarium_smithing_template"
+      "has_stellarium_upgrade_smithing_template"
     ]
   ],
   "rewards": {
     "recipes": [
-      "mythicminerals:stellarium_smithing_template"
+      "mythicminerals:stellarium_upgrade_smithing_template"
     ]
   }
 }
