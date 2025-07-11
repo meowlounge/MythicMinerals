@@ -1,8 +1,0 @@
-// 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/Block Loot Tables
-d32ccdebb9adc5403fe2141b5ae08e375c126590 data/mythicminerals/loot_table/blocks/deepslate_frostium_ore.json
-b2421b06d9cbad958d88c88c7e24df9ee1bd0fcf data/mythicminerals/loot_table/blocks/frostium_block.json
-d04c44f753e9d952e1bcd7819d97e71f05a8f86c data/mythicminerals/loot_table/blocks/frostium_ore.json
-4fc162724015d7f8d1da6f28326c8b429aff432e data/mythicminerals/loot_table/blocks/raw_frostium_block.json
-867b789d13595b6d52e657d71fcc7c8757714481 data/mythicminerals/loot_table/blocks/raw_stellarium_block.json
-737decb630dd1013765e7a77e9f6d3f9f37f670f data/mythicminerals/loot_table/blocks/stellarium_block.json
-0d1431f964eccf223bce6fa3fe539fb4d1965df3 data/mythicminerals/loot_table/blocks/stellarium_ore.json
