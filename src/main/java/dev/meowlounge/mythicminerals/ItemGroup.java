@@ -71,7 +71,7 @@ public class ItemGroup {
                         entries.add(StellariumItems.STELLARIUM_HOE);
                         entries.add(StellariumItems.STELLARIUM_PICKAXE);
                         entries.add(StellariumItems.STELLARIUM_SWORD);
-                        entries.add(StellariumItems.STELLARIUM_SMITHING_TEMPLATE);
+                        entries.add(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE);
 
                         entries.add(StellariumBlocks.STELLARIUM_BLOCK);
                         entries.add(StellariumBlocks.STELLARIUM_ORE);
