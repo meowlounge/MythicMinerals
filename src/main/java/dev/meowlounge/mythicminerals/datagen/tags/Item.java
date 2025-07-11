@@ -1,6 +1,6 @@
 package dev.meowlounge.mythicminerals.datagen.tags;
 
-import dev.meowlounge.mythicminerals.TagsProvider;
+import dev.meowlounge.mythicminerals.providers.TagsProvider;
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
 import dev.meowlounge.mythicminerals.item.StellariumItems;
 import dev.meowlounge.mythicminerals.item.VoidstoneItems;

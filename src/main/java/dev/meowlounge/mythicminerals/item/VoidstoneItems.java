@@ -1,12 +1,12 @@
 package dev.meowlounge.mythicminerals.item;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
-import dev.meowlounge.mythicminerals.TagsProvider;
+import dev.meowlounge.mythicminerals.providers.TagsProvider;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.tag.BlockTags;
 
-import static dev.meowlounge.mythicminerals.item.RegisterItem.registerItem;
+import static dev.meowlounge.mythicminerals.providers.RegisterProvider.registerItem;
 
 public class VoidstoneItems {
     public static final ToolMaterial VOIDSTONE_TOOL_MATERIAL = new ToolMaterial(

@@ -4,7 +4,7 @@ import net.minecraft.text.Style;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import dev.meowlounge.mythicminerals.MythicMinerals;
-import dev.meowlounge.mythicminerals.TagsProvider;
+import dev.meowlounge.mythicminerals.providers.TagsProvider;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.tag.BlockTags;
@@ -13,7 +13,7 @@ import net.minecraft.util.Rarity;
 
 import java.util.List;
 
-import static dev.meowlounge.mythicminerals.item.RegisterItem.*;
+import static dev.meowlounge.mythicminerals.providers.RegisterProvider.*;
 
 public class StellariumItems {
     public static final ToolMaterial STELLARIUM_TOOL_MATERIAL = new ToolMaterial(
