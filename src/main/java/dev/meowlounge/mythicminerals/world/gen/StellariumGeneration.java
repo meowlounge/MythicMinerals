@@ -6,11 +6,11 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.world.gen.GenerationStep;
 
 public class StellariumGeneration {
-	public static void generateOres() {
-		BiomeModifications.addFeature(
-				BiomeSelectors.foundInTheEnd(),
-				GenerationStep.Feature.UNDERGROUND_ORES,
-				PlacedFeatures.STELLARIUM_PLACED_KEY
-		);
-	}
+    public static void generateOres() {
+        BiomeModifications.addFeature(
+                BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES,
+                PlacedFeatures.STELLARIUM_PLACED_KEY
+        );
+    }
 }
