@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "mythicminerals:stellarium_scrap",
+    "mythicminerals:stellarium_scrap",
+    "mythicminerals:stellarium_scrap",
+    "mythicminerals:stellarium_scrap",
+    "mythicminerals:voidstone",
+    "mythicminerals:voidstone",
+    "mythicminerals:voidstone",
+    "mythicminerals:voidstone"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mythicminerals:stellarium"
+  }
+}

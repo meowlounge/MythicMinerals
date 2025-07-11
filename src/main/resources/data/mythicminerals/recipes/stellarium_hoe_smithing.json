@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#mythicminerals:stellarium",
+  "base": "mythicminerals:voidstone_hoe",
+  "result": {
+    "id": "mythicminerals:stellarium_hoe"
+  },
+  "template": "mythicminerals:stellarium_smithing_template"
+}

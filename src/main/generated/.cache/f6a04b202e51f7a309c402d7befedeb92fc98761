@@ -1,0 +1,8 @@
+// 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/⛏️ [MythicMinerals]: Registering Item Tags
+96b1c1a91055f009858dd6b551174b7bf45c0270 data/minecraft/tags/item/enchantable/armor.json
+e04c94300238af11af660ea6084dbf7c8e7885ff data/minecraft/tags/item/enchantable/mining.json
+d5907926e64af88d883763e617069a806788a319 data/minecraft/tags/item/enchantable/mining_loot.json
+c5040ae9a5be83ea2d7da196f386eec3793f6dc6 data/minecraft/tags/item/enchantable/sharp_weapon.json
+5057c406de9d43b3690a0382718ad68faca038ef data/mythicminerals/tags/item/frostium_repair.json
+b3821252e267a7e3434f2019172ed2d9d2ef1b18 data/mythicminerals/tags/item/stellarium_repair.json
+8e65d47218b42b17755fd018990d729a2ad5e023 data/mythicminerals/tags/item/voidstone_repair.json
