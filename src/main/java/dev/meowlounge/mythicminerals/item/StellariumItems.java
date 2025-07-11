@@ -1,6 +1,5 @@
 package dev.meowlounge.mythicminerals.item;
 
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.text.Style;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
