@@ -8,19 +8,18 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 import static dev.meowlounge.mythicminerals.block.Utils.registerBlock;
 
-public class PhantomiumBlocks {
-    public static void registerPhantomiumBlocks() {
-        MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Phantomium Blocks");
-    }
-    public static final Block PHANTOMIUM_ORE = registerBlock("phantomium_ore",
+public class VoidstoneBlocks {
+    public static final Block VOIDSTONE_ORE = registerBlock("voidstone_ore",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
                     properties.strength(3f).requiresTool()));
-
-    public static final Block RAW_PHANTOMIUM_BLOCK = registerBlock("raw_phantomium_block",
+    public static final Block RAW_VOIDSTONE_BLOCK = registerBlock("raw_voidstone_block",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
                     properties.strength(4f).requiresTool()));
-
-    public static final Block PHANTOMIUM_BLOCK = registerBlock("phantomium_block",
+    public static final Block VOIDSTONE_BLOCK = registerBlock("voidstone_block",
             properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
                     properties.strength(4f).requiresTool().sounds(BlockSoundGroup.IRON)));
+
+    public static void registerVoidstoneBlocks() {
+        MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Voidstone Blocks");
+    }
 }
