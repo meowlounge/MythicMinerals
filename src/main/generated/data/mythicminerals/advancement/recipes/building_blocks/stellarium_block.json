@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stellarium_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mythicminerals:stellarium_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mythicminerals:stellarium_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stellarium_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mythicminerals:stellarium_block"
+    ]
+  }
+}

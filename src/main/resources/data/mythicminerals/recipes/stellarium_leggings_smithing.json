@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#mythicminerals:stellarium",
+  "base": "mythicminerals:voidstone_leggings",
+  "result": {
+    "id": "mythicminerals:stellarium_leggings"
+  },
+  "template": "mythicminerals:stellarium_smithing_template"
+}

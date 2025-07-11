@@ -1,4 +1,11 @@
 // 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/⛏️ [MythicMinerals]: Registering Block Tags
-de7c2ca4bf167a9fbd50fc788fc34bb9001bece7 data/minecraft/tags/block/mineable/pickaxe.json
-d680e82a4b2ecfd250a4a8e41ec550a47c805681 data/minecraft/tags/block/needs_diamond_tool.json
+595c991df2095799c7275d998b467b9d8109e022 data/minecraft/tags/block/incorrect_for_diamond_tool.json
+595c991df2095799c7275d998b467b9d8109e022 data/minecraft/tags/block/incorrect_for_gold_tool.json
+595c991df2095799c7275d998b467b9d8109e022 data/minecraft/tags/block/incorrect_for_iron_tool.json
+595c991df2095799c7275d998b467b9d8109e022 data/minecraft/tags/block/incorrect_for_stone_tool.json
+595c991df2095799c7275d998b467b9d8109e022 data/minecraft/tags/block/incorrect_for_wooden_tool.json
+25ee04b58f7d28e5808fb3f3515cf2f206478dbb data/minecraft/tags/block/mineable/pickaxe.json
+69c492d55f6e16eb9b19431b52128ecee374e72e data/minecraft/tags/block/needs_diamond_tool.json
 680709686315cb26e9638f5da4502674b9ca5283 data/minecraft/tags/block/needs_iron_tool.json
+595c991df2095799c7275d998b467b9d8109e022 data/mythicminerals/tags/block/incorrect_for_frostium_tool.json
+dda9f240451082e774d7dedabd07d2de115805bc data/mythicminerals/tags/block/needs_netherite_tool.json

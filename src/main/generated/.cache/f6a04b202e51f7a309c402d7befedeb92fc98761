@@ -1,6 +1,8 @@
 // 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/⛏️ [MythicMinerals]: Registering Item Tags
-a33b5a7b3ab0bcbf8987d2c68542cd03fe30fb70 data/minecraft/tags/item/enchantable/armor.json
-90d6cb96ef5c0097dffd44658155812f278d68af data/minecraft/tags/item/enchantable/mining.json
-334ebdf2e43c60cc475484c51521b47d09213129 data/minecraft/tags/item/enchantable/mining_loot.json
-ef9ff6bfa3fe1cdece7285c8ecc8f71c4a228b64 data/minecraft/tags/item/enchantable/sharp_weapon.json
-28aa7aa35c5286a964ef1cb22aa5ab2ceb24061e data/mythicminerals/tags/item/frostium_repair.json
+96b1c1a91055f009858dd6b551174b7bf45c0270 data/minecraft/tags/item/enchantable/armor.json
+e04c94300238af11af660ea6084dbf7c8e7885ff data/minecraft/tags/item/enchantable/mining.json
+d5907926e64af88d883763e617069a806788a319 data/minecraft/tags/item/enchantable/mining_loot.json
+c5040ae9a5be83ea2d7da196f386eec3793f6dc6 data/minecraft/tags/item/enchantable/sharp_weapon.json
+5057c406de9d43b3690a0382718ad68faca038ef data/mythicminerals/tags/item/frostium_repair.json
+b3821252e267a7e3434f2019172ed2d9d2ef1b18 data/mythicminerals/tags/item/stellarium_repair.json
+8e65d47218b42b17755fd018990d729a2ad5e023 data/mythicminerals/tags/item/voidstone_repair.json

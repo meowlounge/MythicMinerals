@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:end_stone",
+    "*": "mythicminerals:stellarium_smithing_template",
+    "X": "mythicminerals:voidstone"
+  },
+  "pattern": [
+    "#X#",
+    "#*#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "mythicminerals:stellarium_smithing_template"
+  }
+}
