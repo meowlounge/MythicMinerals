@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": "#mythicminerals:stellarium",
-  "base": "mythicminerals:voidstone_chestplate",
-  "result": {
-    "id": "mythicminerals:stellarium_chestplate"
-  },
-  "template": "mythicminerals:stellarium_smithing_template"
-}

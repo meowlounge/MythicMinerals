@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": "#mythicminerals:stellarium",
-  "base": "mythicminerals:voidstone_pickaxe",
-  "result": {
-    "id": "mythicminerals:stellarium_pickaxe"
-  },
-  "template": "mythicminerals:stellarium_smithing_template"
-}
