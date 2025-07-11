@@ -7,13 +7,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import org.jetbrains.annotations.Nullable;
 
 public class FrostiumLogic extends Item {
-//	private static final StatusEffectInstance FIRE_RESISTANCE = new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 1, 1, false, false, false);
-
 	public FrostiumLogic(Settings settings) {
 		super(settings);
 	}
