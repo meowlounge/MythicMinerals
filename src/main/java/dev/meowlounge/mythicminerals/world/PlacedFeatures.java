@@ -17,34 +17,39 @@ import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import java.util.List;
 
 public class PlacedFeatures {
-	public static final RegistryKey<PlacedFeature> FROSTIUM_PLACED_KEY = registerKey("frostium_ore_placed");
-	public static final RegistryKey<PlacedFeature> PHANTOMIUM_PLACED_KEY = registerKey("phantomium_ore_placed");
+    public static final RegistryKey<PlacedFeature> FROSTIUM_PLACED_KEY = registerKey("frostium_ore_placed");
+    public static final RegistryKey<PlacedFeature> VOIDSTONE_PLACED_KEY = registerKey("voidstone_ore_placed");
+    public static final RegistryKey<PlacedFeature> STELLARIUM_PLACED_KEY = registerKey("stellarium_ore_placed");
 
-	public static void bootstrap(Registerable<PlacedFeature> context) {
-		var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+    public static void bootstrap(Registerable<PlacedFeature> context) {
+        var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-		register(context, FROSTIUM_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.FROSTIUM_ORE_KEY),
-				OrePlacement.modifiersWithCount(4,
-						HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(12))));
+        register(context, FROSTIUM_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.FROSTIUM_ORE_KEY),
+                OrePlacement.modifiersWithCount(4,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(12))));
 
-		register(context, PHANTOMIUM_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.PHANTOMIUM_ORE_KEY),
-				OrePlacement.modifiersWithCount(8,
-						HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(20))));
-	}
+        register(context, VOIDSTONE_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.VOIDSTONE_ORE_KEY),
+                OrePlacement.modifiersWithCount(0,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(20))));
+
+        register(context, STELLARIUM_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.STELLARIUM_ORE_KEY),
+                OrePlacement.modifiersWithCount(80,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(20))));
+    }
 
 
-	public static RegistryKey<PlacedFeature> registerKey(String name) {
-		return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MythicMinerals.MOD_ID, name));
-	}
+    public static RegistryKey<PlacedFeature> registerKey(String name) {
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MythicMinerals.MOD_ID, name));
+    }
 
-	private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration,
-								 List<PlacementModifier> modifiers) {
-		context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
-	}
+    private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration,
+                                 List<PlacementModifier> modifiers) {
+        context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
+    }
 
-	private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key,
-																				   RegistryEntry<ConfiguredFeature<?, ?>> configuration,
-																				   PlacementModifier... modifiers) {
-		register(context, key, configuration, List.of(modifiers));
-	}
+    private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key,
+                                                                                   RegistryEntry<ConfiguredFeature<?, ?>> configuration,
+                                                                                   PlacementModifier... modifiers) {
+        register(context, key, configuration, List.of(modifiers));
+    }
 }

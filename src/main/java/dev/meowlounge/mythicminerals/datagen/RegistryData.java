@@ -8,18 +8,18 @@ import net.minecraft.registry.RegistryWrapper;
 import java.util.concurrent.CompletableFuture;
 
 public class RegistryData extends FabricDynamicRegistryProvider {
-	public RegistryData(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
-		super(output, registriesFuture);
-	}
+    public RegistryData(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
+    }
 
-	@Override
-	protected void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
-		entries.addAll(registries.getOrThrow(RegistryKeys.CONFIGURED_FEATURE));
-		entries.addAll(registries.getOrThrow(RegistryKeys.PLACED_FEATURE));
-	}
+    @Override
+    protected void configure(RegistryWrapper.WrapperLookup registries, Entries entries) {
+        entries.addAll(registries.getOrThrow(RegistryKeys.CONFIGURED_FEATURE));
+        entries.addAll(registries.getOrThrow(RegistryKeys.PLACED_FEATURE));
+    }
 
-	@Override
-	public String getName() {
-		return "⛏️ [MythicMinerals]: Registering Data";
-	}
+    @Override
+    public String getName() {
+        return "⛏️ [MythicMinerals]: Registering Data";
+    }
 }
