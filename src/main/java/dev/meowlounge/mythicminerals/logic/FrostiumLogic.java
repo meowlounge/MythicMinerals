@@ -6,7 +6,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class FrostiumLogic extends Item {
@@ -20,7 +19,7 @@ public class FrostiumLogic extends Item {
 		if (world.isClient) return;
 
 		if (hasFullFrostiumArmorOn(player)) {
-			grantColdArmorEffects(player, world);
+			grantColdArmorEffects(player);
 
 //			if (isInNether(world)) {
 //				applyNetherPenalties(player);
@@ -30,7 +29,7 @@ public class FrostiumLogic extends Item {
 		super.inventoryTick(stack, world, entity, slot);
 	}
 
-	private void grantColdArmorEffects(PlayerEntity player, World world) {
+	private void grantColdArmorEffects(PlayerEntity player) {
 		//* player cant burn since the armor cools him down.
 		player.setOnFireFor(0);
 	}
