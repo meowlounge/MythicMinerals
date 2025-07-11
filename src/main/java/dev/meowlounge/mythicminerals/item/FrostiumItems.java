@@ -6,7 +6,7 @@ import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.tag.BlockTags;
 
-import static dev.meowlounge.mythicminerals.item.ItemUtils.*;
+import static dev.meowlounge.mythicminerals.item.RegisterItem.registerItem;
 
 public class FrostiumItems {
     public static final ToolMaterial FROSTIUM_TOOL_MATERIAL = new ToolMaterial(

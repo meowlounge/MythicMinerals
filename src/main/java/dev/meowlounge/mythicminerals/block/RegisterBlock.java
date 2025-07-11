@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
 
-public class RegisterHandler {
+public class RegisterBlock {
 	public static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
 		Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name))));
 		registerBlockItem(name, toRegister);

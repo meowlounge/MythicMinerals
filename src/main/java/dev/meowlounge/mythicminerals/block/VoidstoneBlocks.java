@@ -6,7 +6,7 @@ import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
-import static dev.meowlounge.mythicminerals.block.BlockUtils.*;
+import static dev.meowlounge.mythicminerals.block.RegisterBlock.registerBlock;
 
 public class VoidstoneBlocks {
     public static final Block VOIDSTONE_ORE = registerBlock("voidstone_ore",

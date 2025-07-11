@@ -13,7 +13,7 @@ import net.minecraft.util.Rarity;
 
 import java.util.List;
 
-import static dev.meowlounge.mythicminerals.item.ItemUtils.*;
+import static dev.meowlounge.mythicminerals.item.RegisterItem.*;
 
 public class StellariumItems {
     public static final ToolMaterial STELLARIUM_TOOL_MATERIAL = new ToolMaterial(

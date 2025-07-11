@@ -6,7 +6,7 @@ import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
-import static dev.meowlounge.mythicminerals.block.BlockUtils.*;
+import static dev.meowlounge.mythicminerals.block.RegisterBlock.registerBlock;
 
 public class FrostiumBlocks {
 
