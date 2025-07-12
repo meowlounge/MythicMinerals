@@ -24,7 +24,7 @@ public class ItemGroup {
             Registries.ITEM_GROUP,
             MM_GROUP_KEY.getValue(),
             FabricItemGroup.builder()
-                    .icon(() -> new ItemStack(FrostiumItems.FROSTIUM))
+                    .icon(() -> new ItemStack(StellariumBlocks.STELLARIUM_ORE))
                     .displayName(Text.translatable("mythicminerals.item_group_ore"))
                     .entries((displayContext, entries) -> {
                         entries.add(FrostiumItems.FROSTIUM);
