@@ -33,11 +33,11 @@ public class LangDE extends FabricLanguageProvider {
         //* ---------------------- //
 
         translationBuilder.add("block.mythicminerals.voidstone_ore", "Leerensteinerz");
-        translationBuilder.add("block.mythicminerals.raw_voidstone_block", "Rohesleerensteinblock");
+        translationBuilder.add("block.mythicminerals.raw_voidstone_block", "Roherleerensteinblock");
         translationBuilder.add("block.mythicminerals.voidstone_block", "Leerensteinblock");
 
         translationBuilder.add("item.mythicminerals.voidstone", "Leerenstein");
-        translationBuilder.add("item.mythicminerals.raw_voidstone", "Rohesleerenstein");
+        translationBuilder.add("item.mythicminerals.raw_voidstone", "Roh-Leerenstein");
         translationBuilder.add("item.mythicminerals.voidstone_sword", "Leerensteinschwert");
         translationBuilder.add("item.mythicminerals.voidstone_shovel", "Leerensteinschaufel");
         translationBuilder.add("item.mythicminerals.voidstone_pickaxe", "Leerensteinspitzhacke");
