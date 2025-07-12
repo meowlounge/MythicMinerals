@@ -25,7 +25,7 @@ public class FrostiumLogic extends Item {
 		if (!hasFullFrostiumArmorOn(player)) return;
 
 		if (isInColdBiome(world, player.getBlockPos())) {
-			applyColdBiomeBuffs(player, world);
+			applyColdBiomeBuffs(player);
 		} else {
 			applyOverworldDebuffs(player, world);
 		}
@@ -33,7 +33,7 @@ public class FrostiumLogic extends Item {
 		super.inventoryTick(stack, world, entity, slot);
 	}
 
-	private void applyColdBiomeBuffs(@NotNull PlayerEntity player, ServerWorld world) {
+	private void applyColdBiomeBuffs(@NotNull PlayerEntity player) {
 		player.extinguish();
 		player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 1, 2));
 		player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1, 1));
