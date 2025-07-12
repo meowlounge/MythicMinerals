@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mythicminerals:frostium_layer_1"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mythicminerals:frostium_layer_2"
+      }
+    ]
+  }
+}
