@@ -2,10 +2,11 @@
   "schemaVersion": 1,
   "id": "mythicminerals",
   "version": "${version}",
-  "name": "MythicMinerals",
-  "description": "Adds Custom Ores that will give custom buffs... or debuffs.",
+  "name": "Mythic Minerals",
+  "description": "A mythically inspired mod that introduces unique ores into the world of Minecraft. Each ore brings its own mechanics—some granting powerful buffs, others inflicting dangerous debuffs. Explore, mine, and craft with care.",
   "authors": [
-    "@dwhincandi, @prodbyeagle"
+    "@dwhincandi",
+    "@prodbyeagle"
   ],
   "license": "MIT",
   "icon": "assets/mythicminerals/icon.png",
@@ -23,5 +24,9 @@
     "minecraft": "~1.21.7",
     "java": ">=21",
     "fabric-api": "*"
+  },
+  "contact": {
+    "homepage": "https://github.com/meowlounge/mythicminerals",
+    "issues": "https://github.com/meowlounge/mythicminerals/issues"
   }
 }

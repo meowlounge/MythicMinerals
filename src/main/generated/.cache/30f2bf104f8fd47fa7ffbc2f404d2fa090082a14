@@ -1,4 +1,4 @@
-// 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/Model Definitions
+// 1.21.7	-999999999-01-01T00:00:00	Mythic Minerals/Model Definitions
 055a432809e0d4ccd6aa0c4d7de183a562131e0b assets/mythicminerals/blockstates/deepslate_frostium_ore.json
 768ff71567d6ff2d86b2b05373e93ea5df3aad27 assets/mythicminerals/blockstates/frostium_block.json
 86bd60b4550a2dbce5e09fec428299889de64741 assets/mythicminerals/blockstates/frostium_ore.json
@@ -21,6 +21,7 @@ a94326d745ab4dc244693dd8c54c3ec7b06aaae7 assets/mythicminerals/items/frostium_or
 149087a71487578efb106db56395942ee28c8ba0 assets/mythicminerals/items/frostium_pickaxe.json
 5ac28e35eb070201389ae745fb6375d028eb2c64 assets/mythicminerals/items/frostium_shovel.json
 1c364a6ab2d599bbe54a1f7299185959d4fd64c1 assets/mythicminerals/items/frostium_sword.json
+114f7f3538a7e1ca3b02a7cc6235d72e4e516c3a assets/mythicminerals/items/ore_locator.json
 758e2c6fa4741b8b3bdd746bdd2feddef7d4f43f assets/mythicminerals/items/raw_frostium.json
 bc721b3bcdfd68b3d5dc9ef1f7e3038d48319a29 assets/mythicminerals/items/raw_frostium_block.json
 ff0e9669c303b01bf16ad07a931189080c098026 assets/mythicminerals/items/raw_voidstone.json
@@ -114,6 +115,7 @@ ba016b2c62075f91e91e054c1a144f7de776b92f assets/mythicminerals/models/item/frost
 e1bff28f646920c1121c9f59a100c09239fcb348 assets/mythicminerals/models/item/frostium_pickaxe.json
 ca5cf7af66702657efcc64ecb496fef38b88ea97 assets/mythicminerals/models/item/frostium_shovel.json
 04acade6b3d4ecd53c4bbbe11205cd9692132db4 assets/mythicminerals/models/item/frostium_sword.json
+ce9d33313473f524385d7ed7e3f2731b98ac375e assets/mythicminerals/models/item/ore_locator.json
 1d57c30859a43af05d8b3edfb80cf7e61b1f4983 assets/mythicminerals/models/item/raw_frostium.json
 be5b58fcc3c333f616d0d64333bbcd39191299bd assets/mythicminerals/models/item/raw_voidstone.json
 d6024536755103c678b782c03ad984036fa4ebc8 assets/mythicminerals/models/item/stellarium.json
