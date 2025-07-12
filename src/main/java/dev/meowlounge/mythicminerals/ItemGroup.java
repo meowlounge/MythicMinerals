@@ -29,56 +29,68 @@ public class ItemGroup {
                     .entries((displayContext, entries) -> {
                         entries.add(FrostiumItems.FROSTIUM);
                         entries.add(FrostiumItems.RAW_FROSTIUM);
-                        entries.add(FrostiumItems.FROSTIUM_LEGGINGS);
-                        entries.add(FrostiumItems.FROSTIUM_SHOVEL);
-                        entries.add(FrostiumItems.FROSTIUM_AXE);
-                        entries.add(FrostiumItems.FROSTIUM_BOOTS);
-                        entries.add(FrostiumItems.FROSTIUM_CHESTPLATE);
-                        entries.add(FrostiumItems.FROSTIUM_HELMET);
-                        entries.add(FrostiumItems.FROSTIUM_HOE);
-                        entries.add(FrostiumItems.FROSTIUM_PICKAXE);
-                        entries.add(FrostiumItems.FROSTIUM_SWORD);
 
-                        entries.add(FrostiumBlocks.FROSTIUM_BLOCK);
-                        entries.add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE);
+                        entries.add(FrostiumItems.FROSTIUM_HELMET);
+                        entries.add(FrostiumItems.FROSTIUM_CHESTPLATE);
+                        entries.add(FrostiumItems.FROSTIUM_LEGGINGS);
+                        entries.add(FrostiumItems.FROSTIUM_BOOTS);
+
+                        entries.add(FrostiumItems.FROSTIUM_SWORD);
+                        entries.add(FrostiumItems.FROSTIUM_PICKAXE);
+                        entries.add(FrostiumItems.FROSTIUM_AXE);
+                        entries.add(FrostiumItems.FROSTIUM_SHOVEL);
+                        entries.add(FrostiumItems.FROSTIUM_HOE);
+
                         entries.add(FrostiumBlocks.FROSTIUM_ORE);
+                        entries.add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE);
                         entries.add(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
+                        entries.add(FrostiumBlocks.FROSTIUM_BLOCK);
+
+                        //* ---------------------- //
 
                         entries.add(VoidstoneItems.VOIDSTONE);
                         entries.add(VoidstoneItems.RAW_VOIDSTONE);
-                        entries.add(VoidstoneItems.VOIDSTONE_LEGGINGS);
-                        entries.add(VoidstoneItems.VOIDSTONE_SHOVEL);
-                        entries.add(VoidstoneItems.VOIDSTONE_AXE);
-                        entries.add(VoidstoneItems.VOIDSTONE_BOOTS);
-                        entries.add(VoidstoneItems.VOIDSTONE_CHESTPLATE);
-                        entries.add(VoidstoneItems.VOIDSTONE_HELMET);
-                        entries.add(VoidstoneItems.VOIDSTONE_HOE);
-                        entries.add(VoidstoneItems.VOIDSTONE_PICKAXE);
-                        entries.add(VoidstoneItems.VOIDSTONE_SWORD);
 
-                        entries.add(VoidstoneBlocks.VOIDSTONE_BLOCK);
+                        entries.add(VoidstoneItems.VOIDSTONE_HELMET);
+                        entries.add(VoidstoneItems.VOIDSTONE_CHESTPLATE);
+                        entries.add(VoidstoneItems.VOIDSTONE_LEGGINGS);
+                        entries.add(VoidstoneItems.VOIDSTONE_BOOTS);
+
+                        entries.add(VoidstoneItems.VOIDSTONE_SWORD);
+                        entries.add(VoidstoneItems.VOIDSTONE_PICKAXE);
+                        entries.add(VoidstoneItems.VOIDSTONE_AXE);
+                        entries.add(VoidstoneItems.VOIDSTONE_SHOVEL);
+                        entries.add(VoidstoneItems.VOIDSTONE_HOE);
+
                         entries.add(VoidstoneBlocks.VOIDSTONE_ORE);
                         entries.add(VoidstoneBlocks.RAW_VOIDSTONE_BLOCK);
+                        entries.add(VoidstoneBlocks.VOIDSTONE_BLOCK);
+
+                        //* ---------------------- //
 
                         entries.add(StellariumItems.STELLARIUM);
                         entries.add(StellariumItems.STELLARIUM_SCRAP);
-                        entries.add(StellariumItems.STELLARIUM_LEGGINGS);
-                        entries.add(StellariumItems.STELLARIUM_SHOVEL);
-                        entries.add(StellariumItems.STELLARIUM_AXE);
-                        entries.add(StellariumItems.STELLARIUM_BOOTS);
-                        entries.add(StellariumItems.STELLARIUM_CHESTPLATE);
+
                         entries.add(StellariumItems.STELLARIUM_HELMET);
-                        entries.add(StellariumItems.STELLARIUM_HOE);
-                        entries.add(StellariumItems.STELLARIUM_PICKAXE);
+                        entries.add(StellariumItems.STELLARIUM_CHESTPLATE);
+                        entries.add(StellariumItems.STELLARIUM_LEGGINGS);
+                        entries.add(StellariumItems.STELLARIUM_BOOTS);
+
                         entries.add(StellariumItems.STELLARIUM_SWORD);
+                        entries.add(StellariumItems.STELLARIUM_PICKAXE);
+                        entries.add(StellariumItems.STELLARIUM_AXE);
+                        entries.add(StellariumItems.STELLARIUM_SHOVEL);
+                        entries.add(StellariumItems.STELLARIUM_HOE);
+
                         entries.add(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE);
 
-                        entries.add(StellariumBlocks.STELLARIUM_BLOCK);
                         entries.add(StellariumBlocks.STELLARIUM_ORE);
+                        entries.add(StellariumBlocks.STELLARIUM_BLOCK);
                     })
                     .build()
     );
 
     public static void registerItemGroup() {
+        //? registration triggered on class load
     }
 }
