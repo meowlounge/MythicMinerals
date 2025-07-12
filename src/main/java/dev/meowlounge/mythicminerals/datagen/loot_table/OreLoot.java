@@ -35,13 +35,13 @@ public class OreLoot extends FabricBlockLootTableProvider {
         addDrop(FrostiumBlocks.FROSTIUM_ORE, oreDrops(FrostiumBlocks.FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM));
         addDrop(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, multipleOreDrops(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM, 1, 1));
 
-        // ---------------------- //
+        //* ---------------------- //
 
         addDrop(VoidstoneBlocks.VOIDSTONE_BLOCK);
         addDrop(VoidstoneBlocks.RAW_VOIDSTONE_BLOCK);
         addDrop(VoidstoneBlocks.VOIDSTONE_ORE, oreDrops(VoidstoneBlocks.VOIDSTONE_ORE, VoidstoneItems.RAW_VOIDSTONE));
 
-        // ---------------------- //
+        //* ---------------------- //
 
         addDrop(StellariumBlocks.STELLARIUM_BLOCK);
         addDrop(StellariumBlocks.STELLARIUM_ORE, oreDrops(StellariumBlocks.STELLARIUM_ORE, StellariumItems.STELLARIUM_SCRAP));

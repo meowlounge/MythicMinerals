@@ -30,7 +30,7 @@ public class LangEN extends FabricLanguageProvider {
         translationBuilder.add("item.mythicminerals.frostium_leggings", "Frostium Leggings");
         translationBuilder.add("item.mythicminerals.frostium_boots", "Frostium Boots");
 
-        // ---------------------- //
+        //* ---------------------- //
 
         translationBuilder.add("block.mythicminerals.voidstone_ore", "Voidstone Ore");
         translationBuilder.add("block.mythicminerals.raw_voidstone_block", "Raw Voidstone Block");
@@ -48,7 +48,7 @@ public class LangEN extends FabricLanguageProvider {
         translationBuilder.add("item.mythicminerals.voidstone_leggings", "Voidstone Leggings");
         translationBuilder.add("item.mythicminerals.voidstone_boots", "Voidstone Boots");
 
-        // ---------------------- //
+        //* ---------------------- //
 
         translationBuilder.add("block.mythicminerals.stellarium_ore", "Stellarium Ore");
         translationBuilder.add("block.mythicminerals.stellarium_block", "Stellarium Block");
@@ -66,11 +66,11 @@ public class LangEN extends FabricLanguageProvider {
         translationBuilder.add("item.mythicminerals.stellarium_leggings", "Stellarium Leggings");
         translationBuilder.add("item.mythicminerals.stellarium_boots", "Stellarium Boots");
 
-        // ---------------------- //
+        //* ---------------------- //
 
         translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
 
-        // ---------------------- //
+        //* ---------------------- //
 
         translationBuilder.add("item.minecraft.smithing_template.applies_to.netherite", "Netherite Equipment");
         translationBuilder.add("item.minecraft.smithing_template.base_slot_description", "Add Netherite armor, weapon or tool");

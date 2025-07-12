@@ -26,13 +26,13 @@ public class ItemModel extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(FrostiumBlocks.FROSTIUM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
 
-        // ---------------------- //
+        //* ---------------------- //
 
         blockStateModelGenerator.registerSimpleCubeAll(VoidstoneBlocks.VOIDSTONE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(VoidstoneBlocks.VOIDSTONE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(VoidstoneBlocks.RAW_VOIDSTONE_BLOCK);
 
-        // ---------------------- //
+        //* ---------------------- //
 
         blockStateModelGenerator.registerSimpleCubeAll(StellariumBlocks.STELLARIUM_BLOCK);
         blockStateModelGenerator.registerCubeAllModelTexturePool(StellariumBlocks.STELLARIUM_ORE);
@@ -51,7 +51,7 @@ public class ItemModel extends FabricModelProvider {
         itemModelGenerator.registerArmor(FrostiumItems.FROSTIUM_BOOTS, Armor.FROSTIUM_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(FrostiumItems.FROSTIUM_HELMET, Armor.FROSTIUM_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
 
-        // ---------------------- //
+        //* ---------------------- //
 
         itemModelGenerator.register(VoidstoneItems.RAW_VOIDSTONE, Models.GENERATED);
         itemModelGenerator.register(VoidstoneItems.VOIDSTONE, Models.GENERATED);
@@ -65,7 +65,7 @@ public class ItemModel extends FabricModelProvider {
         itemModelGenerator.registerArmor(VoidstoneItems.VOIDSTONE_BOOTS, Armor.VOIDSTONE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(VoidstoneItems.VOIDSTONE_HELMET, Armor.VOIDSTONE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
 
-        // ---------------------- //
+        //* ---------------------- //
 
         itemModelGenerator.register(StellariumItems.STELLARIUM_SCRAP, Models.GENERATED);
         itemModelGenerator.register(StellariumItems.STELLARIUM, Models.GENERATED);

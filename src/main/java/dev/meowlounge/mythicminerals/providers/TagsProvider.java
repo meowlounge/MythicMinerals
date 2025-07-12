@@ -18,7 +18,7 @@ public class TagsProvider {
         }
     }
 
-    // ---------------------- //
+    //* ---------------------- //
 
     public static class Items {
         public static final TagKey<Item> FROSTIUM_REPAIR = createItemTag("frostium_repair");

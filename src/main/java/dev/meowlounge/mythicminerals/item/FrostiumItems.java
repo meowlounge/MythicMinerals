@@ -32,7 +32,7 @@ public class FrostiumItems {
     public static final Item FROSTIUM_HOE = registerItem("frostium_hoe",
             settings -> new HoeItem(FrostiumItems.FROSTIUM_TOOL_MATERIAL, -1, -3, settings));
 
-    // ---------------------- //
+    //* ---------------------- //
 
     public static final Item FROSTIUM_HELMET = registerItem("frostium_helmet",
             settings -> new FrostiumLogic(settings.armor(Armor.FROSTIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
@@ -46,7 +46,7 @@ public class FrostiumItems {
     public static final Item FROSTIUM_BOOTS = registerItem("frostium_boots",
             settings -> new Item(settings.armor(Armor.FROSTIUM_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-    // ---------------------- //
+    //* ---------------------- //
 
     public static void registerFrostiumItems() {
         MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Frostium Items");

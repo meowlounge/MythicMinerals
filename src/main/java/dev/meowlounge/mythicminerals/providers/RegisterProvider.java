@@ -26,7 +26,7 @@ public class RegisterProvider {
 		return RegistryKey.of(Registries.ITEM.getKey(), Identifier.of(MythicMinerals.MOD_ID, name));
 	}
 
-	// ---------------------- //
+	//* ---------------------- //
 
 	public static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
 		Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MythicMinerals.MOD_ID, name))));

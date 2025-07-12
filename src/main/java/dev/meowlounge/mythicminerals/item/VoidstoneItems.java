@@ -31,7 +31,7 @@ public class VoidstoneItems {
     public static final Item VOIDSTONE_HOE = registerItem("voidstone_hoe",
             settings -> new HoeItem(VoidstoneItems.VOIDSTONE_TOOL_MATERIAL, -0.5F, -3, settings));
 
-    // ---------------------- //
+    //* ---------------------- //
 
     public static final Item VOIDSTONE_HELMET = registerItem("voidstone_helmet",
             settings -> new Item(settings.armor(Armor.VOIDSTONE_ARMOR_MATERIAL, EquipmentType.HELMET)));
@@ -45,7 +45,7 @@ public class VoidstoneItems {
     public static final Item VOIDSTONE_BOOTS = registerItem("voidstone_boots",
             settings -> new Item(settings.armor(Armor.VOIDSTONE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-    // ---------------------- //
+    //* ---------------------- //
 
     public static void registerVoidstoneItems() {
         MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Voidstone Items");

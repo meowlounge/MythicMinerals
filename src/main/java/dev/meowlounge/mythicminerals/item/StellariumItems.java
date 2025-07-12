@@ -39,7 +39,7 @@ public class StellariumItems {
     public static final Item STELLARIUM_HOE = registerItem("stellarium_hoe",
             settings -> new HoeItem(StellariumItems.STELLARIUM_TOOL_MATERIAL, -0.5F, -3, settings));
 
-    // ---------------------- //
+    //* ---------------------- //
 
     public static final Item STELLARIUM_HELMET = registerItem("stellarium_helmet",
             settings -> new Item(settings.armor(Armor.STELLARIUM_ARMOR_MATERIAL, EquipmentType.HELMET)));
@@ -53,7 +53,7 @@ public class StellariumItems {
     public static final Item STELLARIUM_BOOTS = registerItem("stellarium_boots",
             settings -> new Item(settings.armor(Armor.STELLARIUM_ARMOR_MATERIAL, EquipmentType.BOOTS)));
 
-    // ---------------------- //
+    //* ---------------------- //
 
     public static final Item STELLARIUM_UPGRADE_SMITHING_TEMPLATE = registerItem("stellarium_upgrade_smithing_template",
             settings -> new SmithingTemplateItem(
@@ -77,7 +77,7 @@ public class StellariumItems {
                             .rarity(Rarity.EPIC)
             ));
 
-    // ---------------------- //
+    //* ---------------------- //
 
     public static void registerStellariumItems() {
         MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Stellarium Items");
