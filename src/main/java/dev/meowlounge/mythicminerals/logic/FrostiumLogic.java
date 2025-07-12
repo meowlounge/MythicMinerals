@@ -2,10 +2,15 @@ package dev.meowlounge.mythicminerals.logic;
 
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.biome.Biome;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class FrostiumLogic extends Item {
@@ -17,33 +22,38 @@ public class FrostiumLogic extends Item {
 	public void inventoryTick(ItemStack stack, ServerWorld world, net.minecraft.entity.Entity entity, @Nullable EquipmentSlot slot) {
 		if (!(entity instanceof PlayerEntity player)) return;
 		if (world.isClient) return;
+		if (!hasFullFrostiumArmorOn(player)) return;
 
-		if (hasFullFrostiumArmorOn(player)) {
-			grantColdArmorEffects(player);
-
-//			if (isInNether(world)) {
-//				applyNetherPenalties(player);
-//			}
+		if (isInColdBiome(world, player.getBlockPos())) {
+			applyColdBiomeBuffs(player, world);
+		} else {
+			applyOverworldDebuffs(player, world);
 		}
 
 		super.inventoryTick(stack, world, entity, slot);
 	}
 
-	private void grantColdArmorEffects(PlayerEntity player) {
-		//* player cant burn since the armor cools him down.
-		player.setOnFireFor(0);
+	private void applyColdBiomeBuffs(@NotNull PlayerEntity player, ServerWorld world) {
+		player.extinguish();
+		player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 1, 2));
+		player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1, 1));
 	}
 
-//	TODO: add logic to debuff player in nether when frostium armor is on.
-//	private void applyNetherPenalties(PlayerEntity player) {
-//		player.setOnFireFor(0);
-//	}
+	private void applyOverworldDebuffs(@NotNull PlayerEntity player, ServerWorld world) {
+		player.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 1, 0));
+		player.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 1, 0));
+		//* damage player every 120 ticks.
+		if (player.age % 120 == 0) {
+			player.damage(world, world.getDamageSources().magic(), 0.5F);
+		}
+	}
 
-//	private boolean isInNether(ServerWorld world) {
-//		return world.getRegistryKey().getRegistry().getPath().equals("the_nether");
-//	}
+	private boolean isInColdBiome(@NotNull ServerWorld world, BlockPos pos) {
+		Biome biome = world.getBiome(pos).value();
+		return biome.isCold(pos, world.getSeaLevel());
+	}
 
-	private boolean hasFullFrostiumArmorOn(PlayerEntity player) {
+	private boolean hasFullFrostiumArmorOn(@NotNull PlayerEntity player) {
 		ItemStack boots = player.getEquippedStack(EquipmentSlot.FEET);
 		ItemStack leggings = player.getEquippedStack(EquipmentSlot.LEGS);
 		ItemStack chestplate = player.getEquippedStack(EquipmentSlot.CHEST);
