@@ -1,6 +1,7 @@
 package dev.meowlounge.mythicminerals.datagen;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
+import dev.meowlounge.mythicminerals.block.FogstoneBlocks;
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
 import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
@@ -21,6 +22,13 @@ public class ItemModel extends FabricModelProvider {
 		blockStateModelGenerator.registerSimpleCubeAll(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE);
 		blockStateModelGenerator.registerSimpleCubeAll(FrostiumBlocks.FROSTIUM_ORE);
 		blockStateModelGenerator.registerSimpleCubeAll(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
+
+		//* ---------------------- //
+
+		blockStateModelGenerator.registerSimpleCubeAll(FogstoneBlocks.FOGSTONE_ORE);
+		blockStateModelGenerator.registerSimpleCubeAll(FogstoneBlocks.DEEPSLATE_FOGSTONE_ORE);
+		blockStateModelGenerator.registerSimpleCubeAll(FogstoneBlocks.FOGSTONE_BLOCK);
+		blockStateModelGenerator.registerSimpleCubeAll(FogstoneBlocks.RAW_FOGSTONE_BLOCK);
 
 		//* ---------------------- //
 
@@ -82,6 +90,20 @@ public class ItemModel extends FabricModelProvider {
 		itemModelGenerator.registerArmor(StellariumItems.STELLARIUM_LEGGINGS, Armor.STELLARIUM_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
 		itemModelGenerator.registerArmor(StellariumItems.STELLARIUM_BOOTS, Armor.STELLARIUM_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 		itemModelGenerator.registerArmor(StellariumItems.STELLARIUM_HELMET, Armor.STELLARIUM_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+
+		//* ---------------------- //
+
+		itemModelGenerator.register(FogstoneItems.FOGSTONE, Models.GENERATED);
+		itemModelGenerator.register(FogstoneItems.RAW_FOGSTONE, Models.GENERATED);
+		itemModelGenerator.register(FogstoneItems.FOGSTONE_SWORD, Models.HANDHELD);
+		itemModelGenerator.register(FogstoneItems.FOGSTONE_SHOVEL, Models.HANDHELD);
+		itemModelGenerator.register(FogstoneItems.FOGSTONE_AXE, Models.HANDHELD);
+		itemModelGenerator.register(FogstoneItems.FOGSTONE_PICKAXE, Models.HANDHELD);
+		itemModelGenerator.register(FogstoneItems.FOGSTONE_HOE, Models.HANDHELD);
+		itemModelGenerator.registerArmor(FogstoneItems.FOGSTONE_CHESTPLATE, Armor.FOGSTONE_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+		itemModelGenerator.registerArmor(FogstoneItems.FOGSTONE_LEGGINGS, Armor.FOGSTONE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+		itemModelGenerator.registerArmor(FogstoneItems.FOGSTONE_BOOTS, Armor.FOGSTONE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+		itemModelGenerator.registerArmor(FogstoneItems.FOGSTONE_HELMET, Armor.FOGSTONE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
 
 		//* ---------------------- //
 

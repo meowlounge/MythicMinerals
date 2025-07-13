@@ -68,6 +68,24 @@ public class LangDE extends FabricLanguageProvider {
 
 		//* ---------------------- //
 
+		translationBuilder.add("block.mythicminerals.fogstone_ore", "Nebelsteinerz");
+		translationBuilder.add("block.mythicminerals.raw_fogstone_block", "Rohernebelsteinblock");
+		translationBuilder.add("block.mythicminerals.fogstone_block", "Nebelstein Block");
+
+		translationBuilder.add("item.mythicminerals.fogstone", "Nebelstein");
+		translationBuilder.add("item.mythicminerals.raw_fogstone", "Rohnebelstein");
+		translationBuilder.add("item.mythicminerals.fogstone_sword", "Nebelsteinschwert");
+		translationBuilder.add("item.mythicminerals.fogstone_shovel", "Nebelsteinschaufel");
+		translationBuilder.add("item.mythicminerals.fogstone_pickaxe", "Nebelsteinspitzhacke");
+		translationBuilder.add("item.mythicminerals.fogstone_axe", "Nebelsteinaxt");
+		translationBuilder.add("item.mythicminerals.fogstone_hoe", "Nebelsteinhacke");
+		translationBuilder.add("item.mythicminerals.fogstone_helmet", "Nebelsteinhelm");
+		translationBuilder.add("item.mythicminerals.fogstone_chestplate", "Nebelsteinharnisch");
+		translationBuilder.add("item.mythicminerals.fogstone_leggings", "Nebelsteinbeinschutz");
+		translationBuilder.add("item.mythicminerals.fogstone_boots", "Nebelsteinstiefel");
+
+		//* ---------------------- //
+
 		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
 		translationBuilder.add("mythicminerals.debug_item_group", "MythicMinerals DEBUG Items");
 

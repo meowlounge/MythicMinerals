@@ -1,14 +1,12 @@
 package dev.meowlounge.mythicminerals;
 
+import dev.meowlounge.mythicminerals.block.FogstoneBlocks;
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
 import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
 import dev.meowlounge.mythicminerals.group.DebugItemGroup;
 import dev.meowlounge.mythicminerals.group.ItemGroup;
-import dev.meowlounge.mythicminerals.item.DebugItems;
-import dev.meowlounge.mythicminerals.item.FrostiumItems;
-import dev.meowlounge.mythicminerals.item.StellariumItems;
-import dev.meowlounge.mythicminerals.item.VoidstoneItems;
+import dev.meowlounge.mythicminerals.item.*;
 import dev.meowlounge.mythicminerals.world.biome.Biomes;
 import dev.meowlounge.mythicminerals.world.gen.WorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -43,6 +41,9 @@ public class MythicMinerals implements ModInitializer, TerraBlenderApi {
 
 		StellariumItems.registerStellariumItems();
 		StellariumBlocks.registerStellariumBlocks();
+
+		FogstoneItems.registerFogstoneItems();
+		FogstoneBlocks.registerFogstoneBlocks();
 
 		//? init worldgen
 		WorldGeneration.generateWorldGen();

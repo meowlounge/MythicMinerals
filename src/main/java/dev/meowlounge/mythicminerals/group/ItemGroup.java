@@ -1,9 +1,11 @@
 package dev.meowlounge.mythicminerals.group;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
+import dev.meowlounge.mythicminerals.block.FogstoneBlocks;
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
 import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
+import dev.meowlounge.mythicminerals.item.FogstoneItems;
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
 import dev.meowlounge.mythicminerals.item.StellariumItems;
 import dev.meowlounge.mythicminerals.item.VoidstoneItems;
@@ -87,6 +89,26 @@ public class ItemGroup {
 
 						entries.add(StellariumBlocks.STELLARIUM_ORE);
 						entries.add(StellariumBlocks.STELLARIUM_BLOCK);
+
+						//* ---------------------- //
+
+						entries.add(FogstoneItems.FOGSTONE);
+						entries.add(FogstoneItems.RAW_FOGSTONE);
+
+						entries.add(FogstoneItems.FOGSTONE_HELMET);
+						entries.add(FogstoneItems.FOGSTONE_CHESTPLATE);
+						entries.add(FogstoneItems.FOGSTONE_LEGGINGS);
+						entries.add(FogstoneItems.FOGSTONE_BOOTS);
+
+						entries.add(FogstoneItems.FOGSTONE_SWORD);
+						entries.add(FogstoneItems.FOGSTONE_PICKAXE);
+						entries.add(FogstoneItems.FOGSTONE_AXE);
+						entries.add(FogstoneItems.FOGSTONE_SHOVEL);
+						entries.add(FogstoneItems.FOGSTONE_HOE);
+
+						entries.add(FogstoneBlocks.FOGSTONE_ORE);
+						entries.add(FogstoneBlocks.RAW_FOGSTONE_BLOCK);
+						entries.add(FogstoneBlocks.FOGSTONE_BLOCK);
 					})
 					.build()
 	);

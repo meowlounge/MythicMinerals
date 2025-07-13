@@ -68,6 +68,24 @@ public class LangEN extends FabricLanguageProvider {
 
 		//* ---------------------- //
 
+		translationBuilder.add("block.mythicminerals.fogstone_ore", "Fogstone Ore");
+		translationBuilder.add("block.mythicminerals.raw_fogstone_block", "Raw Fogstone Block");
+		translationBuilder.add("block.mythicminerals.fogstone_block", "Fogstone Block");
+
+		translationBuilder.add("item.mythicminerals.fogstone", "Fogstone");
+		translationBuilder.add("item.mythicminerals.raw_fogstone", "Raw Fogstone");
+		translationBuilder.add("item.mythicminerals.fogstone_sword", "Fogstone Sword");
+		translationBuilder.add("item.mythicminerals.fogstone_shovel", "Fogstone Shovel");
+		translationBuilder.add("item.mythicminerals.fogstone_pickaxe", "Fogstone Pickaxe");
+		translationBuilder.add("item.mythicminerals.fogstone_axe", "Fogstone Axe");
+		translationBuilder.add("item.mythicminerals.fogstone_hoe", "Fogstone Hoe");
+		translationBuilder.add("item.mythicminerals.fogstone_helmet", "Fogstone Helmet");
+		translationBuilder.add("item.mythicminerals.fogstone_chestplate", "Fogstone Chestplate");
+		translationBuilder.add("item.mythicminerals.fogstone_leggings", "Fogstone Leggings");
+		translationBuilder.add("item.mythicminerals.fogstone_boots", "Fogstone Boots");
+
+		//* ---------------------- //
+
 		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
 		translationBuilder.add("mythicminerals.debug_item_group", "MythicMinerals DEBUG Items");
 
