@@ -12,34 +12,36 @@ import dev.meowlounge.mythicminerals.datagen.tags.Block;
 import dev.meowlounge.mythicminerals.datagen.tags.Item;
 import dev.meowlounge.mythicminerals.world.ConfiguredFeatures;
 import dev.meowlounge.mythicminerals.world.PlacedFeatures;
+import dev.meowlounge.mythicminerals.world.biome.Biomes;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 
 public class MythicMineralsDataGenerator implements DataGeneratorEntrypoint {
-	@Override
-	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
-		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
+    @Override
+    public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
+        FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
-		pack.addProvider(LangDE::new);
-		pack.addProvider(LangEN::new);
+        pack.addProvider(LangDE::new);
+        pack.addProvider(LangEN::new);
 
-		pack.addProvider(ItemModel::new);
-		pack.addProvider(Item::new);
-		pack.addProvider(Block::new);
+        pack.addProvider(ItemModel::new);
+        pack.addProvider(Item::new);
+        pack.addProvider(Block::new);
 
-		pack.addProvider(OreLoot::new);
-		pack.addProvider(RegistryData::new);
+        pack.addProvider(OreLoot::new);
+        pack.addProvider(RegistryData::new);
 
-		pack.addProvider(VoidstoneRecipes::new);
-		pack.addProvider(FrostiumRecipes::new);
-		pack.addProvider(StellariumRecipes::new);
-	}
+        pack.addProvider(VoidstoneRecipes::new);
+        pack.addProvider(FrostiumRecipes::new);
+        pack.addProvider(StellariumRecipes::new);
+    }
 
-	@Override
-	public void buildRegistry(RegistryBuilder registryBuilder) {
-		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ConfiguredFeatures::bootstrap);
-		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, PlacedFeatures::bootstrap);
-	}
+    @Override
+    public void buildRegistry(RegistryBuilder registryBuilder) {
+        registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ConfiguredFeatures::bootstrap);
+        registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, PlacedFeatures::bootstrap);
+        registryBuilder.addRegistry(RegistryKeys.BIOME, Biomes::bootstrap);
+    }
 }

@@ -1,7 +1,8 @@
-// 1.21.7	-999999999-01-01T00:00:00	Mythic Minerals/⛏️ [MythicMinerals]: Registering Data
+// 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/⛏️ [MythicMinerals]: Registering Data
+8db9d72562f6971bcb1e2d4ae55c64d6801f63a7 data/mythicminerals/worldgen/biome/fog_cave.json
 7cc18b526730159c5d006e1871d218a7109dc2b2 data/mythicminerals/worldgen/configured_feature/frostium_ore_key.json
-b42fe88ad3fba573163ec0f87740c59aa9454abb data/mythicminerals/worldgen/configured_feature/stellarium_ore_key.json
+162a844327954fe0d8b4d98a2ebc379c58982344 data/mythicminerals/worldgen/configured_feature/stellarium_ore_key.json
 9b440695f5bd760e609100dc069f085dd7d2062c data/mythicminerals/worldgen/configured_feature/voidstone_ore_key.json
-c91555c62f3942d9804ecf7ae7639bb1578a7902 data/mythicminerals/worldgen/placed_feature/frostium_ore_placed.json
-a3ef62d4763934c13cd16bab949f5972f468d6b0 data/mythicminerals/worldgen/placed_feature/stellarium_ore_placed.json
-ea8ba2549d6da6088e0f7fa9aab091b78572dfe6 data/mythicminerals/worldgen/placed_feature/voidstone_ore_placed.json
+e10b6999695f77d41a062410d652fdde505cd400 data/mythicminerals/worldgen/placed_feature/frostium_ore_placed.json
+2d12e61d41ceda9d629b41be43d040deff324ea7 data/mythicminerals/worldgen/placed_feature/stellarium_ore_placed.json
+630925d92efdfd6c3764f6f1b30d23d0e5b1d55a data/mythicminerals/worldgen/placed_feature/voidstone_ore_placed.json
