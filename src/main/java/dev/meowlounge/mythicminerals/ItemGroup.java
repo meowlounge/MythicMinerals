@@ -3,6 +3,7 @@ package dev.meowlounge.mythicminerals;
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
 import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
+import dev.meowlounge.mythicminerals.item.DebugItems;
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
 import dev.meowlounge.mythicminerals.item.StellariumItems;
 import dev.meowlounge.mythicminerals.item.VoidstoneItems;
@@ -86,6 +87,8 @@ public class ItemGroup {
 
                         entries.add(StellariumBlocks.STELLARIUM_ORE);
                         entries.add(StellariumBlocks.STELLARIUM_BLOCK);
+
+                        entries.add(DebugItems.ORE_LOCATOR);
                     })
                     .build()
     );
