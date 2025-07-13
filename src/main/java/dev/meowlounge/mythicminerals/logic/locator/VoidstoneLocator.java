@@ -13,7 +13,7 @@ public class VoidstoneLocator extends BaseLocatorLogic {
 
 	@Override
 	protected Block[] getTargetBlocks() {
-		return new Block[] {
+		return new Block[]{
 				VoidstoneBlocks.VOIDSTONE_ORE,
 		};
 	}

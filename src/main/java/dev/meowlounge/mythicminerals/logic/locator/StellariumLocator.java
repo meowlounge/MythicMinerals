@@ -14,7 +14,7 @@ public class StellariumLocator extends BaseLocatorLogic {
 
 	@Override
 	protected Block[] getTargetBlocks() {
-		return new Block[] {
+		return new Block[]{
 				StellariumBlocks.STELLARIUM_ORE,
 		};
 	}

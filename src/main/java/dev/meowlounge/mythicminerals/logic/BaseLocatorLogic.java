@@ -155,10 +155,10 @@ public abstract class BaseLocatorLogic extends Item {
 		/**
 		 * Constructor for the block display marker entity.
 		 *
-		 * @param world         the server world
-		 * @param watchedPos    the position of the block being tracked
-		 * @param target        the target block to verify presence
-		 * @param displayState  the block state to display visually
+		 * @param world        the server world
+		 * @param watchedPos   the position of the block being tracked
+		 * @param target       the target block to verify presence
+		 * @param displayState the block state to display visually
 		 */
 		public OreMarkerDisplay(ServerWorld world, BlockPos watchedPos, Block target, BlockState displayState) {
 			super(EntityType.BLOCK_DISPLAY, world);
