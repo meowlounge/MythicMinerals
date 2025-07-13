@@ -3,6 +3,9 @@ package dev.meowlounge.mythicminerals;
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
 import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
+import dev.meowlounge.mythicminerals.group.DebugItemGroup;
+import dev.meowlounge.mythicminerals.group.ItemGroup;
+import dev.meowlounge.mythicminerals.item.DebugItems;
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
 import dev.meowlounge.mythicminerals.item.StellariumItems;
 import dev.meowlounge.mythicminerals.item.VoidstoneItems;
@@ -28,10 +31,11 @@ public class MythicMinerals implements ModInitializer, TerraBlenderApi
 
     @Override
     public void onInitialize() {
-        ItemGroup.registerItemGroup();
-        WorldGeneration.generateWorldGen();
+        //? init debug stuff
+        DebugItemGroup.registerDebugItemGroup();
+        DebugItems.registerDEBUGItems();
 
-        //? init ores
+        //? init items and blocks
         FrostiumItems.registerFrostiumItems();
         FrostiumBlocks.registerFrostiumBlocks();
 
@@ -40,6 +44,13 @@ public class MythicMinerals implements ModInitializer, TerraBlenderApi
 
         StellariumItems.registerStellariumItems();
         StellariumBlocks.registerStellariumBlocks();
+
+        //? init worldgen
+        WorldGeneration.generateWorldGen();
+
+        //? init other stuff
+        ItemGroup.registerItemGroup();
+
     }
 
     @Override
