@@ -31,7 +31,14 @@ public class ItemModel extends FabricModelProvider {
 		//* ---------------------- //
 
 		blockStateModelGenerator.registerSimpleCubeAll(StellariumBlocks.STELLARIUM_BLOCK);
-		blockStateModelGenerator.registerCubeWithCustomTextures(StellariumBlocks.STELLARIUM_ORE, null, (block, ignored) -> new TextureMap().put(TextureKey.PARTICLE, MythicMinerals.id("block/stellarium_ore_top")).put(TextureKey.TOP, MythicMinerals.id("block/stellarium_ore_top")).put(TextureKey.SIDE, MythicMinerals.id("block/stellarium_ore_side")));
+		blockStateModelGenerator.registerCubeWithCustomTextures(StellariumBlocks.STELLARIUM_ORE, null, (block, ignored) -> new TextureMap()
+				.put(TextureKey.PARTICLE, MythicMinerals.id("block/stellarium_ore_top"))
+				.put(TextureKey.SOUTH, MythicMinerals.id("block/stellarium_ore_side"))
+				.put(TextureKey.WEST, MythicMinerals.id("block/stellarium_ore_side"))
+				.put(TextureKey.NORTH, MythicMinerals.id("block/stellarium_ore_side"))
+				.put(TextureKey.EAST, MythicMinerals.id("block/stellarium_ore_side"))
+				.put(TextureKey.UP, MythicMinerals.id("block/stellarium_ore_top"))
+				.put(TextureKey.DOWN, MythicMinerals.id("block/stellarium_ore_top")));
 	}
 
 	public void generateItemModels(ItemModelGenerator itemModelGenerator) {
