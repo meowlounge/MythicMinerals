@@ -1,17 +1,13 @@
 package dev.meowlounge.mythicminerals.datagen;
 
+import dev.meowlounge.mythicminerals.MythicMinerals;
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
 import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
-import dev.meowlounge.mythicminerals.item.Armor;
-import dev.meowlounge.mythicminerals.item.FrostiumItems;
-import dev.meowlounge.mythicminerals.item.StellariumItems;
-import dev.meowlounge.mythicminerals.item.VoidstoneItems;
+import dev.meowlounge.mythicminerals.item.*;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.Models;
+import net.minecraft.client.data.*;
 
 
 public class ItemModel extends FabricModelProvider {
@@ -35,7 +31,7 @@ public class ItemModel extends FabricModelProvider {
         //* ---------------------- //
 
         blockStateModelGenerator.registerSimpleCubeAll(StellariumBlocks.STELLARIUM_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(StellariumBlocks.STELLARIUM_ORE);
+        blockStateModelGenerator.registerCubeWithCustomTextures(StellariumBlocks.STELLARIUM_ORE, null, (block, ignored) -> new TextureMap().put(TextureKey.PARTICLE, MythicMinerals.id("block/stellarium_ore_top")).put(TextureKey.TOP, MythicMinerals.id("block/stellarium_ore_top")).put(TextureKey.BOTTOM, MythicMinerals.id("block/stellarium_ore_top")).put(TextureKey.SIDE, MythicMinerals.id("block/stellarium_ore_side")));
     }
 
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -79,5 +75,9 @@ public class ItemModel extends FabricModelProvider {
         itemModelGenerator.registerArmor(StellariumItems.STELLARIUM_LEGGINGS, Armor.STELLARIUM_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(StellariumItems.STELLARIUM_BOOTS, Armor.STELLARIUM_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(StellariumItems.STELLARIUM_HELMET, Armor.STELLARIUM_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+
+        //* ---------------------- //
+
+        itemModelGenerator.register(DebugItems.ORE_LOCATOR, Models.HANDHELD);
     }
 }
