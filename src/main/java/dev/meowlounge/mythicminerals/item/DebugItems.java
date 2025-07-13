@@ -12,13 +12,13 @@ import static dev.meowlounge.mythicminerals.providers.RegisterProvider.registerI
 
 public class DebugItems {
 	public static final Item FROSTIUM_ORE_LOCATOR = registerItem("frostium_ore_locator",
-			settings -> new FrostiumLocator(settings.component(DataComponentTypes.RARITY, Rarity.RARE).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)));
+			settings -> new FrostiumLocator(settings.component(DataComponentTypes.RARITY, Rarity.EPIC).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)));
 
 	public static final Item VOIDSTONE_ORE_LOCATOR = registerItem("voidstone_ore_locator",
-			settings -> new VoidstoneLocator(settings.component(DataComponentTypes.RARITY, Rarity.RARE).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)));
+			settings -> new VoidstoneLocator(settings.component(DataComponentTypes.RARITY, Rarity.EPIC).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)));
 
 	public static final Item STELLARIUM_ORE_LOCATOR = registerItem("stellarium_ore_locator",
-			settings -> new StellariumLocator(settings.component(DataComponentTypes.RARITY, Rarity.RARE).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)));
+			settings -> new StellariumLocator(settings.component(DataComponentTypes.RARITY, Rarity.EPIC).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)));
 
 	public static void registerDEBUGItems() {
 		MythicMinerals.LOGGER.info("❌❌❌ [MythicMinerals]: Registering DEBUG Items");
