@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "mythicminerals:item/ore_locator"
+    "layer0": "mythicminerals:item/frostium_ore_locator"
   }
 }

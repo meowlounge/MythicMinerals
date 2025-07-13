@@ -17,6 +17,7 @@
   "item.mythicminerals.frostium_helmet": "Frostium Helmet",
   "item.mythicminerals.frostium_hoe": "Frostium Hoe",
   "item.mythicminerals.frostium_leggings": "Frostium Leggings",
+  "item.mythicminerals.frostium_ore_locator": "Frostium Locator",
   "item.mythicminerals.frostium_pickaxe": "Frostium Pickaxe",
   "item.mythicminerals.frostium_shovel": "Frostium Shovel",
   "item.mythicminerals.frostium_sword": "Frostium Sword",
@@ -29,6 +30,7 @@
   "item.mythicminerals.stellarium_helmet": "Stellarium Helmet",
   "item.mythicminerals.stellarium_hoe": "Stellarium Hoe",
   "item.mythicminerals.stellarium_leggings": "Stellarium Leggings",
+  "item.mythicminerals.stellarium_ore_locator": "Stellarium Locator",
   "item.mythicminerals.stellarium_pickaxe": "Stellarium Pickaxe",
   "item.mythicminerals.stellarium_scrap": "Stellarium Scrap",
   "item.mythicminerals.stellarium_shovel": "Stellarium Shovel",
@@ -42,8 +44,10 @@
   "item.mythicminerals.voidstone_helmet": "Voidstone Helmet",
   "item.mythicminerals.voidstone_hoe": "Voidstone Hoe",
   "item.mythicminerals.voidstone_leggings": "Voidstone Leggings",
+  "item.mythicminerals.voidstone_ore_locator": "Voidstone Locator",
   "item.mythicminerals.voidstone_pickaxe": "Voidstone Pickaxe",
   "item.mythicminerals.voidstone_shovel": "Voidstone Shovel",
   "item.mythicminerals.voidstone_sword": "Voidstone Sword",
+  "mythicminerals.debug_item_group": "MythicMinerals DEBUG Items",
   "mythicminerals.item_group_ore": "MythicMinerals"
 }

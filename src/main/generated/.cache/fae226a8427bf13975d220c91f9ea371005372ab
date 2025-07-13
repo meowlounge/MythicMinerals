@@ -1,4 +1,4 @@
-// 1.21.7	-999999999-01-01T00:00:00	Mythic Minerals/Block Loot Tables
+// 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/Block Loot Tables
 db4316079ccc784296e5f61ea98190eba23bbb3e data/mythicminerals/loot_table/blocks/deepslate_frostium_ore.json
 b2421b06d9cbad958d88c88c7e24df9ee1bd0fcf data/mythicminerals/loot_table/blocks/frostium_block.json
 60f74ce4ab7c97922bf1d83f09fe4c5f88ec7977 data/mythicminerals/loot_table/blocks/frostium_ore.json
