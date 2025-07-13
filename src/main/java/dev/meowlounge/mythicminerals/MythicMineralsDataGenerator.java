@@ -12,6 +12,7 @@ import dev.meowlounge.mythicminerals.datagen.tags.Block;
 import dev.meowlounge.mythicminerals.datagen.tags.Item;
 import dev.meowlounge.mythicminerals.world.ConfiguredFeatures;
 import dev.meowlounge.mythicminerals.world.PlacedFeatures;
+import dev.meowlounge.mythicminerals.world.biome.Biomes;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -41,5 +42,6 @@ public class MythicMineralsDataGenerator implements DataGeneratorEntrypoint {
     public void buildRegistry(RegistryBuilder registryBuilder) {
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ConfiguredFeatures::bootstrap);
         registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, PlacedFeatures::bootstrap);
+        registryBuilder.addRegistry(RegistryKeys.BIOME, Biomes::bootstrap);
     }
 }
