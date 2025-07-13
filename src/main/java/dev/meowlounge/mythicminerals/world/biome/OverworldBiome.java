@@ -20,37 +20,29 @@ public class OverworldBiome {
     }
 
     public static Biome fogCave(RegistryEntryLookup<PlacedFeature> placedFeatureGetter, RegistryEntryLookup<ConfiguredCarver<?>> carverGetter) {
-        // Biome features
         GenerationSettings.LookupBackedBuilder biomeBuilder = new GenerationSettings.LookupBackedBuilder(placedFeatureGetter, carverGetter);
 
-        // Add multiple cave carvers for extensive underground generation
         DefaultBiomeFeatures.addLandCarvers(biomeBuilder);
-        DefaultBiomeFeatures.addAmethystGeodes(biomeBuilder); // Adds underground structures
-        DefaultBiomeFeatures.addDungeons(biomeBuilder); // Adds underground dungeons
+        DefaultBiomeFeatures.addAmethystGeodes(biomeBuilder);
+        DefaultBiomeFeatures.addDungeons(biomeBuilder);
         DefaultBiomeFeatures.addMineables(biomeBuilder);
-        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+//        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
 
-        // Custom Placed Feature for fogstone
-        // addFeature(biomeBuilder, GenerationStep.Feature.UNDERGROUND_ORES, PlacedFeatures.FOGSTONE_PLACED_KEY);
-
-
-        // Build the biome with no surface vegetation
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
-        // Optionally, add underground-specific mobs here (e.g., bats)
         DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
 
         return new Biome.Builder()
                 .precipitation(false)
-                .temperature(4.0F) // Hot
-                .downfall(0.0F) // No rain, humid
+                .temperature(4.0F)
+                .downfall(0.0F)
                 .effects((new BiomeEffects.Builder())
                         .waterColor(0x15423c)
                         .waterFogColor(0x2a6f66)
                         .fogColor(0x9ae1bd)
                         .skyColor(getSkyColor(2.0F))
-                        .particleConfig(new BiomeParticleConfig(ParticleTypes.SMOKE, 0.00725f))
-                        .loopSound(SoundEvents.AMBIENT_CAVE)
-                        .moodSound(new BiomeMoodSound(SoundEvents.AMBIENT_CAVE, 90000, 8, 2.0D))
+                        .particleConfig(new BiomeParticleConfig(ParticleTypes.FIREFLY, 0.00525f))
+//                        .loopSound(SoundEvents.AMBIENT_CAVE)
+                        .moodSound(new BiomeMoodSound(SoundEvents.AMBIENT_BASALT_DELTAS_LOOP, 90000, 8, 2.0D))
                         .music(MusicType.createIngameMusic(SoundEvents.MUSIC_OVERWORLD_SWAMP))
                         .build())
                 .spawnSettings(spawnBuilder.build())

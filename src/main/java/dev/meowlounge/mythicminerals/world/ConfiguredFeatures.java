@@ -34,7 +34,7 @@ public class ConfiguredFeatures {
 				List.of(OreFeatureConfig.createTarget(stoneReplaceables, FrostiumBlocks.FROSTIUM_ORE.getDefaultState()),
 						OreFeatureConfig.createTarget(deepslateReplaceables, FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE.getDefaultState()));
 
-		register(context, FROSTIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(FrostiumOres, 2));
+		register(context, FROSTIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(FrostiumOres, 6));
 
 		List<OreFeatureConfig.Target> VoidstoneOres =
 				List.of(OreFeatureConfig.createTarget(endstoneReplaceables, VoidstoneBlocks.VOIDSTONE_ORE.getDefaultState()));
