@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "group": "frostium",
+  "ingredient": "mythicminerals:deepslate_frostium_ore",
+  "result": {
+    "id": "mythicminerals:frostium"
+  }
+}
