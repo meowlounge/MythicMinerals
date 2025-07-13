@@ -69,12 +69,19 @@ public class LangDE extends FabricLanguageProvider {
 		//* ---------------------- //
 
 		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
+		translationBuilder.add("mythicminerals.debug_item_group", "MythicMinerals DEBUG Items");
 
 		//* ---------------------- //
 
 		translationBuilder.add("item.minecraft.smithing_template.applies_to.netherite", "Netheritausrüstung");
 		translationBuilder.add("item.minecraft.smithing_template.base_slot_description", "Rüstungsteil, Werkzeug oder Schwert aus Netherit hinzufügen");
 		translationBuilder.add("item.mythicminerals.stellarium_upgrade_smithing_template.additions_slot_description", "Stellarium hinzufügen");
+
+		//* ---------------------- //
+
+		translationBuilder.add("item.mythicminerals.frostium_ore_locator", "Frostium Finder");
+		translationBuilder.add("item.mythicminerals.voidstone_ore_locator", "Voidstone Finder");
+		translationBuilder.add("item.mythicminerals.stellarium_ore_locator", "Stellarium Finder");
 	}
 
 	@Override

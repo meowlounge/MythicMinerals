@@ -85,6 +85,8 @@ public class ItemModel extends FabricModelProvider {
 
 		//* ---------------------- //
 
-		itemModelGenerator.register(DebugItems.ORE_LOCATOR, Models.HANDHELD);
+		itemModelGenerator.register(DebugItems.FROSTIUM_ORE_LOCATOR, Models.HANDHELD);
+		itemModelGenerator.register(DebugItems.VOIDSTONE_ORE_LOCATOR, Models.HANDHELD);
+		itemModelGenerator.register(DebugItems.STELLARIUM_ORE_LOCATOR, Models.HANDHELD);
 	}
 }

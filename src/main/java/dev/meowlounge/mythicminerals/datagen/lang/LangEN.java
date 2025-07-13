@@ -69,12 +69,19 @@ public class LangEN extends FabricLanguageProvider {
 		//* ---------------------- //
 
 		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
+		translationBuilder.add("mythicminerals.debug_item_group", "MythicMinerals DEBUG Items");
 
 		//* ---------------------- //
 
 		translationBuilder.add("item.minecraft.smithing_template.applies_to.netherite", "Netherite Equipment");
 		translationBuilder.add("item.minecraft.smithing_template.base_slot_description", "Add Netherite armor, weapon or tool");
 		translationBuilder.add("item.mythicminerals.stellarium_upgrade_smithing_template.additions_slot_description", "Add Stellarium");
+
+		//* ---------------------- //
+
+		translationBuilder.add("item.mythicminerals.frostium_ore_locator", "Frostium Locator");
+		translationBuilder.add("item.mythicminerals.voidstone_ore_locator", "Voidstone Locator");
+		translationBuilder.add("item.mythicminerals.stellarium_ore_locator", "Stellarium Locator");
 	}
 
 	@Override
