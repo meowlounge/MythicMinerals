@@ -24,14 +24,15 @@ public class StellariumLocator extends BaseLocatorLogic {
 		return "§3Stellarium Ore";
 	}
 
+	//* keeping default value.
 	@Override
 	protected int getRadius() {
-		return 256;
+		return super.getRadius();
 	}
 
 	@Override
 	protected int getMaxMarkers() {
-		return 32;
+		return 16;
 	}
 
 	@Override
