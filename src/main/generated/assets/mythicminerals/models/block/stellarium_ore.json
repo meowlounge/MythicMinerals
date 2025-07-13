@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "mythicminerals:block/stellarium_ore"
+    "down": "mythicminerals:block/stellarium_ore_top",
+    "east": "mythicminerals:block/stellarium_ore_side",
+    "north": "mythicminerals:block/stellarium_ore_side",
+    "particle": "mythicminerals:block/stellarium_ore_top",
+    "south": "mythicminerals:block/stellarium_ore_side",
+    "up": "mythicminerals:block/stellarium_ore_top",
+    "west": "mythicminerals:block/stellarium_ore_side"
   }
 }
