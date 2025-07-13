@@ -10,7 +10,6 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.AffineTransformation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -63,15 +62,6 @@ public abstract class BaseLocatorLogic extends Item {
 	}
 
 	/**
-	 * Get the dimension identifier where this locator item is allowed to function.
-	 * Players outside this dimension will not be able to use the locator.
-	 * Must be overridden.
-	 *
-	 * @return the dimension's Identifier
-	 */
-	protected abstract Identifier getDimension();
-
-	/**
 	 * Get the blocks this locator is searching for.
 	 * Must be overridden.
 	 *
@@ -94,12 +84,6 @@ public abstract class BaseLocatorLogic extends Item {
 	@Override
 	public ActionResult use(World world, PlayerEntity user, Hand hand) {
 		if (world.isClient) return ActionResult.PASS;
-
-		//* check if player is in the same dimension.
-		if (!world.getRegistryKey().getValue().equals(getDimension())) {
-			user.sendMessage(Text.of("§cYou are in the wrong dimension for this locator."), false);
-			return ActionResult.FAIL;
-		}
 
 		ServerWorld serverWorld = (ServerWorld) world;
 		Set<Block> targetBlockSet = Set.of(getTargetBlocks());
