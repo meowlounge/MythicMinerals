@@ -29,8 +29,8 @@ public class PlacedFeatures {
 						HeightRangePlacementModifier.trapezoid(YOffset.fixed(-20), YOffset.fixed(30))));
 
 		register(context, VOIDSTONE_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.VOIDSTONE_ORE_KEY),
-				OrePlacement.modifiersWithCount(4,
-						HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(20))));
+				OrePlacement.modifiersWithCount(7,
+						HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(50))));
 
 		register(context, STELLARIUM_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.STELLARIUM_ORE_KEY),
 				OrePlacement.modifiersWithCount(2,
