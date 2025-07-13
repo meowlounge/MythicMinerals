@@ -1,6 +1,7 @@
 package dev.meowlounge.mythicminerals.logic.locator;
 
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
+import dev.meowlounge.mythicminerals.logic.BaseLocatorLogic;
 import net.minecraft.block.Block;
 
 public class FrostiumLocator extends BaseLocatorLogic {
@@ -9,9 +10,13 @@ public class FrostiumLocator extends BaseLocatorLogic {
 	}
 
 	@Override
-	protected Block getTargetBlock() {
-		return FrostiumBlocks.FROSTIUM_ORE;
+	protected Block[] getTargetBlocks() {
+		return new Block[] {
+				FrostiumBlocks.FROSTIUM_ORE,
+				FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE
+		};
 	}
+
 
 	@Override
 	protected String getDisplayName() {

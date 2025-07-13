@@ -1,7 +1,7 @@
 package dev.meowlounge.mythicminerals.logic.locator;
 
 import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
-import net.fabricmc.fabric.api.item.v1.FabricItem;
+import dev.meowlounge.mythicminerals.logic.BaseLocatorLogic;
 import net.minecraft.block.Block;
 
 public class VoidstoneLocator extends BaseLocatorLogic {
@@ -10,8 +10,10 @@ public class VoidstoneLocator extends BaseLocatorLogic {
 	}
 
 	@Override
-	protected Block getTargetBlock() {
-		return VoidstoneBlocks.VOIDSTONE_ORE;
+	protected Block[] getTargetBlocks() {
+		return new Block[] {
+				VoidstoneBlocks.VOIDSTONE_ORE,
+		};
 	}
 
 	@Override

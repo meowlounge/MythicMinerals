@@ -1,6 +1,7 @@
 package dev.meowlounge.mythicminerals.logic.locator;
 
 import dev.meowlounge.mythicminerals.block.StellariumBlocks;
+import dev.meowlounge.mythicminerals.logic.BaseLocatorLogic;
 import net.minecraft.block.Block;
 
 public class StellariumLocator extends BaseLocatorLogic {
@@ -9,8 +10,10 @@ public class StellariumLocator extends BaseLocatorLogic {
 	}
 
 	@Override
-	protected Block getTargetBlock() {
-		return StellariumBlocks.STELLARIUM_ORE;
+	protected Block[] getTargetBlocks() {
+		return new Block[] {
+				StellariumBlocks.STELLARIUM_ORE,
+		};
 	}
 
 	@Override
