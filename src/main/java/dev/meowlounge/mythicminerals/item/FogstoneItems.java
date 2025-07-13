@@ -2,11 +2,9 @@ package dev.meowlounge.mythicminerals.item;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
 import dev.meowlounge.mythicminerals.providers.TagsProvider;
-import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.util.Rarity;
 
 import static dev.meowlounge.mythicminerals.providers.RegisterProvider.registerItem;
 
