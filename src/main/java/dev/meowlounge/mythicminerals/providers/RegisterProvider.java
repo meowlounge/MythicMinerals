@@ -22,6 +22,7 @@ public class RegisterProvider {
 				)
 		);
 	}
+
 	public static RegistryKey<Item> createItemKey(String name) {
 		return RegistryKey.of(Registries.ITEM.getKey(), Identifier.of(MythicMinerals.MOD_ID, name));
 	}

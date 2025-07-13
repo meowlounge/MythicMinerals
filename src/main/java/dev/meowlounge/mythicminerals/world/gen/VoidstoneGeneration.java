@@ -6,11 +6,11 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.world.gen.GenerationStep;
 
 public class VoidstoneGeneration {
-    public static void generateOres() {
-        BiomeModifications.addFeature(
-                BiomeSelectors.foundInTheEnd(),
-                GenerationStep.Feature.UNDERGROUND_ORES,
-                PlacedFeatures.VOIDSTONE_PLACED_KEY
-        );
-    }
+	public static void generateOres() {
+		BiomeModifications.addFeature(
+				BiomeSelectors.foundInTheEnd(),
+				GenerationStep.Feature.UNDERGROUND_ORES,
+				PlacedFeatures.VOIDSTONE_PLACED_KEY
+		);
+	}
 }

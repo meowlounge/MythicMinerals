@@ -14,31 +14,31 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MythicMinerals implements ModInitializer {
-    public static final String MOD_ID = "mythicminerals";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final String MOD_ID = "mythicminerals";
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-    public static Identifier id(String path) {
-        if (path == null || path.isEmpty()) {
-            throw new IllegalArgumentException("Identifier path cannot be null or empty");
-        }
-        return Identifier.of(MOD_ID, path);
-    }
+	public static Identifier id(String path) {
+		if (path == null || path.isEmpty()) {
+			throw new IllegalArgumentException("Identifier path cannot be null or empty");
+		}
+		return Identifier.of(MOD_ID, path);
+	}
 
-    @Override
-    public void onInitialize() {
-        ItemGroup.registerItemGroup();
-        WorldGeneration.generateWorldGen();
+	@Override
+	public void onInitialize() {
+		ItemGroup.registerItemGroup();
+		WorldGeneration.generateWorldGen();
 
-        //? init ores
-        FrostiumItems.registerFrostiumItems();
-        FrostiumBlocks.registerFrostiumBlocks();
+		//? init ores
+		FrostiumItems.registerFrostiumItems();
+		FrostiumBlocks.registerFrostiumBlocks();
 
-        VoidstoneItems.registerVoidstoneItems();
-        VoidstoneBlocks.registerVoidstoneBlocks();
+		VoidstoneItems.registerVoidstoneItems();
+		VoidstoneBlocks.registerVoidstoneBlocks();
 
-        StellariumItems.registerStellariumItems();
-        StellariumBlocks.registerStellariumBlocks();
+		StellariumItems.registerStellariumItems();
+		StellariumBlocks.registerStellariumBlocks();
 
-        DebugItems.registerDEBUGItems();
-    }
+		DebugItems.registerDEBUGItems();
+	}
 }
