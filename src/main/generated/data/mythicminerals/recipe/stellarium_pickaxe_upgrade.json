@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": "mythicminerals:stellarium",
-  "base": "minecraft:netherite_pickaxe",
-  "result": {
-    "id": "mythicminerals:stellarium_pickaxe"
-  },
-  "template": "mythicminerals:stellarium_upgrade_smithing_template"
-}

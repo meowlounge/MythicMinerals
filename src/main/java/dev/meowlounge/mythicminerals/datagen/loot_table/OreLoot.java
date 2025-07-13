@@ -24,33 +24,33 @@ import net.minecraft.registry.RegistryWrapper;
 import java.util.concurrent.CompletableFuture;
 
 public class OreLoot extends FabricBlockLootTableProvider {
-    public OreLoot(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
-        super(dataOutput, registryLookup);
-    }
+	public OreLoot(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+		super(dataOutput, registryLookup);
+	}
 
-    @Override
-    public void generate() {
-        addDrop(FrostiumBlocks.FROSTIUM_BLOCK);
-        addDrop(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
-        addDrop(FrostiumBlocks.FROSTIUM_ORE, oreDrops(FrostiumBlocks.FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM));
-        addDrop(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, multipleOreDrops(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM, 1, 1));
+	@Override
+	public void generate() {
+		addDrop(FrostiumBlocks.FROSTIUM_BLOCK);
+		addDrop(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
+		addDrop(FrostiumBlocks.FROSTIUM_ORE, oreDrops(FrostiumBlocks.FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM));
+		addDrop(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, multipleOreDrops(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE, FrostiumItems.RAW_FROSTIUM, 1, 1));
 
-        //* ---------------------- //
+		//* ---------------------- //
 
-        addDrop(VoidstoneBlocks.VOIDSTONE_BLOCK);
-        addDrop(VoidstoneBlocks.RAW_VOIDSTONE_BLOCK);
-        addDrop(VoidstoneBlocks.VOIDSTONE_ORE, oreDrops(VoidstoneBlocks.VOIDSTONE_ORE, VoidstoneItems.RAW_VOIDSTONE));
+		addDrop(VoidstoneBlocks.VOIDSTONE_BLOCK);
+		addDrop(VoidstoneBlocks.RAW_VOIDSTONE_BLOCK);
+		addDrop(VoidstoneBlocks.VOIDSTONE_ORE, oreDrops(VoidstoneBlocks.VOIDSTONE_ORE, VoidstoneItems.RAW_VOIDSTONE));
 
-        //* ---------------------- //
+		//* ---------------------- //
 
-        addDrop(StellariumBlocks.STELLARIUM_BLOCK);
-        addDrop(StellariumBlocks.STELLARIUM_ORE, oreDrops(StellariumBlocks.STELLARIUM_ORE, StellariumItems.STELLARIUM_SCRAP));
-    }
+		addDrop(StellariumBlocks.STELLARIUM_BLOCK);
+		addDrop(StellariumBlocks.STELLARIUM_ORE, oreDrops(StellariumBlocks.STELLARIUM_ORE, StellariumItems.STELLARIUM_SCRAP));
+	}
 
-    public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
-        RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
-        return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
-                ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
-                .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
-    }
+	public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
+		RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
+		return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop, ((LeafEntry.Builder<?>)
+				ItemEntry.builder(item).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(minDrops, maxDrops))))
+				.apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
+	}
 }
