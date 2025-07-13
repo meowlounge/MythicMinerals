@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mythicminerals:fogstone_layer_1"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mythicminerals:fogstone_layer_2"
+      }
+    ]
+  }
+}
