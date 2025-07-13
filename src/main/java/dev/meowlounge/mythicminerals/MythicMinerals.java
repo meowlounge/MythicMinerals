@@ -9,6 +9,7 @@ import dev.meowlounge.mythicminerals.item.VoidstoneItems;
 import dev.meowlounge.mythicminerals.world.biome.Biomes;
 import dev.meowlounge.mythicminerals.world.gen.WorldGeneration;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import terrablender.api.TerraBlenderApi;
@@ -17,6 +18,13 @@ public class MythicMinerals implements ModInitializer, TerraBlenderApi
 {
     public static final String MOD_ID = "mythicminerals";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+    public static Identifier id(String path) {
+        if (path == null || path.isEmpty()) {
+            throw new IllegalArgumentException("Identifier path cannot be null or empty");
+        }
+        return Identifier.of(MOD_ID, path);
+    }
 
     @Override
     public void onInitialize() {
