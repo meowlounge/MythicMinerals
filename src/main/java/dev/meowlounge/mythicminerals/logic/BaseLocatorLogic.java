@@ -95,7 +95,7 @@ public abstract class BaseLocatorLogic extends Item {
 	public ActionResult use(World world, PlayerEntity user, Hand hand) {
 		if (world.isClient) return ActionResult.PASS;
 
-		// Verify player is in correct dimension
+		//* check if player is in the same dimension.
 		if (!world.getRegistryKey().getValue().equals(getDimension())) {
 			user.sendMessage(Text.of("§cYou are in the wrong dimension for this locator."), false);
 			return ActionResult.FAIL;
@@ -112,7 +112,7 @@ public abstract class BaseLocatorLogic extends Item {
 		final int radius = getRadius();
 		final int maxMarkers = getMaxMarkers();
 
-		// Search within cubic volume centered on player for target blocks
+		//* search in the radius that was selected and mark the block we search.
 		outer:
 		for (int dx = -radius; dx <= radius; dx++) {
 			for (int dy = -radius; dy <= radius; dy++) {
@@ -169,7 +169,7 @@ public abstract class BaseLocatorLogic extends Item {
 			setBlockState(displayState);
 			setGlowing(true);
 
-			// Scale down to 50% and offset to center visually inside the block
+			//* scale block display and move to middle of block.
 			Vector3f translation = new Vector3f(-0.25f, -0.25f, -0.25f);
 			Quaternionf leftRotation = new Quaternionf();
 			Vector3f scale = new Vector3f(0.5f, 0.5f, 0.5f);
