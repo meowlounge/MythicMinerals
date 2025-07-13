@@ -20,6 +20,7 @@ public class PlacedFeatures {
 	public static final RegistryKey<PlacedFeature> FROSTIUM_PLACED_KEY = registerKey("frostium_ore_placed");
 	public static final RegistryKey<PlacedFeature> VOIDSTONE_PLACED_KEY = registerKey("voidstone_ore_placed");
 	public static final RegistryKey<PlacedFeature> STELLARIUM_PLACED_KEY = registerKey("stellarium_ore_placed");
+	public static final RegistryKey<PlacedFeature> FOGSTONE_PLACED_KEY = registerKey("fogstone_ore_placed");
 
 	public static void bootstrap(Registerable<PlacedFeature> context) {
 		var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -35,6 +36,10 @@ public class PlacedFeatures {
 		register(context, STELLARIUM_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.STELLARIUM_ORE_KEY),
 				OrePlacement.modifiersWithCount(2,
 						HeightRangePlacementModifier.trapezoid(YOffset.fixed(-10), YOffset.fixed(20))));
+
+		register(context, FOGSTONE_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.FOGSTONE_ORE_KEY),
+				OrePlacement.modifiersWithCount(8,
+						HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(256))));
 	}
 
 

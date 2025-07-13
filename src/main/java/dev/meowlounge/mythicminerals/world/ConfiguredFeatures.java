@@ -1,6 +1,7 @@
 package dev.meowlounge.mythicminerals.world;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
+import dev.meowlounge.mythicminerals.block.FogstoneBlocks;
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
 import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
@@ -24,6 +25,7 @@ public class ConfiguredFeatures {
 	public static final RegistryKey<ConfiguredFeature<?, ?>> FROSTIUM_ORE_KEY = registerKey("frostium_ore_key");
 	public static final RegistryKey<ConfiguredFeature<?, ?>> VOIDSTONE_ORE_KEY = registerKey("voidstone_ore_key");
 	public static final RegistryKey<ConfiguredFeature<?, ?>> STELLARIUM_ORE_KEY = registerKey("stellarium_ore_key");
+	public static final RegistryKey<ConfiguredFeature<?, ?>> FOGSTONE_ORE_KEY = registerKey("fogstone_ore_key");
 
 	public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
 		RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -45,6 +47,12 @@ public class ConfiguredFeatures {
 				List.of(OreFeatureConfig.createTarget(endstoneReplaceables, StellariumBlocks.STELLARIUM_ORE.getDefaultState()));
 
 		register(context, STELLARIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(StellariumOres, 3));
+
+		List<OreFeatureConfig.Target> FogstoneOres =
+				List.of(OreFeatureConfig.createTarget(stoneReplaceables, FogstoneBlocks.FOGSTONE_ORE.getDefaultState()),
+						OreFeatureConfig.createTarget(deepslateReplaceables, FogstoneBlocks.DEEPSLATE_FOGSTONE_ORE.getDefaultState()));
+
+		register(context, FOGSTONE_ORE_KEY, Feature.ORE, new OreFeatureConfig(FrostiumOres, 6));
 	}
 
 	public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

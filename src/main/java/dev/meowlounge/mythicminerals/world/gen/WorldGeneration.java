@@ -5,5 +5,6 @@ public class WorldGeneration {
 		FrostiumGeneration.generateOres();
 		VoidstoneGeneration.generateOres();
 		StellariumGeneration.generateOres();
+		FogstoneGeneration.generateOres();
 	}
 }

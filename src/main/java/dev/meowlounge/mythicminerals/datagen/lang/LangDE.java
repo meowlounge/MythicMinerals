@@ -69,6 +69,7 @@ public class LangDE extends FabricLanguageProvider {
 		//* ---------------------- //
 
 		translationBuilder.add("block.mythicminerals.fogstone_ore", "Nebelsteinerz");
+		translationBuilder.add("block.mythicminerals.deepslate_fogstone_ore", "Tiefenschiefer-Nebelsteinerz");
 		translationBuilder.add("block.mythicminerals.raw_fogstone_block", "Rohernebelsteinblock");
 		translationBuilder.add("block.mythicminerals.fogstone_block", "Nebelstein Block");
 
@@ -98,6 +99,7 @@ public class LangDE extends FabricLanguageProvider {
 		//* ---------------------- //
 
 		translationBuilder.add("item.mythicminerals.frostium_ore_locator", "Frostium Finder");
+		translationBuilder.add("item.mythicminerals.fogstone_ore_locator", "Fogstone Finder");
 		translationBuilder.add("item.mythicminerals.voidstone_ore_locator", "Voidstone Finder");
 		translationBuilder.add("item.mythicminerals.stellarium_ore_locator", "Stellarium Finder");
 	}

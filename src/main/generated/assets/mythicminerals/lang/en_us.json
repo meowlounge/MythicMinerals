@@ -1,4 +1,5 @@
 {
+  "block.mythicminerals.deepslate_fogstone_ore": "Deepslate Fogstone Ore",
   "block.mythicminerals.deepslate_frostium_ore": "Deepslate Frostium Ore",
   "block.mythicminerals.fogstone_block": "Fogstone Block",
   "block.mythicminerals.fogstone_ore": "Fogstone Ore",
@@ -20,6 +21,7 @@
   "item.mythicminerals.fogstone_helmet": "Fogstone Helmet",
   "item.mythicminerals.fogstone_hoe": "Fogstone Hoe",
   "item.mythicminerals.fogstone_leggings": "Fogstone Leggings",
+  "item.mythicminerals.fogstone_ore_locator": "Fogstone Locator",
   "item.mythicminerals.fogstone_pickaxe": "Fogstone Pickaxe",
   "item.mythicminerals.fogstone_shovel": "Fogstone Shovel",
   "item.mythicminerals.fogstone_sword": "Fogstone Sword",

@@ -107,6 +107,7 @@ public class ItemGroup {
 						entries.add(FogstoneItems.FOGSTONE_HOE);
 
 						entries.add(FogstoneBlocks.FOGSTONE_ORE);
+						entries.add(FogstoneBlocks.DEEPSLATE_FOGSTONE_ORE);
 						entries.add(FogstoneBlocks.RAW_FOGSTONE_BLOCK);
 						entries.add(FogstoneBlocks.FOGSTONE_BLOCK);
 					})

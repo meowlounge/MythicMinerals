@@ -26,6 +26,7 @@ public class DebugItemGroup {
 						entries.add(DebugItems.FROSTIUM_ORE_LOCATOR);
 						entries.add(DebugItems.VOIDSTONE_ORE_LOCATOR);
 						entries.add(DebugItems.STELLARIUM_ORE_LOCATOR);
+						entries.add(DebugItems.FOGSTONE_ORE_LOCATOR);
 					})
 					.build()
 	);

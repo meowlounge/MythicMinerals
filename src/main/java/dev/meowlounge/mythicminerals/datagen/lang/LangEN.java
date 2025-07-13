@@ -69,6 +69,7 @@ public class LangEN extends FabricLanguageProvider {
 		//* ---------------------- //
 
 		translationBuilder.add("block.mythicminerals.fogstone_ore", "Fogstone Ore");
+		translationBuilder.add("block.mythicminerals.deepslate_fogstone_ore", "Deepslate Fogstone Ore");
 		translationBuilder.add("block.mythicminerals.raw_fogstone_block", "Raw Fogstone Block");
 		translationBuilder.add("block.mythicminerals.fogstone_block", "Fogstone Block");
 
@@ -98,6 +99,7 @@ public class LangEN extends FabricLanguageProvider {
 		//* ---------------------- //
 
 		translationBuilder.add("item.mythicminerals.frostium_ore_locator", "Frostium Locator");
+		translationBuilder.add("item.mythicminerals.fogstone_ore_locator", "Fogstone Locator");
 		translationBuilder.add("item.mythicminerals.voidstone_ore_locator", "Voidstone Locator");
 		translationBuilder.add("item.mythicminerals.stellarium_ore_locator", "Stellarium Locator");
 	}
