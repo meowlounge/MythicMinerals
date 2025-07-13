@@ -24,6 +24,8 @@ public class FrostiumLogic extends Item {
 		if (world.isClient) return;
 		if (!hasFullFrostiumArmorOn(player)) return;
 
+		if (world.getRegistryKey() == ServerWorld.END) return;
+
 		if (isInColdBiome(world, player.getBlockPos())) {
 			applyColdBiomeBuffs(player);
 		} else {
