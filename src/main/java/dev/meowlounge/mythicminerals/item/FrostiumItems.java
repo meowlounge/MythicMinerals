@@ -1,7 +1,7 @@
 package dev.meowlounge.mythicminerals.item;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
-import dev.meowlounge.mythicminerals.logic.FrostiumLogic;
+import dev.meowlounge.mythicminerals.logic.armor.FrostiumLogic;
 import dev.meowlounge.mythicminerals.providers.TagsProvider;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;

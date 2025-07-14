@@ -1,4 +1,4 @@
-package dev.meowlounge.mythicminerals.logic;
+package dev.meowlounge.mythicminerals.logic.armor;
 
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
 import net.minecraft.entity.EquipmentSlot;
