@@ -31,6 +31,7 @@ public class DebugItemGroup {
 					.build()
 	);
 
+	@SuppressWarnings("EmptyMethod")
 	public static void registerDebugItemGroup() {
 		//? registration triggered on class load
 	}

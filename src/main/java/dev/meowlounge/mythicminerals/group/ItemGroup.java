@@ -114,6 +114,7 @@ public class ItemGroup {
 					.build()
 	);
 
+	@SuppressWarnings("EmptyMethod")
 	public static void registerItemGroup() {
 		//? registration triggered on class load
 	}

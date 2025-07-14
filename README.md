@@ -9,7 +9,7 @@
 
 - commits should be readable no ( did some things ), we want to know what happened in this commit.
 - test if it works before commiting it.
-- if its an big feature, create an new branch to save the main branch from being ruined. (please test before final...)
+- if it's a big feature, create a new branch to save the main branch from being ruined. (please test before final...)
 
 # ORES
 
