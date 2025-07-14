@@ -21,7 +21,7 @@ public class DebugItemGroup {
 			MM_DEBUG_GROUP_KEY.getValue(),
 			FabricItemGroup.builder()
 					.icon(() -> new ItemStack(DebugItems.VOIDSTONE_ORE_LOCATOR))
-					.displayName(Text.translatable("mythicminerals.debug_item_group"))
+					.displayName(Text.of("MythicMinerals Developer Area"))
 					.entries((displayContext, entries) -> {
 						entries.add(DebugItems.FROSTIUM_ORE_LOCATOR);
 						entries.add(DebugItems.VOIDSTONE_ORE_LOCATOR);
