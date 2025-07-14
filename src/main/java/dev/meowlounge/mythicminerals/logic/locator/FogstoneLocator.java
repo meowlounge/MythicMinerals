@@ -22,7 +22,7 @@ public class FogstoneLocator extends BaseLocatorLogic {
 		return "§3Fogstone Ore";
 	}
 
-	//* keeping default value.
+	//* keeping default value. ( 64 )
 	@Override
 	protected int getRadius() {
 		return super.getRadius();

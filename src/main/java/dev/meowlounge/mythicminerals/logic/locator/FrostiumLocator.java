@@ -22,7 +22,7 @@ public class FrostiumLocator extends BaseLocatorLogic {
 		return "§3Frostium Ore";
 	}
 
-	//* keeping default value.
+	//* keeping default value. ( 64 )
 	@Override
 	protected int getRadius() {
 		return super.getRadius();
