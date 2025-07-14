@@ -64,6 +64,7 @@
   "item.mythicminerals.voidstone_pickaxe": "Voidstone Pickaxe",
   "item.mythicminerals.voidstone_shovel": "Voidstone Shovel",
   "item.mythicminerals.voidstone_sword": "Voidstone Sword",
-  "mythicminerals.debug_item_group": "MythicMinerals DEBUG Items",
+  "key.mythicminerals.boost": "Stellarium Armor Boost",
+  "mythicminerals": "MythicMinerals",
   "mythicminerals.item_group_ore": "MythicMinerals"
 }

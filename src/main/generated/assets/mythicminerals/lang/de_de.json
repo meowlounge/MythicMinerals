@@ -64,6 +64,6 @@
   "item.mythicminerals.voidstone_pickaxe": "Leerensteinspitzhacke",
   "item.mythicminerals.voidstone_shovel": "Leerensteinschaufel",
   "item.mythicminerals.voidstone_sword": "Leerensteinschwert",
-  "mythicminerals.debug_item_group": "MythicMinerals DEBUG Items",
+  "key.mythicminerals.boost": "Stellarium Rüstungs Fähigkeit",
   "mythicminerals.item_group_ore": "MythicMinerals"
 }

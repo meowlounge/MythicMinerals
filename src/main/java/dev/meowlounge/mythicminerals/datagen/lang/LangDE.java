@@ -88,7 +88,6 @@ public class LangDE extends FabricLanguageProvider {
 		//* ---------------------- //
 
 		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
-		translationBuilder.add("mythicminerals.debug_item_group", "MythicMinerals DEBUG Items");
 
 		//* ---------------------- //
 
@@ -102,6 +101,10 @@ public class LangDE extends FabricLanguageProvider {
 		translationBuilder.add("item.mythicminerals.fogstone_ore_locator", "Fogstone Finder");
 		translationBuilder.add("item.mythicminerals.voidstone_ore_locator", "Voidstone Finder");
 		translationBuilder.add("item.mythicminerals.stellarium_ore_locator", "Stellarium Finder");
+
+		//* ---------------------- //
+
+		translationBuilder.add("key.mythicminerals.boost", "Stellarium Rüstungs Fähigkeit");
 	}
 
 	@Override

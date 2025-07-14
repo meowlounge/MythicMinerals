@@ -13,6 +13,10 @@ public class LangEN extends FabricLanguageProvider {
 
 	@Override
 	public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
+		translationBuilder.add("mythicminerals", "MythicMinerals");
+
+		//* ---------------------- //
+
 		translationBuilder.add("block.mythicminerals.frostium_ore", "Frostium Ore");
 		translationBuilder.add("block.mythicminerals.deepslate_frostium_ore", "Deepslate Frostium Ore");
 		translationBuilder.add("block.mythicminerals.raw_frostium_block", "Raw Frostium Block");
@@ -88,7 +92,6 @@ public class LangEN extends FabricLanguageProvider {
 		//* ---------------------- //
 
 		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
-		translationBuilder.add("mythicminerals.debug_item_group", "MythicMinerals DEBUG Items");
 
 		//* ---------------------- //
 
@@ -102,6 +105,10 @@ public class LangEN extends FabricLanguageProvider {
 		translationBuilder.add("item.mythicminerals.fogstone_ore_locator", "Fogstone Locator");
 		translationBuilder.add("item.mythicminerals.voidstone_ore_locator", "Voidstone Locator");
 		translationBuilder.add("item.mythicminerals.stellarium_ore_locator", "Stellarium Locator");
+
+		//* ---------------------- //
+
+		translationBuilder.add("key.mythicminerals.boost", "Stellarium Armor Boost");
 	}
 
 	@Override
