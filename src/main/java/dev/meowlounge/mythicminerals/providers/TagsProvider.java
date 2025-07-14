@@ -26,7 +26,6 @@ public class TagsProvider {
 		public static final TagKey<Item> STELLARIUM_REPAIR = createItemTag("stellarium_repair");
 		public static final TagKey<Item> FOGSTONE_REPAIR = createItemTag("fogstone_repair");
 
-
 		private static TagKey<Item> createItemTag(String name) {
 			return TagKey.of(RegistryKeys.ITEM, Identifier.of(MythicMinerals.MOD_ID, name));
 		}
