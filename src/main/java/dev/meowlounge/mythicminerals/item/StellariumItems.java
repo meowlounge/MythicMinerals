@@ -1,6 +1,7 @@
 package dev.meowlounge.mythicminerals.item;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
+import dev.meowlounge.mythicminerals.logic.armor.stellarium.StellariumLogic;
 import dev.meowlounge.mythicminerals.providers.TagsProvider;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
@@ -51,7 +52,7 @@ public class StellariumItems {
 	// ---------------------- //
 
 	public static final Item STELLARIUM_HELMET = registerItem("stellarium_helmet",
-			settings -> new Item(settings.armor(Armor.STELLARIUM_ARMOR_MATERIAL, EquipmentType.HELMET)
+			settings -> new StellariumLogic(settings.armor(Armor.STELLARIUM_ARMOR_MATERIAL, EquipmentType.HELMET)
 					.component(DataComponentTypes.RARITY, Rarity.EPIC)));
 
 	public static final Item STELLARIUM_CHESTPLATE = registerItem("stellarium_chestplate",

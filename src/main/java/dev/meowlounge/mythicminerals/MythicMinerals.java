@@ -7,9 +7,12 @@ import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
 import dev.meowlounge.mythicminerals.group.DebugItemGroup;
 import dev.meowlounge.mythicminerals.group.ItemGroup;
 import dev.meowlounge.mythicminerals.item.*;
+import dev.meowlounge.mythicminerals.logic.armor.stellarium.ModMessages;
+import dev.meowlounge.mythicminerals.network.payload.StellariumBoostPayload;
 import dev.meowlounge.mythicminerals.world.biome.Biomes;
 import dev.meowlounge.mythicminerals.world.gen.WorldGeneration;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,7 +53,8 @@ public class MythicMinerals implements ModInitializer, TerraBlenderApi {
 
 		//? init other stuff
 		ItemGroup.registerItemGroup();
-
+		PayloadTypeRegistry.playC2S().register(StellariumBoostPayload.ID, StellariumBoostPayload.TYPE.codec());
+		ModMessages.registerC2SPackets();
 	}
 
 	@Override
