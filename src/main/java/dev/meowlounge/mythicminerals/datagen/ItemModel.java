@@ -9,6 +9,7 @@ import dev.meowlounge.mythicminerals.item.*;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.*;
+import net.minecraft.text.Text;
 
 
 public class ItemModel extends FabricModelProvider {
@@ -110,5 +111,6 @@ public class ItemModel extends FabricModelProvider {
 		itemModelGenerator.register(DebugItems.FROSTIUM_ORE_LOCATOR, Models.HANDHELD);
 		itemModelGenerator.register(DebugItems.VOIDSTONE_ORE_LOCATOR, Models.HANDHELD);
 		itemModelGenerator.register(DebugItems.STELLARIUM_ORE_LOCATOR, Models.HANDHELD);
+		itemModelGenerator.register(DebugItems.FOGSTONE_ORE_LOCATOR, Models.HANDHELD);
 	}
 }
