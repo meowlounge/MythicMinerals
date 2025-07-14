@@ -16,6 +16,7 @@ public class DebugItemGroup {
 			Identifier.of(MythicMinerals.MOD_ID, "mythicminerals_debug_items")
 	);
 
+	@SuppressWarnings("unused")
 	public static final net.minecraft.item.ItemGroup MM_DEBUG_ITEM_GROUP = Registry.register(
 			Registries.ITEM_GROUP,
 			MM_DEBUG_GROUP_KEY.getValue(),

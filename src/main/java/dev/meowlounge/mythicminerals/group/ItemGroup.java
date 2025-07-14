@@ -23,6 +23,7 @@ public class ItemGroup {
 			Identifier.of(MythicMinerals.MOD_ID, "mythicminerals_ores")
 	);
 
+	@SuppressWarnings("unused")
 	public static final net.minecraft.item.ItemGroup MM_ITEM_GROUP = Registry.register(
 			Registries.ITEM_GROUP,
 			MM_GROUP_KEY.getValue(),
