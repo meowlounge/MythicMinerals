@@ -56,76 +56,101 @@ public class StellariumLogic extends Item {
 		boostTicks.put(id, 0);
 	}
 
-	/**
-	 * Called from a server tick handler
-	 */
 	public static void onServerTick(MinecraftServer server) {
 		if (boostingPlayers.isEmpty()) return;
 
 		for (ServerWorld world : server.getWorlds()) {
 			for (ServerPlayerEntity player : world.getPlayers()) {
-				UUID id = player.getUuid();
-				if (!boostingPlayers.contains(id)) continue;
+				UUID playerId = player.getUuid();
+				if (!boostingPlayers.contains(playerId)) continue;
 				if (hasFullStellariumArmorOn(player)) {
-					stopBoost(id);
+					stopBoost(playerId);
 					continue;
 				}
 
-				int ticks = boostTicks.getOrDefault(id, 0);
-				if (ticks >= BOOST_TICKS) {
-					stopBoost(id);
-					player.setInvulnerable(false);
-					player.fallDistance = 0f;
-					continue;
-				}
-
-				Vec3d lookDir = player.getRotationVec(1.0f).normalize();
-				Vec3d boostVelocity = lookDir.multiply(BOOST_SPEED);
-				player.addVelocity(boostVelocity.x, boostVelocity.y, boostVelocity.z);
-				player.velocityModified = true;
-
-				// Calculate position behind player along opposite look direction
-				Vec3d behindPos = player.getPos().subtract(lookDir.multiply(0.6)); // 0.6 blocks behind player
-				double px = behindPos.x;
-				double py = behindPos.y + 0.1; // Slightly above ground
-				double pz = behindPos.z;
-
-				// Flame particles with slight random spread
-				for (int i = 0; i < 6; i++) {
-					double offsetX = (Math.random() - 0.5) * 0.3;
-					double offsetY = Math.random() * 0.2;
-					double offsetZ = (Math.random() - 0.5) * 0.3;
-					double velocityX = (Math.random() - 0.5) * 0.01;
-					double velocityY = Math.random() * 0.01;
-					double velocityZ = (Math.random() - 0.5) * 0.01;
-
-					world.spawnParticles(ParticleTypes.FLAME, px + offsetX, py + offsetY, pz + offsetZ, 1, velocityX, velocityY, velocityZ, 0.02);
-				}
-
-				// Smoke particles drifting slightly up
-				for (int i = 0; i < 3; i++) {
-					double offsetX = (Math.random() - 0.5) * 0.2;
-					double offsetY = Math.random() * 0.1;
-					double offsetZ = (Math.random() - 0.5) * 0.2;
-					world.spawnParticles(ParticleTypes.SMOKE, px + offsetX, py + offsetY, pz + offsetZ, 1, 0, 0.01, 0, 0.01);
-				}
-
-				if (ticks % 4 == 0) {
-					world.playSound(null, player.getBlockPos(), SoundEvents.BLOCK_FIRE_AMBIENT, SoundCategory.PLAYERS, 0.2f, 1.0f + (float)(Math.random() * 0.1));
-				}
-
-				if (!player.isOnGround()) {
-					player.setInvulnerable(true);
-				} else {
-					player.setInvulnerable(true);
-					player.fallDistance = 0f;
-					boostTicks.put(id, ticks + 1);
-					continue;
-				}
-
-				boostTicks.put(id, ticks + 1);
+				processBoost(world, player, playerId);
 			}
 		}
+	}
+
+	private static void processBoost(ServerWorld world, ServerPlayerEntity player, UUID playerId) {
+		int ticks = boostTicks.getOrDefault(playerId, 0);
+
+		if (ticks >= BOOST_TICKS) {
+			endBoost(player, playerId);
+			return;
+		}
+
+		applyBoostVelocity(player);
+		spawnParticleTrail(world, player);
+
+		if (ticks % 4 == 0) {
+			playBoostSound(world, player);
+		}
+
+		handleInvulnerabilityAndFallDamage(player, ticks, playerId);
+	}
+
+	private static void applyBoostVelocity(ServerPlayerEntity player) {
+		Vec3d lookDir = player.getRotationVec(1.0f).normalize();
+		Vec3d boostVelocity = lookDir.multiply(BOOST_SPEED);
+		player.addVelocity(boostVelocity.x, boostVelocity.y, boostVelocity.z);
+		player.velocityModified = true;
+	}
+
+	private static void spawnParticleTrail(ServerWorld world, ServerPlayerEntity player) {
+		Vec3d lookDir = player.getRotationVec(1.0f).normalize();
+		Vec3d behindPos = player.getPos().subtract(lookDir.multiply(0.6));
+
+		double px = behindPos.x;
+		double py = behindPos.y + 0.1;
+		double pz = behindPos.z;
+
+		spawnFlameParticles(world, px, py, pz);
+		spawnSmokeParticles(world, px, py, pz);
+	}
+
+	private static void spawnFlameParticles(ServerWorld world, double px, double py, double pz) {
+		for (int i = 0; i < 6; i++) {
+			double offsetX = (Math.random() - 0.5) * 0.3;
+			double offsetY = Math.random() * 0.2;
+			double offsetZ = (Math.random() - 0.5) * 0.3;
+			double velocityX = (Math.random() - 0.5) * 0.01;
+			double velocityY = Math.random() * 0.01;
+			double velocityZ = (Math.random() - 0.5) * 0.01;
+
+			world.spawnParticles(ParticleTypes.FLAME, px + offsetX, py + offsetY, pz + offsetZ, 1, velocityX, velocityY, velocityZ, 0.02);
+		}
+	}
+
+	private static void spawnSmokeParticles(ServerWorld world, double px, double py, double pz) {
+		for (int i = 0; i < 3; i++) {
+			double offsetX = (Math.random() - 0.5) * 0.2;
+			double offsetY = Math.random() * 0.1;
+			double offsetZ = (Math.random() - 0.5) * 0.2;
+
+			world.spawnParticles(ParticleTypes.SMOKE, px + offsetX, py + offsetY, pz + offsetZ, 1, 0, 0.01, 0, 0.01);
+		}
+	}
+
+	private static void playBoostSound(ServerWorld world, ServerPlayerEntity player) {
+		world.playSound(null, player.getBlockPos(), SoundEvents.BLOCK_FIRE_AMBIENT, SoundCategory.PLAYERS, 0.2f, 1.0f + (float)(Math.random() * 0.1));
+	}
+
+	private static void handleInvulnerabilityAndFallDamage(ServerPlayerEntity player, int ticks, UUID playerId) {
+		if (!player.isOnGround()) {
+			player.setInvulnerable(true);
+		} else {
+			player.setInvulnerable(true);
+			player.fallDistance = 0f;
+			boostTicks.put(playerId, ticks + 1);
+		}
+	}
+
+	private static void endBoost(ServerPlayerEntity player, UUID playerId) {
+		stopBoost(playerId);
+		player.setInvulnerable(false);
+		player.fallDistance = 0f;
 	}
 
 	private static void stopBoost(UUID id) {
