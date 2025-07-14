@@ -1,6 +1,5 @@
 package dev.meowlounge.mythicminerals;
 
-import dev.meowlounge.mythicminerals.logic.armor.stellarium.ModMessages;
 import dev.meowlounge.mythicminerals.logic.armor.stellarium.StellariumLogic;
 import dev.meowlounge.mythicminerals.network.payload.StellariumBoostPayload;
 import net.fabricmc.api.ClientModInitializer;
