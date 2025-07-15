@@ -19,11 +19,15 @@ public class StellariumLogic extends Item {
 	private static final Map<UUID, Long> cooldowns = new HashMap<>();
 	private static final Set<UUID> boostingPlayers = new HashSet<>();
 	private static final Map<UUID, Integer> boostTicks = new HashMap<>();
+	private static final Map<UUID, Vec3d> lockedDirections = new HashMap<>();
+	private static final Map<UUID, Integer> invulnerabilityTicks = new HashMap<>();
 
-	private static final long COOLDOWN_MS = 16_000;
-	private static final boolean DEBUG = true;
+	private static final boolean DEBUG_BYPASS_COOLDOWN = false;
+	private static final long COOLDOWN_MS = 500;
 	private static final int BOOST_TICKS = 8;
-	private static final double BOOST_SPEED = 1;
+	private static final int INVULNERABILITY_DURATION = 60;
+	private static final double BOOST_SPEED = 32;
+	private static final double BOOST_DECELERATION = 0.7;
 
 	public StellariumLogic(Settings settings) {
 		super(settings);
@@ -45,15 +49,24 @@ public class StellariumLogic extends Item {
 		if (hasFullStellariumArmorOn(player)) return;
 
 		UUID id = player.getUuid();
-		long now = System.currentTimeMillis();
-		long cooldown = DEBUG ? 1 : COOLDOWN_MS;
-
-		if (cooldowns.getOrDefault(id, 0L) + cooldown > now) return;
 		if (boostingPlayers.contains(id)) return;
 
-		cooldowns.put(id, now);
+		if (!DEBUG_BYPASS_COOLDOWN) {
+			long now = System.currentTimeMillis();
+			long lastUse = cooldowns.getOrDefault(id, 0L);
+			if (now - lastUse < COOLDOWN_MS) return;
+		}
+
 		boostingPlayers.add(id);
 		boostTicks.put(id, 0);
+		invulnerabilityTicks.put(id, 0);
+
+		Vec3d lookDir = player.getRotationVec(1.0f).normalize();
+		lockedDirections.put(id, lookDir);
+
+		Vec3d initialVelocity = lookDir.multiply(BOOST_SPEED);
+		player.setVelocity(initialVelocity);
+		player.velocityModified = true;
 	}
 
 	public static void onServerTick(MinecraftServer server) {
@@ -69,6 +82,7 @@ public class StellariumLogic extends Item {
 				}
 
 				processBoost(world, player, playerId);
+				handleInvulnerability(player, playerId);
 			}
 		}
 	}
@@ -77,25 +91,54 @@ public class StellariumLogic extends Item {
 		int ticks = boostTicks.getOrDefault(playerId, 0);
 
 		if (ticks >= BOOST_TICKS) {
-			endBoost(player, playerId);
+			endBoost(playerId);
 			return;
 		}
 
-		applyBoostVelocity(player);
+		applyBoostVelocity(player, ticks);
 		spawnParticleTrail(world, player);
 
 		if (ticks % 4 == 0) {
 			playBoostSound(world, player);
 		}
 
-		handleInvulnerabilityAndFallDamage(player, ticks, playerId);
+		boostTicks.put(playerId, ticks + 1);
 	}
 
-	private static void applyBoostVelocity(ServerPlayerEntity player) {
-		Vec3d lookDir = player.getRotationVec(1.0f).normalize();
-		Vec3d boostVelocity = lookDir.multiply(BOOST_SPEED);
-		player.addVelocity(boostVelocity.x, boostVelocity.y, boostVelocity.z);
+	private static void applyBoostVelocity(ServerPlayerEntity player, int ticks) {
+		Vec3d lookDir = lockedDirections.get(player.getUuid());
+		if (lookDir == null) return;
+
+		double progressRatio = (double) ticks / BOOST_TICKS;
+		double currentSpeed = BOOST_SPEED * Math.pow(BOOST_DECELERATION, progressRatio * 3);
+
+		Vec3d currentVelocity = player.getVelocity();
+		Vec3d boostVelocity = lookDir.multiply(currentSpeed);
+
+		Vec3d playerInput = new Vec3d(
+				currentVelocity.x * 0.1,
+				0,
+				currentVelocity.z * 0.1
+		);
+
+		Vec3d finalVelocity = boostVelocity.add(playerInput);
+		finalVelocity = new Vec3d(finalVelocity.x, currentVelocity.y, finalVelocity.z);
+
+		player.setVelocity(finalVelocity);
 		player.velocityModified = true;
+	}
+
+	private static void handleInvulnerability(ServerPlayerEntity player, UUID playerId) {
+		int invulnTicks = invulnerabilityTicks.getOrDefault(playerId, 0);
+
+		if (invulnTicks < INVULNERABILITY_DURATION) {
+			player.setInvulnerable(true);
+			player.fallDistance = 0f;
+			invulnerabilityTicks.put(playerId, invulnTicks + 1);
+		} else {
+			player.setInvulnerable(false);
+			invulnerabilityTicks.remove(playerId);
+		}
 	}
 
 	private static void spawnParticleTrail(ServerWorld world, ServerPlayerEntity player) {
@@ -137,24 +180,16 @@ public class StellariumLogic extends Item {
 		world.playSound(null, player.getBlockPos(), SoundEvents.BLOCK_FIRE_AMBIENT, SoundCategory.PLAYERS, 0.2f, 1.0f + (float)(Math.random() * 0.1));
 	}
 
-	private static void handleInvulnerabilityAndFallDamage(ServerPlayerEntity player, int ticks, UUID playerId) {
-		if (!player.isOnGround()) {
-			player.setInvulnerable(true);
-		} else {
-			player.setInvulnerable(true);
-			player.fallDistance = 0f;
-			boostTicks.put(playerId, ticks + 1);
-		}
-	}
-
-	private static void endBoost(ServerPlayerEntity player, UUID playerId) {
+	private static void endBoost(UUID playerId) {
 		stopBoost(playerId);
-		player.setInvulnerable(false);
-		player.fallDistance = 0f;
+
+		cooldowns.put(playerId, System.currentTimeMillis());
 	}
 
 	private static void stopBoost(UUID id) {
 		boostingPlayers.remove(id);
 		boostTicks.remove(id);
+		lockedDirections.remove(id);
+		invulnerabilityTicks.remove(id);
 	}
 }
