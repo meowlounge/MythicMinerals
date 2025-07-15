@@ -1,7 +1,7 @@
 package dev.meowlounge.mythicminerals.datagen.recipe;
 
-import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
-import dev.meowlounge.mythicminerals.item.FrostiumItems;
+import dev.meowlounge.mythicminerals.block.PyrostoneBlocks;
+import dev.meowlounge.mythicminerals.item.PyrostoneItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
@@ -14,8 +14,8 @@ import net.minecraft.registry.RegistryWrapper;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-public class FrostiumRecipes extends FabricRecipeProvider {
-	public FrostiumRecipes(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+public class PyrostoneRecipes extends FabricRecipeProvider {
+	public PyrostoneRecipes(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
 		super(output, registriesFuture);
 	}
 
@@ -24,102 +24,101 @@ public class FrostiumRecipes extends FabricRecipeProvider {
 		return new RecipeGenerator(wrapperLookup, exporter) {
 			@Override
 			public void generate() {
-				List<ItemConvertible> FROSTIUM_SMELTABLES = List.of(
-						FrostiumItems.RAW_FROSTIUM,
-						FrostiumBlocks.FROSTIUM_ORE,
-						FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE
+				List<ItemConvertible> PYROSTONE_SMELTABLES = List.of(
+						PyrostoneItems.RAW_PYROSTONE,
+						PyrostoneBlocks.PYROSTONE_ORE
 				);
 
-				offerSmelting(FROSTIUM_SMELTABLES, RecipeCategory.MISC, FrostiumItems.FROSTIUM, 0.25F, 200, "frostium");
-				offerBlasting(FROSTIUM_SMELTABLES, RecipeCategory.MISC, FrostiumItems.FROSTIUM, 0.35F, 100, "frostium");
+				offerSmelting(PYROSTONE_SMELTABLES, RecipeCategory.MISC, PyrostoneItems.PYROSTONE, 0.25F, 200, "fogstone");
+				offerBlasting(PYROSTONE_SMELTABLES, RecipeCategory.MISC, PyrostoneItems.PYROSTONE, 0.35F, 100, "fogstone");
 
-				offerReversibleCompactingRecipes(RecipeCategory.MISC, FrostiumItems.FROSTIUM, RecipeCategory.BUILDING_BLOCKS, FrostiumBlocks.FROSTIUM_BLOCK);
+				offerReversibleCompactingRecipes(RecipeCategory.MISC, PyrostoneItems.PYROSTONE, RecipeCategory.BUILDING_BLOCKS, PyrostoneBlocks.PYROSTONE_BLOCK);
 
-				createShaped(RecipeCategory.BUILDING_BLOCKS, FrostiumBlocks.RAW_FROSTIUM_BLOCK)
+				createShaped(RecipeCategory.BUILDING_BLOCKS, PyrostoneBlocks.RAW_PYROSTONE_BLOCK)
 						.pattern("###")
 						.pattern("###")
 						.pattern("###")
-						.input('#', FrostiumItems.RAW_FROSTIUM)
-						.criterion(hasItem(FrostiumItems.RAW_FROSTIUM), conditionsFromItem(FrostiumItems.RAW_FROSTIUM))
+						.input('#', PyrostoneItems.RAW_PYROSTONE)
+						.criterion(hasItem(PyrostoneItems.RAW_PYROSTONE), conditionsFromItem(PyrostoneItems.RAW_PYROSTONE))
 						.offerTo(exporter);
 
-				createShapeless(RecipeCategory.MISC, FrostiumItems.RAW_FROSTIUM, 9)
-						.input(FrostiumBlocks.RAW_FROSTIUM_BLOCK)
-						.criterion(hasItem(FrostiumBlocks.RAW_FROSTIUM_BLOCK), conditionsFromItem(FrostiumBlocks.RAW_FROSTIUM_BLOCK))
+				createShapeless(RecipeCategory.MISC, PyrostoneItems.RAW_PYROSTONE, 9)
+						.input(PyrostoneBlocks.RAW_PYROSTONE_BLOCK)
+						.criterion(hasItem(PyrostoneBlocks.RAW_PYROSTONE_BLOCK), conditionsFromItem(PyrostoneBlocks.RAW_PYROSTONE_BLOCK))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.COMBAT, FrostiumItems.FROSTIUM_SWORD)
+				createShaped(RecipeCategory.COMBAT, PyrostoneItems.PYROSTONE_SWORD)
 						.pattern("#")
 						.pattern("#")
 						.pattern("X")
-						.input('#', FrostiumItems.FROSTIUM)
+						.input('#', PyrostoneItems.PYROSTONE)
 						.input('X', Items.STICK)
 						.criterion(hasItem(Items.IRON_SWORD), conditionsFromItem(Items.IRON_SWORD))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.TOOLS, FrostiumItems.FROSTIUM_HOE)
+				createShaped(RecipeCategory.TOOLS, PyrostoneItems.PYROSTONE_HOE)
 						.pattern("## ")
 						.pattern(" # ")
 						.pattern(" X ")
-						.input('#', FrostiumItems.FROSTIUM)
+						.input('#', PyrostoneItems.PYROSTONE)
 						.input('X', Items.STICK)
 						.criterion(hasItem(Items.IRON_HOE), conditionsFromItem(Items.IRON_HOE))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.TOOLS, FrostiumItems.FROSTIUM_AXE)
+				createShaped(RecipeCategory.TOOLS, PyrostoneItems.PYROSTONE_AXE)
 						.pattern("## ")
 						.pattern("#X ")
 						.pattern(" X ")
-						.input('#', FrostiumItems.FROSTIUM)
+						.input('#', PyrostoneItems.PYROSTONE)
 						.input('X', Items.STICK)
 						.criterion(hasItem(Items.IRON_AXE), conditionsFromItem(Items.IRON_AXE))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.TOOLS, FrostiumItems.FROSTIUM_PICKAXE)
+				createShaped(RecipeCategory.TOOLS, PyrostoneItems.PYROSTONE_PICKAXE)
 						.pattern("###")
 						.pattern(" X ")
 						.pattern(" X ")
-						.input('#', FrostiumItems.FROSTIUM)
+						.input('#', PyrostoneItems.PYROSTONE)
 						.input('X', Items.STICK)
 						.criterion(hasItem(Items.IRON_PICKAXE), conditionsFromItem(Items.IRON_PICKAXE))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.TOOLS, FrostiumItems.FROSTIUM_SHOVEL)
+				createShaped(RecipeCategory.TOOLS, PyrostoneItems.PYROSTONE_SHOVEL)
 						.pattern("#")
 						.pattern("X")
 						.pattern("X")
-						.input('#', FrostiumItems.FROSTIUM)
+						.input('#', PyrostoneItems.PYROSTONE)
 						.input('X', Items.STICK)
 						.criterion(hasItem(Items.IRON_SHOVEL), conditionsFromItem(Items.IRON_SHOVEL))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.COMBAT, FrostiumItems.FROSTIUM_HELMET)
+				createShaped(RecipeCategory.COMBAT, PyrostoneItems.PYROSTONE_HELMET)
 						.pattern("###")
 						.pattern("# #")
-						.input('#', FrostiumItems.FROSTIUM)
+						.input('#', PyrostoneItems.PYROSTONE)
 						.criterion(hasItem(Items.IRON_HELMET), conditionsFromItem(Items.IRON_HELMET))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.COMBAT, FrostiumItems.FROSTIUM_CHESTPLATE)
+				createShaped(RecipeCategory.COMBAT, PyrostoneItems.PYROSTONE_CHESTPLATE)
 						.pattern("# #")
 						.pattern("###")
 						.pattern("###")
-						.input('#', FrostiumItems.FROSTIUM)
+						.input('#', PyrostoneItems.PYROSTONE)
 						.criterion(hasItem(Items.IRON_CHESTPLATE), conditionsFromItem(Items.IRON_CHESTPLATE))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.COMBAT, FrostiumItems.FROSTIUM_LEGGINGS)
+				createShaped(RecipeCategory.COMBAT, PyrostoneItems.PYROSTONE_LEGGINGS)
 						.pattern("###")
 						.pattern("# #")
 						.pattern("# #")
-						.input('#', FrostiumItems.FROSTIUM)
+						.input('#', PyrostoneItems.PYROSTONE)
 						.criterion(hasItem(Items.IRON_LEGGINGS), conditionsFromItem(Items.IRON_LEGGINGS))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.COMBAT, FrostiumItems.FROSTIUM_BOOTS)
+				createShaped(RecipeCategory.COMBAT, PyrostoneItems.PYROSTONE_BOOTS)
 						.pattern("# #")
 						.pattern("# #")
-						.input('#', FrostiumItems.FROSTIUM)
+						.input('#', PyrostoneItems.PYROSTONE)
 						.criterion(hasItem(Items.IRON_BOOTS), conditionsFromItem(Items.IRON_BOOTS))
 						.offerTo(exporter);
 			}
@@ -128,6 +127,6 @@ public class FrostiumRecipes extends FabricRecipeProvider {
 
 	@Override
 	public String getName() {
-		return "⛏️ [MythicMinerals]: Registering Frostium Recipes";
+		return "⛏️ [MythicMinerals]: Registering Pyrostone Recipes";
 	}
 }

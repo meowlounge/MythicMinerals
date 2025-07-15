@@ -1,9 +1,6 @@
 package dev.meowlounge.mythicminerals;
 
-import dev.meowlounge.mythicminerals.block.FogstoneBlocks;
-import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
-import dev.meowlounge.mythicminerals.block.StellariumBlocks;
-import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
+import dev.meowlounge.mythicminerals.block.*;
 import dev.meowlounge.mythicminerals.group.DebugItemGroup;
 import dev.meowlounge.mythicminerals.group.ItemGroup;
 import dev.meowlounge.mythicminerals.item.*;
@@ -38,6 +35,9 @@ public class MythicMinerals implements ModInitializer, TerraBlenderApi {
 		//? init items and blocks
 		FrostiumItems.registerFrostiumItems();
 		FrostiumBlocks.registerFrostiumBlocks();
+
+		PyrostoneItems.registerPyrostoneItems();
+		PyrostoneBlocks.registerPyrostoneBlocks();
 
 		VoidstoneItems.registerVoidstoneItems();
 		VoidstoneBlocks.registerVoidstoneBlocks();

@@ -27,8 +27,7 @@ public class FogstoneRecipes extends FabricRecipeProvider {
 				List<ItemConvertible> FOGSTONE_SMELTABLES = List.of(
 						FogstoneItems.RAW_FOGSTONE,
 						FogstoneBlocks.FOGSTONE_ORE,
-						FogstoneBlocks.DEEPSLATE_FOGSTONE_ORE,
-						FogstoneBlocks.RAW_FOGSTONE_BLOCK
+						FogstoneBlocks.DEEPSLATE_FOGSTONE_ORE
 				);
 
 				offerSmelting(FOGSTONE_SMELTABLES, RecipeCategory.MISC, FogstoneItems.FOGSTONE, 0.25F, 200, "fogstone");

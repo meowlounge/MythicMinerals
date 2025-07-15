@@ -64,6 +64,28 @@ public class Armor {
 
 	//* ---------------------- //
 
+	public static final RegistryKey<EquipmentAsset> PYROSTONE_KEY =
+			RegistryKey.of(REGISTRY_KEY, Identifier.of(MythicMinerals.MOD_ID, "pyrostone"));
+
+	public static final ArmorMaterial PYROSTONE_ARMOR_MATERIAL = new ArmorMaterial(
+			20,
+			Util.make(new EnumMap<>(EquipmentType.class), map -> {
+				map.put(EquipmentType.BOOTS, 1);
+				map.put(EquipmentType.CHESTPLATE, 3);
+				map.put(EquipmentType.HELMET, 1);
+				map.put(EquipmentType.LEGGINGS, 2);
+				map.put(EquipmentType.BODY, 2);
+			}),
+			15,
+			SoundEvents.ITEM_ARMOR_EQUIP_CHAIN,
+			0.0f,
+			0.05f,
+			TagsProvider.Items.PYROSTONE_REPAIR,
+			PYROSTONE_KEY
+	);
+
+	//* ---------------------- //
+
 	public static final RegistryKey<EquipmentAsset> VOIDSTONE_KEY =
 			RegistryKey.of(REGISTRY_KEY, Identifier.of(MythicMinerals.MOD_ID, "voidstone"));
 

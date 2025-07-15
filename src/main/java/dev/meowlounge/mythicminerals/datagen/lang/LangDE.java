@@ -87,6 +87,24 @@ public class LangDE extends FabricLanguageProvider {
 
 		//* ---------------------- //
 
+		translationBuilder.add("block.mythicminerals.pyrostone_ore", "Pyrosteinerz");
+		translationBuilder.add("block.mythicminerals.raw_pyrostone_block", "Roherpyrosteinblock");
+		translationBuilder.add("block.mythicminerals.pyrostone_block", "Pyrosteinblock");
+
+		translationBuilder.add("item.mythicminerals.pyrostone", "Pyrostein");
+		translationBuilder.add("item.mythicminerals.raw_pyrostone", "Roh-Pyrostein");
+		translationBuilder.add("item.mythicminerals.pyrostone_sword", "Pyrosteinschwert");
+		translationBuilder.add("item.mythicminerals.pyrostone_shovel", "Pyrosteinschaufel");
+		translationBuilder.add("item.mythicminerals.pyrostone_pickaxe", "Pyrosteinspitzhacke");
+		translationBuilder.add("item.mythicminerals.pyrostone_axe", "Pyrosteinaxt");
+		translationBuilder.add("item.mythicminerals.pyrostone_hoe", "Pyrosteinhacke");
+		translationBuilder.add("item.mythicminerals.pyrostone_helmet", "Pyrosteinhelm");
+		translationBuilder.add("item.mythicminerals.pyrostone_chestplate", "Pyrosteinharnisch");
+		translationBuilder.add("item.mythicminerals.pyrostone_leggings", "Pyrosteinbeinschutz");
+		translationBuilder.add("item.mythicminerals.pyrostone_boots", "Pyrosteinstiefel");
+
+		//* ---------------------- //
+
 		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
 
 		//* ---------------------- //
@@ -101,6 +119,7 @@ public class LangDE extends FabricLanguageProvider {
 		translationBuilder.add("item.mythicminerals.fogstone_ore_locator", "Fogstone Finder");
 		translationBuilder.add("item.mythicminerals.voidstone_ore_locator", "Voidstone Finder");
 		translationBuilder.add("item.mythicminerals.stellarium_ore_locator", "Stellarium Finder");
+		translationBuilder.add("item.mythicminerals.pyrostone_ore_locator", "Pyrostein Finder");
 
 		//* ---------------------- //
 
