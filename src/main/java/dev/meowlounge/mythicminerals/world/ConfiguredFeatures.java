@@ -52,7 +52,7 @@ public class ConfiguredFeatures {
 				List.of(OreFeatureConfig.createTarget(stoneReplaceables, FogstoneBlocks.FOGSTONE_ORE.getDefaultState()),
 						OreFeatureConfig.createTarget(deepslateReplaceables, FogstoneBlocks.DEEPSLATE_FOGSTONE_ORE.getDefaultState()));
 
-		register(context, FOGSTONE_ORE_KEY, Feature.ORE, new OreFeatureConfig(FrostiumOres, 6));
+		register(context, FOGSTONE_ORE_KEY, Feature.ORE, new OreFeatureConfig(FogstoneOres, 6));
 	}
 
 	public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
