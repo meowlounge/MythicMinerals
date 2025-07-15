@@ -1,5 +1,6 @@
 package dev.meowlounge.mythicminerals.world.biome;
 
+import dev.meowlounge.mythicminerals.world.PlacedFeatures;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
@@ -26,6 +27,8 @@ public class OverworldBiome {
 		DefaultBiomeFeatures.addDungeons(biomeBuilder);
 		DefaultBiomeFeatures.addMineables(biomeBuilder);
 //        DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
+
+		addFeature(biomeBuilder, GenerationStep.Feature.UNDERGROUND_ORES, PlacedFeatures.FOGSTONE_PLACED_KEY);
 
 		SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 		DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);

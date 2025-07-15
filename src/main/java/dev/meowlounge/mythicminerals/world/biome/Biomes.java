@@ -13,7 +13,7 @@ public class Biomes {
 	public static final RegistryKey<Biome> FOG_CAVE = registerBiomeKey();
 
 	public static void registerBiomes() {
-		Regions.register(new OverworldRegion(Identifier.of(MythicMinerals.MOD_ID, "mythicminerals_overworld"), 20));
+		Regions.register(new OverworldRegion(Identifier.of(MythicMinerals.MOD_ID, "mythicminerals_overworld"), 100));
 
 	}
 

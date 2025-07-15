@@ -39,7 +39,7 @@ public class PlacedFeatures {
 
 		register(context, FOGSTONE_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.FOGSTONE_ORE_KEY),
 				OrePlacement.modifiersWithCount(8,
-						HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(256))));
+						HeightRangePlacementModifier.trapezoid(YOffset.fixed(-40), YOffset.fixed(40))));
 	}
 
 
