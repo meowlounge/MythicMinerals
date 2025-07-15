@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "mythicminerals:pyrostone",
+    "X": "minecraft:stick"
+  },
+  "pattern": [
+    "## ",
+    "#X ",
+    " X "
+  ],
+  "result": {
+    "count": 1,
+    "id": "mythicminerals:pyrostone_axe"
+  }
+}

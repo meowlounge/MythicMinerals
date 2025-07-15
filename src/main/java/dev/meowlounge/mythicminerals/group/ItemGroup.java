@@ -1,14 +1,8 @@
 package dev.meowlounge.mythicminerals.group;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
-import dev.meowlounge.mythicminerals.block.FogstoneBlocks;
-import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
-import dev.meowlounge.mythicminerals.block.StellariumBlocks;
-import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
-import dev.meowlounge.mythicminerals.item.FogstoneItems;
-import dev.meowlounge.mythicminerals.item.FrostiumItems;
-import dev.meowlounge.mythicminerals.item.StellariumItems;
-import dev.meowlounge.mythicminerals.item.VoidstoneItems;
+import dev.meowlounge.mythicminerals.block.*;
+import dev.meowlounge.mythicminerals.item.*;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -49,6 +43,26 @@ public class ItemGroup {
 						entries.add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE);
 						entries.add(FrostiumBlocks.RAW_FROSTIUM_BLOCK);
 						entries.add(FrostiumBlocks.FROSTIUM_BLOCK);
+
+						//* ---------------------- //
+
+						entries.add(PyrostoneItems.PYROSTONE);
+						entries.add(PyrostoneItems.RAW_PYROSTONE);
+
+						entries.add(PyrostoneItems.PYROSTONE_HELMET);
+						entries.add(PyrostoneItems.PYROSTONE_CHESTPLATE);
+						entries.add(PyrostoneItems.PYROSTONE_LEGGINGS);
+						entries.add(PyrostoneItems.PYROSTONE_BOOTS);
+
+						entries.add(PyrostoneItems.PYROSTONE_SWORD);
+						entries.add(PyrostoneItems.PYROSTONE_PICKAXE);
+						entries.add(PyrostoneItems.PYROSTONE_AXE);
+						entries.add(PyrostoneItems.PYROSTONE_SHOVEL);
+						entries.add(PyrostoneItems.PYROSTONE_HOE);
+
+						entries.add(PyrostoneBlocks.PYROSTONE_ORE);
+						entries.add(PyrostoneBlocks.RAW_PYROSTONE_BLOCK);
+						entries.add(PyrostoneBlocks.PYROSTONE_BLOCK);
 
 						//* ---------------------- //
 

@@ -1,11 +1,7 @@
 package dev.meowlounge.mythicminerals.datagen.loot_table;
 
-import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
-import dev.meowlounge.mythicminerals.block.StellariumBlocks;
-import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
-import dev.meowlounge.mythicminerals.item.FrostiumItems;
-import dev.meowlounge.mythicminerals.item.StellariumItems;
-import dev.meowlounge.mythicminerals.item.VoidstoneItems;
+import dev.meowlounge.mythicminerals.block.*;
+import dev.meowlounge.mythicminerals.item.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
@@ -40,6 +36,18 @@ public class OreLoot extends FabricBlockLootTableProvider {
 		addDrop(VoidstoneBlocks.VOIDSTONE_BLOCK);
 		addDrop(VoidstoneBlocks.RAW_VOIDSTONE_BLOCK);
 		addDrop(VoidstoneBlocks.VOIDSTONE_ORE, oreDrops(VoidstoneBlocks.VOIDSTONE_ORE, VoidstoneItems.RAW_VOIDSTONE));
+
+		//* ---------------------- //
+
+		addDrop(PyrostoneBlocks.PYROSTONE_BLOCK);
+		addDrop(PyrostoneBlocks.RAW_PYROSTONE_BLOCK);
+		addDrop(PyrostoneBlocks.PYROSTONE_ORE, oreDrops(PyrostoneBlocks.PYROSTONE_ORE, PyrostoneItems.RAW_PYROSTONE));
+
+		//* ---------------------- //
+
+		addDrop(FogstoneBlocks.FOGSTONE_BLOCK);
+		addDrop(FogstoneBlocks.RAW_FOGSTONE_BLOCK);
+		addDrop(FogstoneBlocks.FOGSTONE_ORE, oreDrops(FogstoneBlocks.FOGSTONE_ORE, FogstoneItems.RAW_FOGSTONE));
 
 		//* ---------------------- //
 

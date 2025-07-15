@@ -27,8 +27,7 @@ public class FrostiumRecipes extends FabricRecipeProvider {
 				List<ItemConvertible> FROSTIUM_SMELTABLES = List.of(
 						FrostiumItems.RAW_FROSTIUM,
 						FrostiumBlocks.FROSTIUM_ORE,
-						FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE,
-						FrostiumBlocks.RAW_FROSTIUM_BLOCK
+						FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE
 				);
 
 				offerSmelting(FROSTIUM_SMELTABLES, RecipeCategory.MISC, FrostiumItems.FROSTIUM, 0.25F, 200, "frostium");

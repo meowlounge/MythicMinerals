@@ -5,10 +5,7 @@ import dev.meowlounge.mythicminerals.datagen.RegistryData;
 import dev.meowlounge.mythicminerals.datagen.lang.LangDE;
 import dev.meowlounge.mythicminerals.datagen.lang.LangEN;
 import dev.meowlounge.mythicminerals.datagen.loot_table.OreLoot;
-import dev.meowlounge.mythicminerals.datagen.recipe.FogstoneRecipes;
-import dev.meowlounge.mythicminerals.datagen.recipe.FrostiumRecipes;
-import dev.meowlounge.mythicminerals.datagen.recipe.StellariumRecipes;
-import dev.meowlounge.mythicminerals.datagen.recipe.VoidstoneRecipes;
+import dev.meowlounge.mythicminerals.datagen.recipe.*;
 import dev.meowlounge.mythicminerals.datagen.tags.Block;
 import dev.meowlounge.mythicminerals.datagen.tags.Item;
 import dev.meowlounge.mythicminerals.world.ConfiguredFeatures;
@@ -38,6 +35,7 @@ public class MythicMineralsDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(FrostiumRecipes::new);
 		pack.addProvider(StellariumRecipes::new);
 		pack.addProvider(FogstoneRecipes::new);
+		pack.addProvider(PyrostoneRecipes::new);
 	}
 
 	@Override

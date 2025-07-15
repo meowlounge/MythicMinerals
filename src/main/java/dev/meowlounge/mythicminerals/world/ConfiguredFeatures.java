@@ -1,10 +1,7 @@
 package dev.meowlounge.mythicminerals.world;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
-import dev.meowlounge.mythicminerals.block.FogstoneBlocks;
-import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
-import dev.meowlounge.mythicminerals.block.StellariumBlocks;
-import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
+import dev.meowlounge.mythicminerals.block.*;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -26,11 +23,13 @@ public class ConfiguredFeatures {
 	public static final RegistryKey<ConfiguredFeature<?, ?>> VOIDSTONE_ORE_KEY = registerKey("voidstone_ore_key");
 	public static final RegistryKey<ConfiguredFeature<?, ?>> STELLARIUM_ORE_KEY = registerKey("stellarium_ore_key");
 	public static final RegistryKey<ConfiguredFeature<?, ?>> FOGSTONE_ORE_KEY = registerKey("fogstone_ore_key");
+	public static final RegistryKey<ConfiguredFeature<?, ?>> PYROSTONE_ORE_KEY = registerKey("pyrostone_ore_key");
 
 	public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
 		RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
 		RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 		RuleTest endstoneReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
+		RuleTest netherrackReplaceables = new BlockMatchRuleTest(Blocks.NETHERRACK);
 
 		List<OreFeatureConfig.Target> FrostiumOres =
 				List.of(OreFeatureConfig.createTarget(stoneReplaceables, FrostiumBlocks.FROSTIUM_ORE.getDefaultState()),
@@ -53,12 +52,18 @@ public class ConfiguredFeatures {
 						OreFeatureConfig.createTarget(deepslateReplaceables, FogstoneBlocks.DEEPSLATE_FOGSTONE_ORE.getDefaultState()));
 
 		register(context, FOGSTONE_ORE_KEY, Feature.ORE, new OreFeatureConfig(FogstoneOres, 6));
+
+		List<OreFeatureConfig.Target> PyrostoneOres =
+				List.of(OreFeatureConfig.createTarget(netherrackReplaceables, PyrostoneBlocks.PYROSTONE_ORE.getDefaultState()));
+
+		register(context, PYROSTONE_ORE_KEY, Feature.ORE, new OreFeatureConfig(PyrostoneOres, 8));
 	}
 
 	public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
 		return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(MythicMinerals.MOD_ID, name));
 	}
 
+	@SuppressWarnings("unused")
 	private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,
 																				   RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
 		context.register(key, new ConfiguredFeature<>(feature, configuration));

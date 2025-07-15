@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "group": "fogstone",
+  "ingredient": "mythicminerals:raw_pyrostone",
+  "result": {
+    "id": "mythicminerals:pyrostone"
+  }
+}

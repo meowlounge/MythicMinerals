@@ -1,10 +1,7 @@
 package dev.meowlounge.mythicminerals.datagen;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
-import dev.meowlounge.mythicminerals.block.FogstoneBlocks;
-import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
-import dev.meowlounge.mythicminerals.block.StellariumBlocks;
-import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
+import dev.meowlounge.mythicminerals.block.*;
 import dev.meowlounge.mythicminerals.item.*;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -35,6 +32,12 @@ public class ItemModel extends FabricModelProvider {
 		blockStateModelGenerator.registerSimpleCubeAll(VoidstoneBlocks.VOIDSTONE_BLOCK);
 		blockStateModelGenerator.registerSimpleCubeAll(VoidstoneBlocks.VOIDSTONE_ORE);
 		blockStateModelGenerator.registerSimpleCubeAll(VoidstoneBlocks.RAW_VOIDSTONE_BLOCK);
+
+		//* ---------------------- //
+
+		blockStateModelGenerator.registerSimpleCubeAll(PyrostoneBlocks.PYROSTONE_BLOCK);
+		blockStateModelGenerator.registerSimpleCubeAll(PyrostoneBlocks.PYROSTONE_ORE);
+		blockStateModelGenerator.registerSimpleCubeAll(PyrostoneBlocks.RAW_PYROSTONE_BLOCK);
 
 		//* ---------------------- //
 
@@ -78,6 +81,20 @@ public class ItemModel extends FabricModelProvider {
 
 		//* ---------------------- //
 
+		itemModelGenerator.register(PyrostoneItems.RAW_PYROSTONE, Models.GENERATED);
+		itemModelGenerator.register(PyrostoneItems.PYROSTONE, Models.GENERATED);
+		itemModelGenerator.register(PyrostoneItems.PYROSTONE_SWORD, Models.HANDHELD);
+		itemModelGenerator.register(PyrostoneItems.PYROSTONE_SHOVEL, Models.HANDHELD);
+		itemModelGenerator.register(PyrostoneItems.PYROSTONE_AXE, Models.HANDHELD);
+		itemModelGenerator.register(PyrostoneItems.PYROSTONE_PICKAXE, Models.HANDHELD);
+		itemModelGenerator.register(PyrostoneItems.PYROSTONE_HOE, Models.HANDHELD);
+		itemModelGenerator.registerArmor(PyrostoneItems.PYROSTONE_CHESTPLATE, Armor.PYROSTONE_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+		itemModelGenerator.registerArmor(PyrostoneItems.PYROSTONE_LEGGINGS, Armor.PYROSTONE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+		itemModelGenerator.registerArmor(PyrostoneItems.PYROSTONE_BOOTS, Armor.PYROSTONE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+		itemModelGenerator.registerArmor(PyrostoneItems.PYROSTONE_HELMET, Armor.PYROSTONE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+
+		//* ---------------------- //
+
 		itemModelGenerator.register(StellariumItems.STELLARIUM_SCRAP, Models.GENERATED);
 		itemModelGenerator.register(StellariumItems.STELLARIUM, Models.GENERATED);
 		itemModelGenerator.register(StellariumItems.STELLARIUM_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
@@ -111,5 +128,6 @@ public class ItemModel extends FabricModelProvider {
 		itemModelGenerator.register(DebugItems.VOIDSTONE_ORE_LOCATOR, Models.HANDHELD);
 		itemModelGenerator.register(DebugItems.STELLARIUM_ORE_LOCATOR, Models.HANDHELD);
 		itemModelGenerator.register(DebugItems.FOGSTONE_ORE_LOCATOR, Models.HANDHELD);
+		itemModelGenerator.register(DebugItems.PYROSTONE_ORE_LOCATOR, Models.HANDHELD);
 	}
 }

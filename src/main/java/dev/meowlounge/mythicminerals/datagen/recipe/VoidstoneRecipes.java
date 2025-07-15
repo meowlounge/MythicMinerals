@@ -26,8 +26,7 @@ public class VoidstoneRecipes extends FabricRecipeProvider {
 			public void generate() {
 				List<ItemConvertible> VOIDSTONE_SMELTABLES = List.of(
 						VoidstoneItems.RAW_VOIDSTONE,
-						VoidstoneBlocks.VOIDSTONE_ORE,
-						VoidstoneBlocks.RAW_VOIDSTONE_BLOCK
+						VoidstoneBlocks.VOIDSTONE_ORE
 				);
 
 				offerSmelting(VOIDSTONE_SMELTABLES, RecipeCategory.MISC, VoidstoneItems.VOIDSTONE, 0.25f, 200, "voidstone");

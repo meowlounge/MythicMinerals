@@ -1,6 +1,7 @@
 package dev.meowlounge.mythicminerals.datagen.tags;
 
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
+import dev.meowlounge.mythicminerals.block.PyrostoneBlocks;
 import dev.meowlounge.mythicminerals.block.StellariumBlocks;
 import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
 import dev.meowlounge.mythicminerals.providers.TagsProvider;
@@ -26,6 +27,9 @@ public class Block extends FabricTagProvider.BlockTagProvider {
 				.add(VoidstoneBlocks.VOIDSTONE_ORE)
 				.add(VoidstoneBlocks.RAW_VOIDSTONE_BLOCK)
 				.add(VoidstoneBlocks.VOIDSTONE_BLOCK)
+				.add(PyrostoneBlocks.PYROSTONE_ORE)
+				.add(PyrostoneBlocks.RAW_PYROSTONE_BLOCK)
+				.add(PyrostoneBlocks.PYROSTONE_BLOCK)
 				.add(StellariumBlocks.STELLARIUM_ORE)
 				.add(StellariumBlocks.STELLARIUM_BLOCK);
 
@@ -33,7 +37,10 @@ public class Block extends FabricTagProvider.BlockTagProvider {
 				.add(FrostiumBlocks.FROSTIUM_ORE)
 				.add(FrostiumBlocks.RAW_FROSTIUM_BLOCK)
 				.add(FrostiumBlocks.FROSTIUM_BLOCK)
-				.add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE);
+				.add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE)
+				.add(PyrostoneBlocks.PYROSTONE_ORE)
+				.add(PyrostoneBlocks.RAW_PYROSTONE_BLOCK)
+				.add(PyrostoneBlocks.PYROSTONE_BLOCK);
 
 		valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
 				.add(VoidstoneBlocks.VOIDSTONE_ORE)

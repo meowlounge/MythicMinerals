@@ -1,6 +1,7 @@
 package dev.meowlounge.mythicminerals.datagen.tags;
 
 import dev.meowlounge.mythicminerals.item.FrostiumItems;
+import dev.meowlounge.mythicminerals.item.PyrostoneItems;
 import dev.meowlounge.mythicminerals.item.StellariumItems;
 import dev.meowlounge.mythicminerals.item.VoidstoneItems;
 import dev.meowlounge.mythicminerals.providers.TagsProvider;
@@ -27,12 +28,18 @@ public class Item extends FabricTagProvider.ItemTagProvider {
 		valueLookupBuilder(TagsProvider.Items.STELLARIUM_REPAIR)
 				.add(StellariumItems.STELLARIUM);
 
+		valueLookupBuilder(TagsProvider.Items.PYROSTONE_REPAIR)
+				.add(PyrostoneItems.PYROSTONE);
+
 		valueLookupBuilder(ItemTags.SHARP_WEAPON_ENCHANTABLE)
 				.add(FrostiumItems.FROSTIUM_SWORD)
 				.add(FrostiumItems.FROSTIUM_AXE)
 
 				.add(VoidstoneItems.VOIDSTONE_SWORD)
 				.add(VoidstoneItems.VOIDSTONE_AXE)
+
+				.add(PyrostoneItems.PYROSTONE_SWORD)
+				.add(PyrostoneItems.PYROSTONE_AXE)
 
 				.add(StellariumItems.STELLARIUM_SWORD)
 				.add(StellariumItems.STELLARIUM_AXE);
@@ -41,6 +48,10 @@ public class Item extends FabricTagProvider.ItemTagProvider {
 				.add(FrostiumItems.FROSTIUM_SHOVEL)
 				.add(FrostiumItems.FROSTIUM_AXE)
 				.add(FrostiumItems.FROSTIUM_HOE)
+
+				.add(PyrostoneItems.PYROSTONE_SHOVEL)
+				.add(PyrostoneItems.PYROSTONE_AXE)
+				.add(PyrostoneItems.PYROSTONE_HOE)
 
 				.add(VoidstoneItems.VOIDSTONE_SHOVEL)
 				.add(VoidstoneItems.VOIDSTONE_AXE)
@@ -53,6 +64,7 @@ public class Item extends FabricTagProvider.ItemTagProvider {
 		valueLookupBuilder(ItemTags.MINING_ENCHANTABLE)
 				.add(FrostiumItems.FROSTIUM_PICKAXE)
 				.add(VoidstoneItems.VOIDSTONE_PICKAXE)
+				.add(PyrostoneItems.PYROSTONE_PICKAXE)
 				.add(StellariumItems.STELLARIUM_PICKAXE);
 
 		valueLookupBuilder(ItemTags.ARMOR_ENCHANTABLE)
@@ -60,6 +72,11 @@ public class Item extends FabricTagProvider.ItemTagProvider {
 				.add(FrostiumItems.FROSTIUM_CHESTPLATE)
 				.add(FrostiumItems.FROSTIUM_HELMET)
 				.add(FrostiumItems.FROSTIUM_LEGGINGS)
+
+				.add(PyrostoneItems.PYROSTONE_BOOTS)
+				.add(PyrostoneItems.PYROSTONE_CHESTPLATE)
+				.add(PyrostoneItems.PYROSTONE_HELMET)
+				.add(PyrostoneItems.PYROSTONE_LEGGINGS)
 
 				.add(VoidstoneItems.VOIDSTONE_BOOTS)
 				.add(VoidstoneItems.VOIDSTONE_CHESTPLATE)
