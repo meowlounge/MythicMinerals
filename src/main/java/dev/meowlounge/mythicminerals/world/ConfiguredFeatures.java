@@ -2,7 +2,6 @@ package dev.meowlounge.mythicminerals.world;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
 import dev.meowlounge.mythicminerals.block.*;
-import dev.meowlounge.mythicminerals.world.gen.PyrostoneGeneration;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -64,6 +63,7 @@ public class ConfiguredFeatures {
 		return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(MythicMinerals.MOD_ID, name));
 	}
 
+	@SuppressWarnings("unused")
 	private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,
 																				   RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
 		context.register(key, new ConfiguredFeature<>(feature, configuration));
