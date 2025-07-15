@@ -28,7 +28,7 @@ public class OverworldRegion extends Region {
 				.humidity(Humidity.span(Humidity.HUMID, Humidity.WET))
 				.continentalness(Continentalness.INLAND)
 				.erosion(Erosion.EROSION_0, Erosion.EROSION_1)
-				.depth(Depth.FLOOR, Depth.FLOOR)
+				.depth(Depth.UNDERGROUND)
 				.weirdness(Weirdness.MID_SLICE_NORMAL_ASCENDING, Weirdness.MID_SLICE_NORMAL_DESCENDING)
 				.build().forEach(point -> builder.add(point, Biomes.FOG_CAVE));
 
