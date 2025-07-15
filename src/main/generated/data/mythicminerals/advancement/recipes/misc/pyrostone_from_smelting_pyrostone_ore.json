@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pyrostone_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mythicminerals:pyrostone_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mythicminerals:pyrostone_from_smelting_pyrostone_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pyrostone_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mythicminerals:pyrostone_from_smelting_pyrostone_ore"
+    ]
+  }
+}
