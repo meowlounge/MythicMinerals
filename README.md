@@ -1,22 +1,27 @@
-# TODO
+### ✅ DONE
+- ~~convert hardcoded data files to "DATAGENERATED" Files~~
+---
+## 🛠️ IN PROGRESS
 
-~~- use datagen instead of hardcoding all loot tables and worldgen stuff~~ @prodbyeagle
+> [!INFO] WORK IN PROGRESS!
+> Every Armor-Set can be changed. Nothing is final!
 
-- Armor sets should have specific buffs and debuffs
-  - Mining Tools
-  - Fighting sets
+- #### *Armor sets should have specific buffs and debuffs*
+    - [ ] [[🧊 Frostium Ore]] → `Mining Set` (Cold Biomes Onloy)
+    - [ ] [[🌫️ Fogstone Ore]] → `Stealth Armor` (Humid Biomes)
+    - [ ] [[🌑 Voidstone Ore]] → `Speed Boots` (Boots-based Speed Buff)
+    - [ ] [[🔥 Pyrostone Ore]] → `Berserker Armor` (Melee Combat, Fire Immune)
+    - [ ] [[✨ Stellarium]] → `Cosmic Set` (GOD Tier Armor, No Debuffs)
 
-# INFO
+---
+## 🔎 QUICK INFOS
 
-- commits should be readable no ( did some things ), we want to know what happened in this commit.
-- test if it works before commiting it.
-- if it's a big feature, create a new branch to save the main branch from being ruined. (please test before final...)
+- Commits should **clearly describe the change**.
+    - ✅ Good: `feat(frostium): added frostbite aura & mining speed boost`
+    - ❌ Bad: `did some stuff`, `fixed a thing`
 
-# ORES
+- ALWAYS **test before committing**.
 
-- ###  Frostium (Mining [Cold Biomes Only])
-- ###  Fogstone (Armor [Humid Biomes only])
-- ###  Voidstone (Boots = Faster)
-- ###  Pyrostone (You are sensible)
-- ###  Stellarium (It doesn't have debuffs)
-
+- For large changes, **use feature branches**, then merge after testing.
+    - Branch name: `feature/<ore-name>-logic`
+    - Example: `feature/stellarium-boost-fix`
