@@ -2,8 +2,9 @@
 
 ~~- use datagen instead of hardcoding all loot tables and worldgen stuff~~ @prodbyeagle
 
-- implement all ores and their deepslate variant
-- create custom ore textures.
+- Armor sets should have specific buffs and debuffs
+  - Mining Tools
+  - Fighting sets
 
 # INFO
 
@@ -13,9 +14,9 @@
 
 # ORES
 
-## 🧊 Frostium
+- ###  Frostium (Mining [Cold Biomes Only])
+- ###  Fogstone (Armor [Humid Biomes only])
+- ###  Voidstone (Boots = Faster)
+- ###  Pyrostone (You are sensible)
+- ###  Stellarium (It doesn't have debuffs)
 
-- Fundort: Nur in gefrorenen Ozeanen oder Schneebiomen.
-- Aussehen: Eisblau, kristallartig mit Schneepartikeln.
-- Eigenschaft: Verlangsamt Mobs in der Nähe automatisch.
-- Extra: Schwert + Frostium = „Freezer Blade“, das Gegner einfriert für 3 Sek.
