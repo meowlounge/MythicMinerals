@@ -2,6 +2,8 @@ package dev.meowlounge.mythicminerals.world;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
 import dev.meowlounge.mythicminerals.block.*;
+import dev.meowlounge.mythicminerals.world.feature.VolcanoFeature;
+import dev.meowlounge.mythicminerals.world.feature.VolcanoFeatureConfig;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -11,10 +13,7 @@ import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 
 import java.util.List;
 
@@ -24,6 +23,7 @@ public class ConfiguredFeatures {
 	public static final RegistryKey<ConfiguredFeature<?, ?>> STELLARIUM_ORE_KEY = registerKey("stellarium_ore_key");
 	public static final RegistryKey<ConfiguredFeature<?, ?>> FOGSTONE_ORE_KEY = registerKey("fogstone_ore_key");
 	public static final RegistryKey<ConfiguredFeature<?, ?>> PYROSTONE_ORE_KEY = registerKey("pyrostone_ore_key");
+	public static final RegistryKey<ConfiguredFeature<?, ?>> VOLCANO_KEY = registerKey("volcano_key");
 
 	public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
 		RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -57,13 +57,17 @@ public class ConfiguredFeatures {
 				List.of(OreFeatureConfig.createTarget(netherrackReplaceables, PyrostoneBlocks.PYROSTONE_ORE.getDefaultState()));
 
 		register(context, PYROSTONE_ORE_KEY, Feature.ORE, new OreFeatureConfig(PyrostoneOres, 8));
+
+
+		register(context, VOLCANO_KEY, new VolcanoFeature(), new VolcanoFeatureConfig());
 	}
 
 	public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
 		return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(MythicMinerals.MOD_ID, name));
 	}
 
-	@SuppressWarnings("unused")
+	@SuppressWarnings({"unused", "deprecated"})
+
 	private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,
 																				   RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
 		context.register(key, new ConfiguredFeature<>(feature, configuration));

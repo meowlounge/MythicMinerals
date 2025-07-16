@@ -11,6 +11,8 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.placementmodifier.BiomePlacementModifier;
+import net.minecraft.world.gen.placementmodifier.CountPlacementModifier;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 
@@ -22,6 +24,7 @@ public class PlacedFeatures {
 	public static final RegistryKey<PlacedFeature> STELLARIUM_PLACED_KEY = registerKey("stellarium_ore_placed");
 	public static final RegistryKey<PlacedFeature> FOGSTONE_PLACED_KEY = registerKey("fogstone_ore_placed");
 	public static final RegistryKey<PlacedFeature> PYROSTONE_PLACED_KEY = registerKey("pyrostone_ore_placed");
+	public static final RegistryKey<PlacedFeature> VOLCANO_PLACED_KEY = registerKey("volcano_placed");
 
 	public static void bootstrap(Registerable<PlacedFeature> context) {
 		var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -45,8 +48,15 @@ public class PlacedFeatures {
 		register(context, PYROSTONE_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.PYROSTONE_ORE_KEY),
 				OrePlacement.modifiersWithCount(10,
 						HeightRangePlacementModifier.trapezoid(YOffset.fixed(12), YOffset.fixed(80))));
-	}
 
+
+		register(context, VOLCANO_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.VOLCANO_KEY),
+				List.of(
+						CountPlacementModifier.of(1),
+						HeightRangePlacementModifier.uniform(YOffset.fixed(60), YOffset.fixed(100)),
+						BiomePlacementModifier.of()
+				));
+	}
 
 	public static RegistryKey<PlacedFeature> registerKey(String name) {
 		return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(MythicMinerals.MOD_ID, name));
@@ -57,7 +67,7 @@ public class PlacedFeatures {
 		context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
 	}
 
- 	@SuppressWarnings("unused")
+	@SuppressWarnings("unused")
 	private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key,
 																				   RegistryEntry<ConfiguredFeature<?, ?>> configuration,
 																				   PlacementModifier... modifiers) {

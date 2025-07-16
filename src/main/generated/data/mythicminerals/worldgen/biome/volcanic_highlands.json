@@ -6,7 +6,7 @@
   ],
   "downfall": 0.0,
   "effects": {
-    "fog_color": 10150333,
+    "fog_color": 12740410,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
@@ -19,7 +19,7 @@
           "max_delay": 24000,
           "min_delay": 12000,
           "replace_current_music": false,
-          "sound": "minecraft:music.overworld.swamp"
+          "sound": "minecraft:music.nether.basalt_deltas"
         },
         "weight": 1
       }
@@ -27,13 +27,13 @@
     "music_volume": 1.0,
     "particle": {
       "options": {
-        "type": "minecraft:firefly"
+        "type": "minecraft:ash"
       },
-      "probability": 0.00525
+      "probability": 0.0075
     },
-    "sky_color": 7254527,
-    "water_color": 1393212,
-    "water_fog_color": 2781030
+    "sky_color": 6667519,
+    "water_color": 14565392,
+    "water_fog_color": 9708545
   },
   "features": [
     [],
@@ -41,31 +41,10 @@
       "minecraft:lake_lava_underground",
       "minecraft:lake_lava_surface"
     ],
-    [
-      "minecraft:amethyst_geode"
-    ],
-    [
-      "minecraft:monster_room",
-      "minecraft:monster_room_deep"
-    ],
     [],
     [],
     [
-      "minecraft:ore_dirt",
-      "minecraft:ore_gravel",
-      "minecraft:ore_granite_upper",
-      "minecraft:ore_granite_lower",
-      "minecraft:ore_diorite_upper",
-      "minecraft:ore_diorite_lower",
-      "minecraft:ore_andesite_upper",
-      "minecraft:ore_andesite_lower",
-      "minecraft:ore_tuff",
-      "mythicminerals:fogstone_ore_placed"
-    ],
-    [],
-    [],
-    [
-      "minecraft:glow_lichen"
+      "mythicminerals:volcano_placed"
     ]
   ],
   "has_precipitation": false,
@@ -143,5 +122,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 1.0
+  "temperature": 4.0
 }

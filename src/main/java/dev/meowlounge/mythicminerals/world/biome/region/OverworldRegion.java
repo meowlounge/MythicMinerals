@@ -26,11 +26,18 @@ public class OverworldRegion extends Region {
 		new ParameterPointListBuilder()
 				.temperature(Temperature.span(Temperature.WARM, Temperature.HOT))
 				.humidity(Humidity.span(Humidity.HUMID, Humidity.WET))
-				.continentalness(Continentalness.INLAND)
-				.erosion(Erosion.EROSION_0, Erosion.EROSION_1)
+				.continentalness(Continentalness.FULL_RANGE)
 				.depth(Depth.UNDERGROUND)
-				.weirdness(Weirdness.MID_SLICE_NORMAL_ASCENDING, Weirdness.MID_SLICE_NORMAL_DESCENDING)
 				.build().forEach(point -> builder.add(point, Biomes.FOG_CAVE));
+
+		new ParameterPointListBuilder()
+				.temperature(Temperature.HOT)
+				.humidity(Humidity.DRY)
+				.continentalness(Continentalness.MID_INLAND)
+				.erosion(Erosion.EROSION_0)
+				.depth(Depth.SURFACE)
+				.weirdness(Weirdness.PEAK_VARIANT)
+				.build().forEach(point -> builder.add(point, Biomes.VOLCANIC_HIGHLANDS));
 
 		builder.build().forEach(mapper);
 	}

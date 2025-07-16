@@ -1,5 +1,6 @@
 // 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/⛏️ [MythicMinerals]: Registering Data
-d874dd50c7f182ab98eff627ce9dd994d12feb30 data/mythicminerals/worldgen/biome/fog_cave.json
+46e5fe90c3f7c071ef8fb0f040387d3577f450f1 data/mythicminerals/worldgen/biome/fog_cave.json
+ea334ef2832f5619836075c099d825b26421dc1a data/mythicminerals/worldgen/biome/volcanic_highlands.json
 cdce85bbb0e6b470a19fde617047b20848fd6cf3 data/mythicminerals/worldgen/configured_feature/fogstone_ore_key.json
 db1f6a37f67cb0972853d3e80bbf1e7d55109e69 data/mythicminerals/worldgen/configured_feature/frostium_ore_key.json
 01d16e37abfaeda32d6c62facf4407d6303ef381 data/mythicminerals/worldgen/configured_feature/pyrostone_ore_key.json
@@ -10,3 +11,4 @@ bf6550dc57213627f1c20f1ff4c24347ef924864 data/mythicminerals/worldgen/placed_fea
 09f60cfab8aa4d6d864f2940906fe19ce8ba108e data/mythicminerals/worldgen/placed_feature/pyrostone_ore_placed.json
 a3ef62d4763934c13cd16bab949f5972f468d6b0 data/mythicminerals/worldgen/placed_feature/stellarium_ore_placed.json
 674f3ca192d9ef5954b9b0b1515d9475cd29f6df data/mythicminerals/worldgen/placed_feature/voidstone_ore_placed.json
+41c0e4e370996d278403ab99c1797d39b039a3c1 data/mythicminerals/worldgen/placed_feature/volcano_placed.json
