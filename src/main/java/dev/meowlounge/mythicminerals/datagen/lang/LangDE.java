@@ -124,6 +124,10 @@ public class LangDE extends FabricLanguageProvider {
 		//* ---------------------- //
 
 		translationBuilder.add("key.mythicminerals.boost", "Stellarium Rüstungs Fähigkeit");
+
+		//* ---------------------- //
+
+		translationBuilder.add("enchantment.mythicminerals.lava_walker", "Lava Läufer");
 	}
 
 	@Override

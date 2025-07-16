@@ -128,6 +128,10 @@ public class LangEN extends FabricLanguageProvider {
 		//* ---------------------- //
 
 		translationBuilder.add("key.mythicminerals.boost", "Stellarium Armor Boost");
+
+		//* ---------------------- //
+
+		translationBuilder.add("enchantment.mythicminerals.lava_walker", "Lava Walker");
 	}
 
 	@Override

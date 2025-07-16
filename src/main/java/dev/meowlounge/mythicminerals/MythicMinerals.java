@@ -1,6 +1,7 @@
 package dev.meowlounge.mythicminerals;
 
 import dev.meowlounge.mythicminerals.block.*;
+import dev.meowlounge.mythicminerals.enchantment.EnchantmentEffects;
 import dev.meowlounge.mythicminerals.group.DebugItemGroup;
 import dev.meowlounge.mythicminerals.group.ItemGroup;
 import dev.meowlounge.mythicminerals.item.*;
@@ -53,6 +54,9 @@ public class MythicMinerals implements ModInitializer, TerraBlenderApi {
 
 		//? init other stuff
 		ItemGroup.registerItemGroup();
+		EnchantmentEffects.registerEnchantmentEffects();
+
+		//? init client side stuff
 		PayloadTypeRegistry.playC2S().register(StellariumBoostPayload.ID, StellariumBoostPayload.TYPE.codec());
 		ModMessages.registerC2SPackets();
 	}
