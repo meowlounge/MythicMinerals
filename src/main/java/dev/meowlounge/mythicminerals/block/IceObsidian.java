@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 import static dev.meowlounge.mythicminerals.providers.RegisterProvider.registerBlock;
 
 public class IceObsidian extends Block {
-	public static final IntProperty AGE = IntProperty.of("age", 0, 3);
+	public static final IntProperty AGE = IntProperty.of("age", 0, 4);
 
 	public IceObsidian(Settings settings) {
 		super(settings);
@@ -56,11 +56,12 @@ public class IceObsidian extends Block {
 	}
 
 	private boolean slightlyMelt(BlockState state, ServerWorld world, BlockPos pos) {
-		final int MAX_AGE_BEFORE_LAVA = 1;
+		final int MAX_AGE = 4;
 		int currentAge = state.get(AGE);
 
-		if (currentAge < MAX_AGE_BEFORE_LAVA) {
+		if (currentAge < MAX_AGE) {
 			world.setBlockState(pos, state.with(AGE, currentAge + 1), Block.NOTIFY_ALL);
+			MythicMinerals.LOGGER.debug("🧊 Ice Obsidian aged to {} at {}", currentAge + 1, pos);
 			return false;
 		} else {
 			this.melt(world, pos);

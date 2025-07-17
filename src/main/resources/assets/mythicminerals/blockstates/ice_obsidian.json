@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "age=0": { "model": "minecraft:block/netherrack" },
+    "age=1": { "model": "minecraft:block/pink_terracotta" },
+    "age=2": { "model": "minecraft:block/stripped_mangrove_wood" },
+    "age=3": { "model": "minecraft:block/mangrove_planks" },
+    "age=4": { "model": "minecraft:block/red_terracotta" }
+  }
+}
