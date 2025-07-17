@@ -1,10 +1,19 @@
 package dev.meowlounge.mythicminerals.item;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
+import dev.meowlounge.mythicminerals.enchantment.Enchantments;
+import dev.meowlounge.mythicminerals.enchantment.EnchantmentsEffects;
 import dev.meowlounge.mythicminerals.providers.TagsProvider;
+import net.minecraft.component.ComponentType;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.EnchantmentEffectComponentTypes;
+import net.minecraft.component.type.ItemEnchantmentsComponent;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.util.Rarity;
 
 import static dev.meowlounge.mythicminerals.providers.RegisterProvider.registerItem;
 
@@ -17,33 +26,42 @@ public class PyrostoneItems {
 	public static final Item PYROSTONE = registerItem("pyrostone", Item::new);
 
 	public static final Item PYROSTONE_SWORD = registerItem("pyrostone_sword",
-			settings -> new Item(settings.sword(PYROSTONE_TOOL_MATERIAL, 5, -2.2F)));
+			settings -> new Item(settings.sword(PYROSTONE_TOOL_MATERIAL, 5, -2.2F)
+					.fireproof()));
 
 	public static final Item PYROSTONE_SHOVEL = registerItem("pyrostone_shovel",
-			settings -> new ShovelItem(PYROSTONE_TOOL_MATERIAL, -0.5F, -3, settings));
+			settings -> new ShovelItem(PYROSTONE_TOOL_MATERIAL, -0.5F, -3,
+					settings.fireproof()));
 
 	public static final Item PYROSTONE_PICKAXE = registerItem("pyrostone_pickaxe",
-			settings -> new Item(settings.pickaxe(PYROSTONE_TOOL_MATERIAL, -0.5F, -3)));
+			settings -> new Item(settings.pickaxe(PYROSTONE_TOOL_MATERIAL, -0.5F, -3)
+					.fireproof()));
 
 	public static final Item PYROSTONE_AXE = registerItem("pyrostone_axe",
-			settings -> new AxeItem(PYROSTONE_TOOL_MATERIAL, 7, -2.8F, settings));
+			settings -> new AxeItem(PYROSTONE_TOOL_MATERIAL, 7, -2.8F,
+					settings.fireproof()));
 
 	public static final Item PYROSTONE_HOE = registerItem("pyrostone_hoe",
-			settings -> new HoeItem(PYROSTONE_TOOL_MATERIAL, -0.5F, -3, settings));
+			settings -> new HoeItem(PYROSTONE_TOOL_MATERIAL, -0.5F, -3,
+					settings.fireproof()));
 
 	//* ---------------------- //
 
 	public static final Item PYROSTONE_HELMET = registerItem("pyrostone_helmet",
-			settings -> new Item(settings.armor(Armor.PYROSTONE_ARMOR_MATERIAL, EquipmentType.HELMET)));
+			settings -> new Item(settings.armor(Armor.PYROSTONE_ARMOR_MATERIAL, EquipmentType.HELMET)
+					.fireproof()));
 
 	public static final Item PYROSTONE_CHESTPLATE = registerItem("pyrostone_chestplate",
-			settings -> new Item(settings.armor(Armor.PYROSTONE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+			settings -> new Item(settings.armor(Armor.PYROSTONE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)
+					.fireproof()));
 
 	public static final Item PYROSTONE_LEGGINGS = registerItem("pyrostone_leggings",
-			settings -> new Item(settings.armor(Armor.PYROSTONE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+			settings -> new Item(settings.armor(Armor.PYROSTONE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)
+					.fireproof()));
 
 	public static final Item PYROSTONE_BOOTS = registerItem("pyrostone_boots",
-			settings -> new Item(settings.armor(Armor.PYROSTONE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+			settings -> new Item(settings.armor(Armor.PYROSTONE_ARMOR_MATERIAL, EquipmentType.BOOTS)
+					.fireproof()));
 
 	//* ---------------------- //
 
