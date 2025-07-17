@@ -26,7 +26,7 @@ public class LavaWalkerEffect implements EnchantmentEntityEffect {
 			return;
 		}
 
-		float radius = MathHelper.clamp(2.0F + (level - 1) * 1.0F, 0.0F, 8.0F);
+		float radius = MathHelper.clamp(3.0F + (level - 1) * 1.0F, 0.0F, 8.0F);
 		int maxDx = MathHelper.floor(radius);
 		BlockPos centerBelow = BlockPos.ofFloored(pos).down();
 
