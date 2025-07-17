@@ -7,7 +7,6 @@ import dev.meowlounge.mythicminerals.datagen.lang.LangEN;
 import dev.meowlounge.mythicminerals.datagen.loot_table.OreLoot;
 import dev.meowlounge.mythicminerals.datagen.recipe.*;
 import dev.meowlounge.mythicminerals.datagen.tags.Block;
-import dev.meowlounge.mythicminerals.datagen.tags.EnchantmentTag;
 import dev.meowlounge.mythicminerals.datagen.tags.Item;
 import dev.meowlounge.mythicminerals.enchantment.Enchantments;
 import dev.meowlounge.mythicminerals.world.ConfiguredFeatures;
@@ -29,7 +28,6 @@ public class MythicMineralsDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ItemModel::new);
 		pack.addProvider(Item::new);
 		pack.addProvider(Block::new);
-		pack.addProvider(EnchantmentTag::new);
 
 		pack.addProvider(OreLoot::new);
 		pack.addProvider(RegistryData::new);

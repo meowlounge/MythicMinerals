@@ -1,7 +1,7 @@
 package dev.meowlounge.mythicminerals.enchantment;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
-import dev.meowlounge.mythicminerals.enchantment.custom.LavaWalkerEnchantmentEffect;
+import dev.meowlounge.mythicminerals.enchantment.custom.LavaWalkerEffect;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.enchantment.Enchantment;
@@ -21,19 +21,19 @@ public class Enchantments {
 		var items = registerable.getRegistryLookup(RegistryKeys.ITEM);
 
 		register(registerable, LAVA_WALKER, Enchantment.builder(Enchantment.definition(
-						items.getOrThrow(ItemTags.FOOT_ARMOR_ENCHANTABLE),
+						items.getOrThrow(ItemTags.FOOT_ARMOR_ENCHANTABLE), //? doof = good = food
 						5,
-						1,
+						2,
 						Enchantment.leveledCost(5, 7),
 						Enchantment.leveledCost(25, 9),
 						2,
 						AttributeModifierSlot.FEET))
-				.exclusiveSet(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE_SET))
+				.exclusiveSet(enchantments.getOrThrow(EnchantmentTags.BOOTS_EXCLUSIVE_SET))
 				.addEffect(EnchantmentEffectComponentTypes.TICK,
-						new LavaWalkerEnchantmentEffect()));
+						new LavaWalkerEffect()));
 	}
 
-
+	@SuppressWarnings("SameParameterValue")
 	private static void register(Registerable<Enchantment> registry, RegistryKey<Enchantment> key, Enchantment.Builder builder) {
 		registry.register(key, builder.build(key.getValue()));
 	}

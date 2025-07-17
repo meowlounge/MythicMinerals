@@ -1,7 +1,7 @@
 package dev.meowlounge.mythicminerals;
 
 import dev.meowlounge.mythicminerals.block.*;
-import dev.meowlounge.mythicminerals.enchantment.EnchantmentEffects;
+import dev.meowlounge.mythicminerals.enchantment.EnchantmentsEffects;
 import dev.meowlounge.mythicminerals.group.DebugItemGroup;
 import dev.meowlounge.mythicminerals.group.ItemGroup;
 import dev.meowlounge.mythicminerals.item.*;
@@ -49,12 +49,14 @@ public class MythicMinerals implements ModInitializer, TerraBlenderApi {
 		FogstoneItems.registerFogstoneItems();
 		FogstoneBlocks.registerFogstoneBlocks();
 
+		IceObsidian.registerIceObsidian();
+
 		//? init worldgen
 		WorldGeneration.generateWorldGen();
 
 		//? init other stuff
 		ItemGroup.registerItemGroup();
-		EnchantmentEffects.registerEnchantmentEffects();
+		EnchantmentsEffects.registerEnchantmentEffects();
 
 		//? init client side stuff
 		PayloadTypeRegistry.playC2S().register(StellariumBoostPayload.ID, StellariumBoostPayload.TYPE.codec());

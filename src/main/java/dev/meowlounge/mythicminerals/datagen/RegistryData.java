@@ -17,6 +17,7 @@ public class RegistryData extends FabricDynamicRegistryProvider {
 		entries.addAll(registries.getOrThrow(RegistryKeys.CONFIGURED_FEATURE));
 		entries.addAll(registries.getOrThrow(RegistryKeys.PLACED_FEATURE));
 		entries.addAll(registries.getOrThrow(RegistryKeys.BIOME));
+		entries.addAll(registries.getOrThrow(RegistryKeys.ENCHANTMENT));
 	}
 
 	@Override
