@@ -1,19 +1,10 @@
 package dev.meowlounge.mythicminerals.item;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
-import dev.meowlounge.mythicminerals.enchantment.Enchantments;
-import dev.meowlounge.mythicminerals.enchantment.EnchantmentsEffects;
 import dev.meowlounge.mythicminerals.providers.TagsProvider;
-import net.minecraft.component.ComponentType;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.EnchantmentEffectComponentTypes;
-import net.minecraft.component.type.ItemEnchantmentsComponent;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.util.Rarity;
 
 import static dev.meowlounge.mythicminerals.providers.RegisterProvider.registerItem;
 
