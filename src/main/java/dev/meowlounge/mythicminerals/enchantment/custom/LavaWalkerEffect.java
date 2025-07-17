@@ -1,7 +1,6 @@
 package dev.meowlounge.mythicminerals.enchantment.custom;
 
 import com.mojang.serialization.MapCodec;
-import dev.meowlounge.mythicminerals.MythicMinerals;
 import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.EnchantmentEffectContext;
 import net.minecraft.enchantment.effect.EnchantmentEntityEffect;

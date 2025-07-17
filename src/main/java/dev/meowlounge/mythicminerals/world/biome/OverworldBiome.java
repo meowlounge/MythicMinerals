@@ -15,6 +15,7 @@ import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.feature.PlacedFeature;
 
 public class OverworldBiome {
+	@SuppressWarnings("SameParameterValue")
 	private static void addFeature(GenerationSettings.LookupBackedBuilder builder, GenerationStep.Feature step, RegistryKey<PlacedFeature> feature) {
 		builder.feature(step, feature);
 	}
