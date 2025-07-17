@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 import static dev.meowlounge.mythicminerals.providers.RegisterProvider.registerBlock;
 
 public class IceObsidian extends Block {
-	public static final IntProperty AGE = IntProperty.of("age", 0, 4);
+	public static final IntProperty AGE = IntProperty.of("age", 0, 3);
 
 	public IceObsidian(Settings settings) {
 		super(settings);
@@ -30,7 +30,7 @@ public class IceObsidian extends Block {
 					.instrument(NoteBlockInstrument.BASEDRUM)
 					.strength(50.0F, 1200.0F)
 					.requiresTool()
-					.sounds(BlockSoundGroup.STONE)));
+					.sounds(BlockSoundGroup.NETHER_ORE)));
 
 	@Override
 	public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
@@ -45,7 +45,7 @@ public class IceObsidian extends Block {
 	public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 		int meltProbability = 4;
 		if (!(random.nextInt(meltProbability) == 0 && this.slightlyMelt(state, world, pos))) {
-			int delay = MathHelper.nextInt(random, 10, 20);
+			int delay = MathHelper.nextInt(random, 5, 20);
 			world.scheduleBlockTick(pos, this, delay);
 		}
 	}
@@ -56,12 +56,11 @@ public class IceObsidian extends Block {
 	}
 
 	private boolean slightlyMelt(BlockState state, ServerWorld world, BlockPos pos) {
-		final int MAX_AGE = 4;
+		final int MAX_AGE = 3;
 		int currentAge = state.get(AGE);
 
 		if (currentAge < MAX_AGE) {
 			world.setBlockState(pos, state.with(AGE, currentAge + 1), Block.NOTIFY_ALL);
-			MythicMinerals.LOGGER.debug("🧊 Ice Obsidian aged to {} at {}", currentAge + 1, pos);
 			return false;
 		} else {
 			this.melt(world, pos);
