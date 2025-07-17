@@ -9,6 +9,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class EnchantmentsEffects {
+	@SuppressWarnings("unused")
 	public static final MapCodec<? extends EnchantmentEntityEffect> LAVA_WALKER =
 			registerEntityEffect("lava_walker", LavaWalkerEffect.CODEC);
 
