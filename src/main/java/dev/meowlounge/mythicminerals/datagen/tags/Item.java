@@ -1,9 +1,6 @@
 package dev.meowlounge.mythicminerals.datagen.tags;
 
-import dev.meowlounge.mythicminerals.item.FrostiumItems;
-import dev.meowlounge.mythicminerals.item.PyrostoneItems;
-import dev.meowlounge.mythicminerals.item.StellariumItems;
-import dev.meowlounge.mythicminerals.item.VoidstoneItems;
+import dev.meowlounge.mythicminerals.item.*;
 import dev.meowlounge.mythicminerals.providers.TagsProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -60,6 +57,34 @@ public class Item extends FabricTagProvider.ItemTagProvider {
 				.add(StellariumItems.STELLARIUM_SHOVEL)
 				.add(StellariumItems.STELLARIUM_AXE)
 				.add(StellariumItems.STELLARIUM_HOE);
+
+		valueLookupBuilder(ItemTags.FOOT_ARMOR_ENCHANTABLE)
+				.add(FrostiumItems.FROSTIUM_BOOTS)
+				.add(PyrostoneItems.PYROSTONE_BOOTS)
+				.add(VoidstoneItems.VOIDSTONE_BOOTS)
+				.add(StellariumItems.STELLARIUM_BOOTS)
+				.add(FogstoneItems.FOGSTONE_BOOTS);
+
+		valueLookupBuilder(ItemTags.HEAD_ARMOR_ENCHANTABLE)
+				.add(FrostiumItems.FROSTIUM_HELMET)
+				.add(PyrostoneItems.PYROSTONE_HELMET)
+				.add(VoidstoneItems.VOIDSTONE_HELMET)
+				.add(StellariumItems.STELLARIUM_HELMET)
+				.add(FogstoneItems.FOGSTONE_HELMET);
+
+		valueLookupBuilder(ItemTags.CHEST_ARMOR_ENCHANTABLE)
+				.add(FrostiumItems.FROSTIUM_CHESTPLATE)
+				.add(PyrostoneItems.PYROSTONE_CHESTPLATE)
+				.add(VoidstoneItems.VOIDSTONE_CHESTPLATE)
+				.add(StellariumItems.STELLARIUM_CHESTPLATE)
+				.add(FogstoneItems.FOGSTONE_CHESTPLATE);
+
+		valueLookupBuilder(ItemTags.LEG_ARMOR_ENCHANTABLE)
+				.add(FrostiumItems.FROSTIUM_LEGGINGS)
+				.add(PyrostoneItems.PYROSTONE_LEGGINGS)
+				.add(VoidstoneItems.VOIDSTONE_LEGGINGS)
+				.add(StellariumItems.STELLARIUM_LEGGINGS)
+				.add(FogstoneItems.FOGSTONE_LEGGINGS);
 
 		valueLookupBuilder(ItemTags.MINING_ENCHANTABLE)
 				.add(FrostiumItems.FROSTIUM_PICKAXE)
