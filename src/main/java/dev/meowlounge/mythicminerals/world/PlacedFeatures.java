@@ -57,7 +57,7 @@ public class PlacedFeatures {
 		context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
 	}
 
- 	@SuppressWarnings("unused")
+	@SuppressWarnings("unused")
 	private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key,
 																				   RegistryEntry<ConfiguredFeature<?, ?>> configuration,
 																				   PlacementModifier... modifiers) {

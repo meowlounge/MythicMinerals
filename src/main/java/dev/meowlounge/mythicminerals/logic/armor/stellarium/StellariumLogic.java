@@ -178,7 +178,7 @@ public class StellariumLogic extends Item {
 	}
 
 	private static void playBoostSound(ServerWorld world, ServerPlayerEntity player) {
-		world.playSound(null, player.getBlockPos(), SoundEvents.BLOCK_FIRE_AMBIENT, SoundCategory.PLAYERS, 0.2f, 1.0f + (float)(Math.random() * 0.1));
+		world.playSound(null, player.getBlockPos(), SoundEvents.BLOCK_FIRE_AMBIENT, SoundCategory.PLAYERS, 0.2f, 1.0f + (float) (Math.random() * 0.1));
 	}
 
 	private static void endBoost(UUID playerId) {

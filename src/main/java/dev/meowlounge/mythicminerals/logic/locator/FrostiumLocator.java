@@ -1,7 +1,6 @@
 package dev.meowlounge.mythicminerals.logic.locator;
 
 import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
-import dev.meowlounge.mythicminerals.logic.BaseLocatorLogic;
 import net.minecraft.block.Block;
 
 public class FrostiumLocator extends BaseLocatorLogic {
