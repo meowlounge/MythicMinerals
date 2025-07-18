@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mythicminerals:pyrostone_layer_1"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mythicminerals:pyrostone_layer_2"
+      }
+    ]
+  }
+}
