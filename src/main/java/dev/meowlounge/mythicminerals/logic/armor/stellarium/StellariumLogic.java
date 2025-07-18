@@ -22,11 +22,12 @@ public class StellariumLogic extends Item {
 	private static final Map<UUID, Vec3d> lockedDirections = new HashMap<>();
 	private static final Map<UUID, Integer> invulnerabilityTicks = new HashMap<>();
 
-	private static final boolean DEBUG_BYPASS_COOLDOWN = false;
-	private static final long COOLDOWN_MS = 500;
+	//TODO: DEBUG MODE ONLY. DONT SET TO TRUE WHEN PUSHED TO PROD.
+	private static final boolean DEBUG_BYPASS_COOLDOWN = true;
+	private static final long COOLDOWN_MS = 16_000;
 	private static final int BOOST_TICKS = 8;
 	private static final int INVULNERABILITY_DURATION = 60;
-	private static final double BOOST_SPEED = 32;
+	private static final double BOOST_SPEED = 6;
 	private static final double BOOST_DECELERATION = 0.7;
 
 	public StellariumLogic(Settings settings) {
