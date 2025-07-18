@@ -1,6 +1,7 @@
 package dev.meowlounge.mythicminerals.item;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
+import dev.meowlounge.mythicminerals.logic.armor.fogstone.FogstoneArmor;
 import dev.meowlounge.mythicminerals.providers.TagsProvider;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
@@ -34,7 +35,7 @@ public class FogstoneItems {
 	//* ---------------------- //
 
 	public static final Item FOGSTONE_HELMET = registerItem("fogstone_helmet",
-			settings -> new Item(settings.armor(Armor.FOGSTONE_ARMOR_MATERIAL, EquipmentType.HELMET)));
+			settings -> new FogstoneArmor(settings.armor(Armor.FOGSTONE_ARMOR_MATERIAL, EquipmentType.HELMET)));
 
 	public static final Item FOGSTONE_CHESTPLATE = registerItem("fogstone_chestplate",
 			settings -> new Item(settings.armor(Armor.FOGSTONE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
