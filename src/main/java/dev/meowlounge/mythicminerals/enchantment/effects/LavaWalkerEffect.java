@@ -1,4 +1,4 @@
-package dev.meowlounge.mythicminerals.enchantment.custom;
+package dev.meowlounge.mythicminerals.enchantment.effects;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.Blocks;

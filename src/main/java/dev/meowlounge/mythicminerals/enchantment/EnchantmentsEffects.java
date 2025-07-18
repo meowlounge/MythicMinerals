@@ -2,7 +2,7 @@ package dev.meowlounge.mythicminerals.enchantment;
 
 import com.mojang.serialization.MapCodec;
 import dev.meowlounge.mythicminerals.MythicMinerals;
-import dev.meowlounge.mythicminerals.enchantment.custom.LavaWalkerEffect;
+import dev.meowlounge.mythicminerals.enchantment.effects.LavaWalkerEffect;
 import net.minecraft.enchantment.effect.EnchantmentEntityEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;

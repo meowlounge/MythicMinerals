@@ -1,7 +1,7 @@
 package dev.meowlounge.mythicminerals.enchantment;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
-import dev.meowlounge.mythicminerals.enchantment.custom.LavaWalkerEffect;
+import dev.meowlounge.mythicminerals.enchantment.effects.LavaWalkerEffect;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.enchantment.Enchantment;
