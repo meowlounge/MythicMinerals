@@ -11,7 +11,8 @@ public record StellariumBoostPayload() implements CustomPayload {
 
 	public static final CustomPayload.Type<PacketByteBuf, StellariumBoostPayload> TYPE =
 			new Type<>(ID, PacketCodec.of(
-					(buf, payload) -> {},
+					(buf, payload) -> {
+					},
 					buf -> new StellariumBoostPayload()
 			));
 

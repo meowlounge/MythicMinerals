@@ -1,7 +1,10 @@
 package dev.meowlounge.mythicminerals.block;
 
 import dev.meowlounge.mythicminerals.MythicMinerals;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
@@ -18,12 +21,6 @@ import static dev.meowlounge.mythicminerals.providers.RegisterProvider.registerB
 
 public class IceObsidian extends Block {
 	public static final IntProperty AGE = IntProperty.of("age", 0, 3);
-
-	public IceObsidian(Settings settings) {
-		super(settings);
-		this.setDefaultState(this.stateManager.getDefaultState().with(AGE, 0));
-	}
-
 	public static final Block ICE_OBSIDIAN = registerBlock("ice_obsidian",
 			settings -> new IceObsidian(settings
 					.mapColor(MapColor.BLACK)
@@ -31,6 +28,15 @@ public class IceObsidian extends Block {
 					.strength(50.0F, 1200.0F)
 					.requiresTool()
 					.sounds(BlockSoundGroup.NETHER_ORE)));
+
+	public IceObsidian(Settings settings) {
+		super(settings);
+		this.setDefaultState(this.stateManager.getDefaultState().with(AGE, 0));
+	}
+
+	public static void registerIceObsidian() {
+		MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Ice Obsidian Block");
+	}
 
 	@Override
 	public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
@@ -70,9 +76,5 @@ public class IceObsidian extends Block {
 
 	private void melt(ServerWorld world, BlockPos pos) {
 		world.setBlockState(pos, Blocks.LAVA.getDefaultState(), Block.NOTIFY_ALL);
-	}
-
-	public static void registerIceObsidian() {
-		MythicMinerals.LOGGER.info("⛏️ [MythicMinerals]: Registering Ice Obsidian Block");
 	}
 }
