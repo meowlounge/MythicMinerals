@@ -1,9 +1,6 @@
 package dev.meowlounge.mythicminerals.datagen.tags;
 
-import dev.meowlounge.mythicminerals.block.FrostiumBlocks;
-import dev.meowlounge.mythicminerals.block.PyrostoneBlocks;
-import dev.meowlounge.mythicminerals.block.StellariumBlocks;
-import dev.meowlounge.mythicminerals.block.VoidstoneBlocks;
+import dev.meowlounge.mythicminerals.block.*;
 import dev.meowlounge.mythicminerals.providers.TagsProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -24,6 +21,10 @@ public class Block extends FabricTagProvider.BlockTagProvider {
 				.add(FrostiumBlocks.RAW_FROSTIUM_BLOCK)
 				.add(FrostiumBlocks.FROSTIUM_BLOCK)
 				.add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE)
+				.add(FogstoneBlocks.FOGSTONE_BLOCK)
+				.add(FogstoneBlocks.RAW_FOGSTONE_BLOCK)
+				.add(FogstoneBlocks.FOGSTONE_ORE)
+				.add(FogstoneBlocks.DEEPSLATE_FOGSTONE_ORE)
 				.add(VoidstoneBlocks.VOIDSTONE_ORE)
 				.add(VoidstoneBlocks.RAW_VOIDSTONE_BLOCK)
 				.add(VoidstoneBlocks.VOIDSTONE_BLOCK)
@@ -34,6 +35,10 @@ public class Block extends FabricTagProvider.BlockTagProvider {
 				.add(StellariumBlocks.STELLARIUM_BLOCK);
 
 		valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
+				.add(FogstoneBlocks.FOGSTONE_BLOCK)
+				.add(FogstoneBlocks.RAW_FOGSTONE_BLOCK)
+				.add(FogstoneBlocks.FOGSTONE_ORE)
+				.add(FogstoneBlocks.DEEPSLATE_FOGSTONE_ORE)
 				.add(FrostiumBlocks.FROSTIUM_ORE)
 				.add(FrostiumBlocks.RAW_FROSTIUM_BLOCK)
 				.add(FrostiumBlocks.FROSTIUM_BLOCK)
