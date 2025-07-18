@@ -43,7 +43,7 @@ public class PlacedFeatures {
 						HeightRangePlacementModifier.trapezoid(YOffset.fixed(-40), YOffset.fixed(40))));
 
 		register(context, PYROSTONE_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.PYROSTONE_ORE_KEY),
-				OrePlacement.modifiersWithCount(10,
+				OrePlacement.modifiersWithCount(3,
 						HeightRangePlacementModifier.trapezoid(YOffset.fixed(12), YOffset.fixed(80))));
 	}
 
