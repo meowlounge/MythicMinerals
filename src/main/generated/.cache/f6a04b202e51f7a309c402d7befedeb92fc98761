@@ -1,5 +1,9 @@
 // 1.21.7	-999999999-01-01T00:00:00	MythicMinerals/⛏️ [MythicMinerals]: Registering Item Tags
 a5fdee296d6d48a7b8d99f2297165bcb027fbd04 data/minecraft/tags/item/enchantable/armor.json
+a19b85c0c2964565b3d8ec83e2beaf61b25e89bd data/minecraft/tags/item/enchantable/chest_armor.json
+82678aed62777e7586a25f897977655fc28c9c2b data/minecraft/tags/item/enchantable/foot_armor.json
+f9de3b52bc78d0bb39d491fd57488321d7cd20af data/minecraft/tags/item/enchantable/head_armor.json
+eb0aa2318c768a47ccc35ea7397f2e97a922e4eb data/minecraft/tags/item/enchantable/leg_armor.json
 6682a6ee48a4e81781e61200ec77850c7e6fdfc3 data/minecraft/tags/item/enchantable/mining.json
 db8763b11e4e52ccd2b6b742997749ae7ed25522 data/minecraft/tags/item/enchantable/mining_loot.json
 89abf918c3204a3802b766e27f391b225e9d903f data/minecraft/tags/item/enchantable/sharp_weapon.json
