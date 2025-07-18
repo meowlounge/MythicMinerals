@@ -39,7 +39,7 @@ public class LavaWalkerEffect implements EnchantmentEntityEffect {
 						world.setBlockState(target, ICE_OBSIDIAN.getDefaultState());
 						world.emitGameEvent(GameEvent.BLOCK_PLACE, target, GameEvent.Emitter.of(user));
 
-						int delay = MathHelper.nextInt(world.getRandom(), 30, 60);
+						int delay = MathHelper.nextInt(world.getRandom(), 10, 30);
 						world.scheduleBlockTick(target, ICE_OBSIDIAN, delay);
 					}
 				}
