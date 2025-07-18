@@ -36,7 +36,7 @@ public class IceObsidian extends Block {
 	public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
 		if (!world.isClient) {
 			ServerWorld serverWorld = (ServerWorld) world;
-			int delay = MathHelper.nextInt(world.getRandom(), 30, 60);
+			int delay = MathHelper.nextInt(world.getRandom(), 5, 15);
 			serverWorld.scheduleBlockTick(pos, this, delay);
 		}
 	}
@@ -45,7 +45,7 @@ public class IceObsidian extends Block {
 	public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 		int meltProbability = 4;
 		if (!(random.nextInt(meltProbability) == 0 && this.slightlyMelt(state, world, pos))) {
-			int delay = MathHelper.nextInt(random, 5, 20);
+			int delay = MathHelper.nextInt(random, 5, 15);
 			world.scheduleBlockTick(pos, this, delay);
 		}
 	}
