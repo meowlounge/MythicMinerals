@@ -1,5 +1,9 @@
 {
   "values": [
+    "mythicminerals:fogstone_block",
+    "mythicminerals:raw_fogstone_block",
+    "mythicminerals:fogstone_ore",
+    "mythicminerals:deepslate_fogstone_ore",
     "mythicminerals:frostium_ore",
     "mythicminerals:raw_frostium_block",
     "mythicminerals:frostium_block",
