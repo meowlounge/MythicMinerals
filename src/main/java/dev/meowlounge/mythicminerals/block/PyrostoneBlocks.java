@@ -11,8 +11,8 @@ import static dev.meowlounge.mythicminerals.providers.RegisterProvider.registerB
 public class PyrostoneBlocks {
 
 	public static final Block PYROSTONE_ORE = registerBlock("pyrostone_ore",
-			properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
-					properties.strength(3f).requiresTool()));
+			properties -> new ExperienceDroppingBlock(UniformIntProvider.create(3, 9),
+					properties.strength(3f).requiresTool().sounds(BlockSoundGroup.NETHER_ORE)));
 	public static final Block RAW_PYROSTONE_BLOCK = registerBlock("raw_pyrostone_block",
 			properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
 					properties.strength(4f).requiresTool()));

@@ -10,7 +10,7 @@ import static dev.meowlounge.mythicminerals.providers.RegisterProvider.registerB
 
 public class StellariumBlocks {
 	public static final Block STELLARIUM_ORE = registerBlock("stellarium_ore",
-			properties -> new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+			properties -> new ExperienceDroppingBlock(UniformIntProvider.create(10, 25),
 					properties.strength(3f).requiresTool()));
 	public static final Block STELLARIUM_BLOCK = registerBlock("stellarium_block",
 			properties -> new ExperienceDroppingBlock(UniformIntProvider.create(0, 0),
