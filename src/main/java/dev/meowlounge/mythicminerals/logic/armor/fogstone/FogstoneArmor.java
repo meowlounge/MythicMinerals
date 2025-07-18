@@ -15,8 +15,8 @@ import net.minecraft.world.biome.Biome;
 import org.jetbrains.annotations.Nullable;
 
 public class FogstoneArmor extends Item {
-	private static final int CHECK_INTERVAL = 20; // Every 1 second
-	private static final int CAMO_THRESHOLD_TICKS = 60; // 3 seconds
+	private static final int CHECK_INTERVAL = 20; //* every second
+	private static final int CAMO_THRESHOLD_TICKS = 60; //* every 3 seconds
 	private static final int CLIMB_SPEED_BOOST_LEVEL = 1;
 
 	public FogstoneArmor(Settings settings) {
@@ -35,7 +35,7 @@ public class FogstoneArmor extends Item {
 		boolean isHumid = isHumidBiome(biome);
 
 		if (isHumid) {
-			applyHumidBuffs(player, world, pos);
+			applyHumidBuffs(player, world);
 			handleCamouflage(player, biome);
 		} else {
 			applyDryDebuffs(player);
@@ -53,7 +53,7 @@ public class FogstoneArmor extends Item {
 		return name.contains("jungle") || name.contains("swamp") || name.contains("mangrove") || name.contains("rainforest");
 	}
 
-	private void applyHumidBuffs(PlayerEntity player, ServerWorld world, BlockPos pos) {
+	private void applyHumidBuffs(PlayerEntity player, ServerWorld world) {
 		if (world.isRaining()) {
 			player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, CHECK_INTERVAL + 5, 0, true, false));
 		}
