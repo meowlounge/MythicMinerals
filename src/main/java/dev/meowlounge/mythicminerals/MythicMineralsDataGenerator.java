@@ -37,6 +37,7 @@ public class MythicMineralsDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(StellariumRecipes::new);
 		pack.addProvider(FogstoneRecipes::new);
 		pack.addProvider(PyrostoneRecipes::new);
+		pack.addProvider(MagmaritRecipes::new);
 	}
 
 	@Override
