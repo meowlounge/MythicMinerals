@@ -6,5 +6,6 @@ public class WorldGeneration {
 		VoidstoneGeneration.generateOres();
 		StellariumGeneration.generateOres();
 		PyrostoneGeneration.generateOres();
+		MagmaritGeneration.generateOres();
 	}
 }
