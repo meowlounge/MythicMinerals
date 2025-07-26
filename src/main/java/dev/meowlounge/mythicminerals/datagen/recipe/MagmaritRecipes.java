@@ -1,7 +1,7 @@
 package dev.meowlounge.mythicminerals.datagen.recipe;
 
-import dev.meowlounge.mythicminerals.block.PyrostoneBlocks;
-import dev.meowlounge.mythicminerals.item.PyrostoneItems;
+import dev.meowlounge.mythicminerals.block.MagmaritBlocks;
+import dev.meowlounge.mythicminerals.item.MagmaritItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
@@ -14,8 +14,8 @@ import net.minecraft.registry.RegistryWrapper;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-public class PyrostoneRecipes extends FabricRecipeProvider {
-	public PyrostoneRecipes(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+public class MagmaritRecipes extends FabricRecipeProvider {
+	public MagmaritRecipes(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
 		super(output, registriesFuture);
 	}
 
@@ -24,101 +24,100 @@ public class PyrostoneRecipes extends FabricRecipeProvider {
 		return new RecipeGenerator(wrapperLookup, exporter) {
 			@Override
 			public void generate() {
-				List<ItemConvertible> PYROSTONE_SMELTABLES = List.of(
-						PyrostoneItems.RAW_PYROSTONE,
-						PyrostoneBlocks.PYROSTONE_ORE
+				List<ItemConvertible> MAGMARIT_SMELTABLES = List.of(
+						MagmaritItems.RAW_MAGMARIT,
+						MagmaritBlocks.MAGMARIT_ORE
 				);
 
-				offerSmelting(PYROSTONE_SMELTABLES, RecipeCategory.MISC, PyrostoneItems.PYROSTONE, 0.25F, 200, "pyrostone");
-				offerBlasting(PYROSTONE_SMELTABLES, RecipeCategory.MISC, PyrostoneItems.PYROSTONE, 0.35F, 100, "pyrostone");
+				offerBlasting(MAGMARIT_SMELTABLES, RecipeCategory.MISC, MagmaritItems.MAGMARIT, 0.4F, 200, "magmarit");
 
-				offerReversibleCompactingRecipes(RecipeCategory.MISC, PyrostoneItems.PYROSTONE, RecipeCategory.BUILDING_BLOCKS, PyrostoneBlocks.PYROSTONE_BLOCK);
+				offerReversibleCompactingRecipes(RecipeCategory.MISC, MagmaritItems.MAGMARIT, RecipeCategory.BUILDING_BLOCKS, MagmaritBlocks.MAGMARIT_BLOCK);
 
-				createShaped(RecipeCategory.BUILDING_BLOCKS, PyrostoneBlocks.RAW_PYROSTONE_BLOCK)
+				createShaped(RecipeCategory.BUILDING_BLOCKS, MagmaritBlocks.RAW_MAGMARIT_BLOCK)
 						.pattern("###")
 						.pattern("###")
 						.pattern("###")
-						.input('#', PyrostoneItems.RAW_PYROSTONE)
-						.criterion(hasItem(PyrostoneItems.RAW_PYROSTONE), conditionsFromItem(PyrostoneItems.RAW_PYROSTONE))
+						.input('#', MagmaritItems.RAW_MAGMARIT)
+						.criterion(hasItem(MagmaritItems.RAW_MAGMARIT), conditionsFromItem(MagmaritItems.RAW_MAGMARIT))
 						.offerTo(exporter);
 
-				createShapeless(RecipeCategory.MISC, PyrostoneItems.RAW_PYROSTONE, 9)
-						.input(PyrostoneBlocks.RAW_PYROSTONE_BLOCK)
-						.criterion(hasItem(PyrostoneBlocks.RAW_PYROSTONE_BLOCK), conditionsFromItem(PyrostoneBlocks.RAW_PYROSTONE_BLOCK))
+				createShapeless(RecipeCategory.MISC, MagmaritItems.RAW_MAGMARIT, 9)
+						.input(MagmaritBlocks.RAW_MAGMARIT_BLOCK)
+						.criterion(hasItem(MagmaritBlocks.RAW_MAGMARIT_BLOCK), conditionsFromItem(MagmaritBlocks.RAW_MAGMARIT_BLOCK))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.COMBAT, PyrostoneItems.PYROSTONE_SWORD)
+				createShaped(RecipeCategory.COMBAT, MagmaritItems.MAGMARIT_SWORD)
 						.pattern("#")
 						.pattern("#")
 						.pattern("X")
-						.input('#', PyrostoneItems.PYROSTONE)
+						.input('#', MagmaritItems.MAGMARIT)
 						.input('X', Items.STICK)
 						.criterion(hasItem(Items.IRON_SWORD), conditionsFromItem(Items.IRON_SWORD))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.TOOLS, PyrostoneItems.PYROSTONE_HOE)
+				createShaped(RecipeCategory.TOOLS, MagmaritItems.MAGMARIT_HOE)
 						.pattern("## ")
 						.pattern(" # ")
 						.pattern(" X ")
-						.input('#', PyrostoneItems.PYROSTONE)
+						.input('#', MagmaritItems.MAGMARIT)
 						.input('X', Items.STICK)
 						.criterion(hasItem(Items.IRON_HOE), conditionsFromItem(Items.IRON_HOE))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.TOOLS, PyrostoneItems.PYROSTONE_AXE)
+				createShaped(RecipeCategory.TOOLS, MagmaritItems.MAGMARIT_AXE)
 						.pattern("## ")
 						.pattern("#X ")
 						.pattern(" X ")
-						.input('#', PyrostoneItems.PYROSTONE)
+						.input('#', MagmaritItems.MAGMARIT)
 						.input('X', Items.STICK)
 						.criterion(hasItem(Items.IRON_AXE), conditionsFromItem(Items.IRON_AXE))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.TOOLS, PyrostoneItems.PYROSTONE_PICKAXE)
+				createShaped(RecipeCategory.TOOLS, MagmaritItems.MAGMARIT_PICKAXE)
 						.pattern("###")
 						.pattern(" X ")
 						.pattern(" X ")
-						.input('#', PyrostoneItems.PYROSTONE)
+						.input('#', MagmaritItems.MAGMARIT)
 						.input('X', Items.STICK)
 						.criterion(hasItem(Items.IRON_PICKAXE), conditionsFromItem(Items.IRON_PICKAXE))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.TOOLS, PyrostoneItems.PYROSTONE_SHOVEL)
+				createShaped(RecipeCategory.TOOLS, MagmaritItems.MAGMARIT_SHOVEL)
 						.pattern("#")
 						.pattern("X")
 						.pattern("X")
-						.input('#', PyrostoneItems.PYROSTONE)
+						.input('#', MagmaritItems.MAGMARIT)
 						.input('X', Items.STICK)
 						.criterion(hasItem(Items.IRON_SHOVEL), conditionsFromItem(Items.IRON_SHOVEL))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.COMBAT, PyrostoneItems.PYROSTONE_HELMET)
+				createShaped(RecipeCategory.COMBAT, MagmaritItems.MAGMARIT_HELMET)
 						.pattern("###")
 						.pattern("# #")
-						.input('#', PyrostoneItems.PYROSTONE)
+						.input('#', MagmaritItems.MAGMARIT)
 						.criterion(hasItem(Items.IRON_HELMET), conditionsFromItem(Items.IRON_HELMET))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.COMBAT, PyrostoneItems.PYROSTONE_CHESTPLATE)
+				createShaped(RecipeCategory.COMBAT, MagmaritItems.MAGMARIT_CHESTPLATE)
 						.pattern("# #")
 						.pattern("###")
 						.pattern("###")
-						.input('#', PyrostoneItems.PYROSTONE)
+						.input('#', MagmaritItems.MAGMARIT)
 						.criterion(hasItem(Items.IRON_CHESTPLATE), conditionsFromItem(Items.IRON_CHESTPLATE))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.COMBAT, PyrostoneItems.PYROSTONE_LEGGINGS)
+				createShaped(RecipeCategory.COMBAT, MagmaritItems.MAGMARIT_LEGGINGS)
 						.pattern("###")
 						.pattern("# #")
 						.pattern("# #")
-						.input('#', PyrostoneItems.PYROSTONE)
+						.input('#', MagmaritItems.MAGMARIT)
 						.criterion(hasItem(Items.IRON_LEGGINGS), conditionsFromItem(Items.IRON_LEGGINGS))
 						.offerTo(exporter);
 
-				createShaped(RecipeCategory.COMBAT, PyrostoneItems.PYROSTONE_BOOTS)
+				createShaped(RecipeCategory.COMBAT, MagmaritItems.MAGMARIT_BOOTS)
 						.pattern("# #")
 						.pattern("# #")
-						.input('#', PyrostoneItems.PYROSTONE)
+						.input('#', MagmaritItems.MAGMARIT)
 						.criterion(hasItem(Items.IRON_BOOTS), conditionsFromItem(Items.IRON_BOOTS))
 						.offerTo(exporter);
 			}
@@ -127,6 +126,6 @@ public class PyrostoneRecipes extends FabricRecipeProvider {
 
 	@Override
 	public String getName() {
-		return "⛏️ [MythicMinerals]: Registering Pyrostone Recipes";
+		return "⛏️ [MythicMinerals]: Registering Magmarit Recipes";
 	}
 }

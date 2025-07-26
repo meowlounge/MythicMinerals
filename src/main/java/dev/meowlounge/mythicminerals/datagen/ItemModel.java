@@ -50,6 +50,18 @@ public class ItemModel extends FabricModelProvider {
 				.put(TextureKey.EAST, MythicMinerals.id("block/stellarium_ore_side"))
 				.put(TextureKey.UP, MythicMinerals.id("block/stellarium_ore_top"))
 				.put(TextureKey.DOWN, MythicMinerals.id("block/stellarium_ore_top")));
+
+		//* ---------------------- //
+
+		blockStateModelGenerator.registerSimpleCubeAll(MagmaritBlocks.MAGMARIT_BLOCK);
+		blockStateModelGenerator.registerCubeWithCustomTextures(MagmaritBlocks.MAGMARIT_ORE, null, (block, ignored) -> new TextureMap()
+				.put(TextureKey.PARTICLE, MythicMinerals.id("block/magmarit_ore_top"))
+				.put(TextureKey.SOUTH, MythicMinerals.id("block/magmarit_ore_side"))
+				.put(TextureKey.WEST, MythicMinerals.id("block/magmarit_ore_side"))
+				.put(TextureKey.NORTH, MythicMinerals.id("block/magmarit_ore_side"))
+				.put(TextureKey.EAST, MythicMinerals.id("block/magmarit_ore_side"))
+				.put(TextureKey.UP, MythicMinerals.id("block/magmarit_ore_top"))
+				.put(TextureKey.DOWN, MythicMinerals.id("block/magmarit_ore_top")));
 	}
 
 	public void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -93,6 +105,21 @@ public class ItemModel extends FabricModelProvider {
 		itemModelGenerator.registerArmor(PyrostoneItems.PYROSTONE_BOOTS, Armor.PYROSTONE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 		itemModelGenerator.registerArmor(PyrostoneItems.PYROSTONE_HELMET, Armor.PYROSTONE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
 
+
+		//* ---------------------- //
+
+		itemModelGenerator.register(MagmaritItems.RAW_MAGMARIT, Models.GENERATED);
+		itemModelGenerator.register(MagmaritItems.MAGMARIT, Models.GENERATED);
+		itemModelGenerator.register(MagmaritItems.MAGMARIT_SWORD, Models.HANDHELD);
+		itemModelGenerator.register(MagmaritItems.MAGMARIT_SHOVEL, Models.HANDHELD);
+		itemModelGenerator.register(MagmaritItems.MAGMARIT_AXE, Models.HANDHELD);
+		itemModelGenerator.register(MagmaritItems.MAGMARIT_PICKAXE, Models.HANDHELD);
+		itemModelGenerator.register(MagmaritItems.MAGMARIT_HOE, Models.HANDHELD);
+		itemModelGenerator.registerArmor(MagmaritItems.MAGMARIT_CHESTPLATE, Armor.MAGMARIT_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+		itemModelGenerator.registerArmor(MagmaritItems.MAGMARIT_LEGGINGS, Armor.MAGMARIT_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+		itemModelGenerator.registerArmor(MagmaritItems.MAGMARIT_BOOTS, Armor.MAGMARIT_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+		itemModelGenerator.registerArmor(MagmaritItems.MAGMARIT_HELMET, Armor.MAGMARIT_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+
 		//* ---------------------- //
 
 		itemModelGenerator.register(StellariumItems.STELLARIUM_SCRAP, Models.GENERATED);
@@ -129,5 +156,6 @@ public class ItemModel extends FabricModelProvider {
 		itemModelGenerator.register(DebugItems.STELLARIUM_ORE_LOCATOR, Models.HANDHELD);
 		itemModelGenerator.register(DebugItems.FOGSTONE_ORE_LOCATOR, Models.HANDHELD);
 		itemModelGenerator.register(DebugItems.PYROSTONE_ORE_LOCATOR, Models.HANDHELD);
+		itemModelGenerator.register(DebugItems.MAGMARIT_ORE_LOCATOR, Models.HANDHELD);
 	}
 }

@@ -29,6 +29,7 @@ public class DebugItemGroup {
 						entries.add(DebugItems.STELLARIUM_ORE_LOCATOR);
 						entries.add(DebugItems.FOGSTONE_ORE_LOCATOR);
 						entries.add(DebugItems.PYROSTONE_ORE_LOCATOR);
+						entries.add(DebugItems.MAGMARIT_ORE_LOCATOR);
 					})
 					.build()
 	);

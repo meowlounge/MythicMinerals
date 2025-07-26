@@ -105,6 +105,24 @@ public class LangDE extends FabricLanguageProvider {
 
 		//* ---------------------- //
 
+		translationBuilder.add("block.mythicminerals.magmarit_ore", "Magmariterz");
+		translationBuilder.add("block.mythicminerals.raw_magmarit_block", "Rohermagmaritblock");
+		translationBuilder.add("block.mythicminerals.magmarit_block", "Magmaritblock");
+
+		translationBuilder.add("item.mythicminerals.magmarit", "Magmarit");
+		translationBuilder.add("item.mythicminerals.raw_magmarit", "Roh-Magmarit");
+		translationBuilder.add("item.mythicminerals.magmarit_sword", "Magmaritschwert");
+		translationBuilder.add("item.mythicminerals.magmarit_shovel", "Magmaritschaufel");
+		translationBuilder.add("item.mythicminerals.magmarit_pickaxe", "Magmaritspitzhacke");
+		translationBuilder.add("item.mythicminerals.magmarit_axe", "Magmaritaxt");
+		translationBuilder.add("item.mythicminerals.magmarit_hoe", "Magmarithacke");
+		translationBuilder.add("item.mythicminerals.magmarit_helmet", "Magmarithelm");
+		translationBuilder.add("item.mythicminerals.magmarit_chestplate", "Magmaritharnisch");
+		translationBuilder.add("item.mythicminerals.magmarit_leggings", "Magmaritbeinschutz");
+		translationBuilder.add("item.mythicminerals.magmarit_boots", "Magmaritstiefel");
+
+		//* ---------------------- //
+
 		translationBuilder.add("mythicminerals.item_group_ore", "MythicMinerals");
 
 		//* ---------------------- //
@@ -120,6 +138,7 @@ public class LangDE extends FabricLanguageProvider {
 		translationBuilder.add("item.mythicminerals.voidstone_ore_locator", "Voidstone Finder");
 		translationBuilder.add("item.mythicminerals.stellarium_ore_locator", "Stellarium Finder");
 		translationBuilder.add("item.mythicminerals.pyrostone_ore_locator", "Pyrostein Finder");
+		translationBuilder.add("item.mythicminerals.magmarit_ore_locator", "Magmarit Finder");
 
 		//* ---------------------- //
 

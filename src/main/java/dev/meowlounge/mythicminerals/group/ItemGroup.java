@@ -66,6 +66,26 @@ public class ItemGroup {
 
 						//* ---------------------- //
 
+						entries.add(MagmaritItems.MAGMARIT);
+						entries.add(MagmaritItems.RAW_MAGMARIT);
+
+						entries.add(MagmaritItems.MAGMARIT_HELMET);
+						entries.add(MagmaritItems.MAGMARIT_CHESTPLATE);
+						entries.add(MagmaritItems.MAGMARIT_LEGGINGS);
+						entries.add(MagmaritItems.MAGMARIT_BOOTS);
+
+						entries.add(MagmaritItems.MAGMARIT_SWORD);
+						entries.add(MagmaritItems.MAGMARIT_PICKAXE);
+						entries.add(MagmaritItems.MAGMARIT_AXE);
+						entries.add(MagmaritItems.MAGMARIT_SHOVEL);
+						entries.add(MagmaritItems.MAGMARIT_HOE);
+
+						entries.add(MagmaritBlocks.MAGMARIT_ORE);
+						entries.add(MagmaritBlocks.RAW_MAGMARIT_BLOCK);
+						entries.add(MagmaritBlocks.MAGMARIT_BLOCK);
+
+						//* ---------------------- //
+
 						entries.add(VoidstoneItems.VOIDSTONE);
 						entries.add(VoidstoneItems.RAW_VOIDSTONE);
 

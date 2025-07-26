@@ -127,4 +127,26 @@ public class Armor {
 			TagsProvider.Items.STELLARIUM_REPAIR,
 			STELLARIUM_KEY
 	);
+
+	//* ---------------------- //
+
+	public static final RegistryKey<EquipmentAsset> MAGMARIT_KEY =
+			RegistryKey.of(REGISTRY_KEY, Identifier.of(MythicMinerals.MOD_ID, "magmarit"));
+
+	public static final ArmorMaterial MAGMARIT_ARMOR_MATERIAL = new ArmorMaterial(
+			60,
+			Util.make(new EnumMap<>(EquipmentType.class), map -> {
+				map.put(EquipmentType.BOOTS, 2);
+				map.put(EquipmentType.CHESTPLATE, 6);
+				map.put(EquipmentType.HELMET, 4);
+				map.put(EquipmentType.LEGGINGS, 4);
+				map.put(EquipmentType.BODY, 5);
+			}),
+			8,
+			SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
+			1.6f,
+			0.2f,
+			TagsProvider.Items.MAGMARIT_REPAIR,
+			MAGMARIT_KEY
+	);
 }
