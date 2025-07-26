@@ -45,6 +45,12 @@ public class OreLoot extends FabricBlockLootTableProvider {
 
 		//* ---------------------- //
 
+		addDrop(MagmaritBlocks.MAGMARIT_BLOCK);
+		addDrop(MagmaritBlocks.RAW_MAGMARIT_BLOCK);
+		addDrop(MagmaritBlocks.MAGMARIT_ORE, oreDrops(MagmaritBlocks.MAGMARIT_ORE, MagmaritItems.RAW_MAGMARIT));
+
+		//* ---------------------- //
+
 		addDrop(FogstoneBlocks.FOGSTONE_BLOCK);
 		addDrop(FogstoneBlocks.RAW_FOGSTONE_BLOCK);
 		addDrop(FogstoneBlocks.FOGSTONE_ORE, oreDrops(FogstoneBlocks.FOGSTONE_ORE, FogstoneItems.RAW_FOGSTONE));

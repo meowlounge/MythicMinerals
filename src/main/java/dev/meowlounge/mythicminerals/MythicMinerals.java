@@ -38,6 +38,9 @@ public class MythicMinerals implements ModInitializer, TerraBlenderApi {
 		FrostiumItems.registerFrostiumItems();
 		FrostiumBlocks.registerFrostiumBlocks();
 
+		MagmaritItems.registerMagmaritItems();
+		MagmaritBlocks.registerMagmaritBlocks();
+
 		PyrostoneItems.registerPyrostoneItems();
 		PyrostoneBlocks.registerPyrostoneBlocks();
 

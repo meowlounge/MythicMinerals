@@ -29,8 +29,8 @@ public class PyrostoneRecipes extends FabricRecipeProvider {
 						PyrostoneBlocks.PYROSTONE_ORE
 				);
 
-				offerSmelting(PYROSTONE_SMELTABLES, RecipeCategory.MISC, PyrostoneItems.PYROSTONE, 0.25F, 200, "fogstone");
-				offerBlasting(PYROSTONE_SMELTABLES, RecipeCategory.MISC, PyrostoneItems.PYROSTONE, 0.35F, 100, "fogstone");
+				offerSmelting(PYROSTONE_SMELTABLES, RecipeCategory.MISC, PyrostoneItems.PYROSTONE, 0.25F, 200, "pyrostone");
+				offerBlasting(PYROSTONE_SMELTABLES, RecipeCategory.MISC, PyrostoneItems.PYROSTONE, 0.35F, 100, "pyrostone");
 
 				offerReversibleCompactingRecipes(RecipeCategory.MISC, PyrostoneItems.PYROSTONE, RecipeCategory.BUILDING_BLOCKS, PyrostoneBlocks.PYROSTONE_BLOCK);
 

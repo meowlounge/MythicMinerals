@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "mythicminerals:magmarit",
+    "X": "minecraft:stick"
+  },
+  "pattern": [
+    "#",
+    "X",
+    "X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mythicminerals:magmarit_shovel"
+  }
+}

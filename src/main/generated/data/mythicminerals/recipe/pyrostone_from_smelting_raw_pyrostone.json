@@ -3,7 +3,7 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 0.25,
-  "group": "fogstone",
+  "group": "pyrostone",
   "ingredient": "mythicminerals:raw_pyrostone",
   "result": {
     "id": "mythicminerals:pyrostone"

@@ -21,40 +21,62 @@ public class Block extends FabricTagProvider.BlockTagProvider {
 				.add(FrostiumBlocks.RAW_FROSTIUM_BLOCK)
 				.add(FrostiumBlocks.FROSTIUM_BLOCK)
 				.add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE)
+
 				.add(FogstoneBlocks.FOGSTONE_BLOCK)
 				.add(FogstoneBlocks.RAW_FOGSTONE_BLOCK)
 				.add(FogstoneBlocks.FOGSTONE_ORE)
 				.add(FogstoneBlocks.DEEPSLATE_FOGSTONE_ORE)
+
 				.add(VoidstoneBlocks.VOIDSTONE_ORE)
 				.add(VoidstoneBlocks.RAW_VOIDSTONE_BLOCK)
 				.add(VoidstoneBlocks.VOIDSTONE_BLOCK)
+
 				.add(PyrostoneBlocks.PYROSTONE_ORE)
 				.add(PyrostoneBlocks.RAW_PYROSTONE_BLOCK)
 				.add(PyrostoneBlocks.PYROSTONE_BLOCK)
+
+				.add(MagmaritBlocks.MAGMARIT_ORE)
+				.add(MagmaritBlocks.RAW_MAGMARIT_BLOCK)
+				.add(MagmaritBlocks.MAGMARIT_BLOCK)
+
 				.add(StellariumBlocks.STELLARIUM_ORE)
 				.add(StellariumBlocks.STELLARIUM_BLOCK);
+
+	//* ---------------------- //
 
 		valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
 				.add(FogstoneBlocks.FOGSTONE_BLOCK)
 				.add(FogstoneBlocks.RAW_FOGSTONE_BLOCK)
 				.add(FogstoneBlocks.FOGSTONE_ORE)
 				.add(FogstoneBlocks.DEEPSLATE_FOGSTONE_ORE)
+
 				.add(FrostiumBlocks.FROSTIUM_ORE)
 				.add(FrostiumBlocks.RAW_FROSTIUM_BLOCK)
 				.add(FrostiumBlocks.FROSTIUM_BLOCK)
 				.add(FrostiumBlocks.DEEPSLATE_FROSTIUM_ORE)
+
 				.add(PyrostoneBlocks.PYROSTONE_ORE)
 				.add(PyrostoneBlocks.RAW_PYROSTONE_BLOCK)
 				.add(PyrostoneBlocks.PYROSTONE_BLOCK);
 
+		//* ---------------------- //
+
 		valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
 				.add(VoidstoneBlocks.VOIDSTONE_ORE)
 				.add(VoidstoneBlocks.RAW_VOIDSTONE_BLOCK)
-				.add(VoidstoneBlocks.VOIDSTONE_BLOCK);
+				.add(VoidstoneBlocks.VOIDSTONE_BLOCK)
+
+				.add(MagmaritBlocks.MAGMARIT_ORE)
+				.add(MagmaritBlocks.RAW_MAGMARIT_BLOCK)
+				.add(MagmaritBlocks.MAGMARIT_BLOCK);
+
+		//* ---------------------- //
 
 		valueLookupBuilder(TagsProvider.Blocks.NEEDS_NETHERITE_TOOL)
 				.add(StellariumBlocks.STELLARIUM_ORE)
 				.add(StellariumBlocks.STELLARIUM_BLOCK);
+
+		//* ---------------------- //
 
 		valueLookupBuilder(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
 				.addTag(TagsProvider.Blocks.NEEDS_NETHERITE_TOOL);

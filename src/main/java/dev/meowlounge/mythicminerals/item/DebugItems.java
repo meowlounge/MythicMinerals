@@ -24,6 +24,9 @@ public class DebugItems {
 	public static final Item PYROSTONE_ORE_LOCATOR = registerItem("pyrostone_ore_locator",
 			settings -> new PyrostoneLocator(settings.component(DataComponentTypes.RARITY, Rarity.EPIC).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)));
 
+	public static final Item MAGMARIT_ORE_LOCATOR = registerItem("magmarit_ore_locator",
+			settings -> new MagmaritLocator(settings.component(DataComponentTypes.RARITY, Rarity.EPIC).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)));
+
 	public static void registerDEBUGItems() {
 		MythicMinerals.LOGGER.info("❌❌❌ [MythicMinerals]: Registering DEBUG Items");
 	}

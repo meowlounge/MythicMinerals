@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "mythicminerals:block/magmarit_ore_top",
+    "east": "mythicminerals:block/magmarit_ore_side",
+    "north": "mythicminerals:block/magmarit_ore_side",
+    "particle": "mythicminerals:block/magmarit_ore_top",
+    "south": "mythicminerals:block/magmarit_ore_side",
+    "up": "mythicminerals:block/magmarit_ore_top",
+    "west": "mythicminerals:block/magmarit_ore_side"
+  }
+}
