@@ -31,7 +31,6 @@ public class ConfiguredFeatures {
 		RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 		RuleTest endstoneReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 		RuleTest netherrackReplaceables = new BlockMatchRuleTest(Blocks.NETHERRACK);
-		RuleTest lavaReplaceables = new BlockMatchRuleTest(Blocks.LAVA); // Regel für Lava-Blöcke
 
 		// Frostium
 		List<OreFeatureConfig.Target> FrostiumOres =
@@ -62,7 +61,7 @@ public class ConfiguredFeatures {
 
 		// Magmarit (nur in Lava)
 		List<OreFeatureConfig.Target> MagmaritOres =
-				List.of(OreFeatureConfig.createTarget(lavaReplaceables, MagmaritBlocks.MAGMARIT_ORE.getDefaultState()));
+				List.of(OreFeatureConfig.createTarget(netherrackReplaceables, MagmaritBlocks.MAGMARIT_ORE.getDefaultState()));
 		register(context, MAGMARIT_ORE_KEY, Feature.ORE, new OreFeatureConfig(MagmaritOres, 4)); // Größe der Erzlager
 	}
 

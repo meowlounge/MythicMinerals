@@ -9,7 +9,7 @@
           "Name": "mythicminerals:magmarit_ore"
         },
         "target": {
-          "block": "minecraft:lava",
+          "block": "minecraft:netherrack",
           "predicate_type": "minecraft:block_match"
         }
       }
