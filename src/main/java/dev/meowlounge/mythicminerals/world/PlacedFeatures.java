@@ -7,6 +7,8 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -57,9 +59,16 @@ public class PlacedFeatures {
 		register(context, MAGMARIT_PLACED_KEY, configuredFeatures.getOrThrow(ConfiguredFeatures.MAGMARIT_ORE_KEY),
 				List.of(
 						CountPlacementModifier.of(10), // Anzahl der Versuche pro Chunk
-						SquarePlacementModifier.of(), // Verteilung im Chunk
+						SquarePlacementModifier.of(), // Gleichmäßige Verteilung im Chunk
 						HeightRangePlacementModifier.uniform(YOffset.fixed(2), YOffset.fixed(125)), // Höhenbereich im Nether
-						BlockFilterPlacementModifier.of(BlockPredicate.matchingBlocks(Blocks.LAVA)) // Nur in Lava
+						BlockFilterPlacementModifier.of(BlockPredicate.anyOf(
+								BlockPredicate.matchingBlocks(BlockPos.ORIGIN.offset(Direction.UP), Blocks.LAVA),
+								BlockPredicate.matchingBlocks(BlockPos.ORIGIN.offset(Direction.DOWN), Blocks.LAVA),
+								BlockPredicate.matchingBlocks(BlockPos.ORIGIN.offset(Direction.NORTH), Blocks.LAVA),
+								BlockPredicate.matchingBlocks(BlockPos.ORIGIN.offset(Direction.SOUTH), Blocks.LAVA),
+								BlockPredicate.matchingBlocks(BlockPos.ORIGIN.offset(Direction.EAST), Blocks.LAVA),
+								BlockPredicate.matchingBlocks(BlockPos.ORIGIN.offset(Direction.WEST), Blocks.LAVA)
+						)) // Nur in der Nähe von Lava
 				));
 	}
 

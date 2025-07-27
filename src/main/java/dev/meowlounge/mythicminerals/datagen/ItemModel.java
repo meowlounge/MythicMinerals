@@ -54,14 +54,7 @@ public class ItemModel extends FabricModelProvider {
 		//* ---------------------- //
 
 		blockStateModelGenerator.registerSimpleCubeAll(MagmaritBlocks.MAGMARIT_BLOCK);
-		blockStateModelGenerator.registerCubeWithCustomTextures(MagmaritBlocks.MAGMARIT_ORE, null, (block, ignored) -> new TextureMap()
-				.put(TextureKey.PARTICLE, MythicMinerals.id("block/magmarit_ore_top"))
-				.put(TextureKey.SOUTH, MythicMinerals.id("block/magmarit_ore_side"))
-				.put(TextureKey.WEST, MythicMinerals.id("block/magmarit_ore_side"))
-				.put(TextureKey.NORTH, MythicMinerals.id("block/magmarit_ore_side"))
-				.put(TextureKey.EAST, MythicMinerals.id("block/magmarit_ore_side"))
-				.put(TextureKey.UP, MythicMinerals.id("block/magmarit_ore_top"))
-				.put(TextureKey.DOWN, MythicMinerals.id("block/magmarit_ore_top")));
+		blockStateModelGenerator.registerSimpleCubeAll(MagmaritBlocks.MAGMARIT_ORE);
 	}
 
 	public void generateItemModels(ItemModelGenerator itemModelGenerator) {
