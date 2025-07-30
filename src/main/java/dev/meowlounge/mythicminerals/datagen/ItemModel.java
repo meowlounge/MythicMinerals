@@ -54,6 +54,7 @@ public class ItemModel extends FabricModelProvider {
 		//* ---------------------- //
 
 		blockStateModelGenerator.registerSimpleCubeAll(MagmaritBlocks.MAGMARIT_BLOCK);
+		blockStateModelGenerator.registerSimpleCubeAll(MagmaritBlocks.RAW_MAGMARIT_BLOCK);
 		blockStateModelGenerator.registerSimpleCubeAll(MagmaritBlocks.MAGMARIT_ORE);
 	}
 

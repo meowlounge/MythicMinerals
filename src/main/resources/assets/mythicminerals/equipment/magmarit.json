@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mythicminerals:magmarit_layer_1"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mythicminerals:magmarit_layer_2"
+      }
+    ]
+  }
+}
